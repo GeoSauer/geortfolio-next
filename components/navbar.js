@@ -7,11 +7,21 @@ import {
   Text,
   ButtonGroup,
   IconButton,
+  useColorMode,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaEye, FaGithubAlt, FaLinkedin } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 
 export default function Navbar() {
+  const { toggleColorMode, colorMode } = useColorMode();
+  const [mounted, setMounted] = useState(false);
+
+  //ensure component is mounted before rendering theme toggling UI as the server cannot know the current theme
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <Container as="nav" role="navigation" minWidth="80vw">
       <HStack justify="space-between" align="center">
@@ -56,6 +66,15 @@ export default function Navbar() {
               target="_blank"
               icon={<FaEye />}
             />
+            <IconButton
+              as="button"
+              aria-label="Color Mode"
+              data-toggle="tooltip"
+              title={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}
+              onClick={toggleColorMode}
+            >
+              {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
+            </IconButton>
           </ButtonGroup>
         </HStack>
       </HStack>
