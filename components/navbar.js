@@ -21,8 +21,8 @@ export default function Navbar() {
             <Text>{myData.designation}</Text>
           </Link>
         </VStack>
-        <HStack spacing={4}>
-          <Link href="/about">Abt</Link>
+        <HStack>
+          <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/myStory">My Story</Link>
           <Link href="/contact">Contact</Link>
