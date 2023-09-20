@@ -18,7 +18,6 @@ export default function Home() {
       <Flex height="100vh" alignItems="center" justifyContent="center">
         <Flex direction="column" alignItems="center">
           <Heading>Hello World!</Heading>
-          <Image src="/next.svg" width={"50"} height={"50"} />
         </Flex>
       </Flex>
     </>

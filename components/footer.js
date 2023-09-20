@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithubAlt, FaEye } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Container as="footer" role="contentinfo">
+    <Container as="footer" role="contentinfo" minWidth="80vw">
       <HStack justify="space-between" align="center">
         <Text fontSize="sm">
           &copy; {new Date().getFullYear()} Geo Sauer, All rights reserved.{" "}
