@@ -12,8 +12,9 @@ import {
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
+import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 
-export default function Navbar() {
+export default function Navbar({ superDark, setSuperDark }) {
   const { toggleColorMode, colorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
 
@@ -21,6 +22,10 @@ export default function Navbar() {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const toggleSuperDarkMode = () => {
+    setSuperDark(!superDark);
+  };
 
   return (
     <Container as="nav" role="navigation" minWidth="80vw">
@@ -74,6 +79,15 @@ export default function Navbar() {
               onClick={toggleColorMode}
             >
               {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
+            </IconButton>
+            <IconButton
+              as="button"
+              aria-label="Super Dark Mode"
+              data-toggle="tooltip"
+              title="Toggle Super Dark Mode"
+              onClick={toggleSuperDarkMode}
+            >
+              {mounted && superDark ? <MdFlashlightOff /> : <MdFlashlightOn />}
             </IconButton>
           </ButtonGroup>
         </HStack>
