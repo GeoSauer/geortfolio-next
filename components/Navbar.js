@@ -16,6 +16,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
+import Links from "./Links";
 
 export default function Navbar({ superDark, setSuperDark }) {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -41,11 +42,9 @@ export default function Navbar({ superDark, setSuperDark }) {
           </Link>
         </VStack>
 
-        <HStack hideBelow={"940px"} spacing={8}>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/myStory">My Story</Link>
-          <Link href="/contact">Contact</Link>
+        {/* desktop nav */}
+        <HStack hideBelow={"940px"} spacing={8} fontWeight={"bold"}>
+          <Links />
         </HStack>
 
         <HStack>
@@ -91,11 +90,15 @@ export default function Navbar({ superDark, setSuperDark }) {
         </HStack>
       </Flex>
 
-      <HStack hideFrom={"941px"} justify={"space-evenly"} maxWidth={"90vw"} paddingY={2}>
-        <Link href="/about">About</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/myStory">My Story</Link>
-        <Link href="/contact">Contact</Link>
+      {/* mobile nav */}
+      <HStack
+        hideFrom={"941px"}
+        justify={"space-evenly"}
+        maxWidth={"90vw"}
+        paddingY={2}
+        fontWeight={"bold"}
+      >
+        <Links />
       </HStack>
     </Container>
   );
