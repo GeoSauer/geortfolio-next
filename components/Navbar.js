@@ -8,8 +8,11 @@ import {
   ButtonGroup,
   IconButton,
   useColorMode,
+  Flex,
+  Tooltip,
 } from "@chakra-ui/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
@@ -17,6 +20,7 @@ import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 export default function Navbar({ superDark, setSuperDark }) {
   const { toggleColorMode, colorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
+  const router = useRouter();
 
   //ensure component is mounted before rendering theme toggling UI as the server cannot know the current theme
   useEffect(() => {
@@ -28,69 +32,70 @@ export default function Navbar({ superDark, setSuperDark }) {
   };
 
   return (
-    <Container as="nav" role="navigation" minWidth="80vw">
-      <HStack justify="space-between" align="center">
+    <Container as="nav" role="navigation" minWidth="90vw" paddingY={{ base: 10, md: 20 }}>
+      <Flex justify="space-between" align="center">
         <VStack>
           <Link href="/">
-            <Heading>{myData.name}</Heading>
+            <Heading size={"md"}>{myData.name}</Heading>
             <Text>{myData.designation}</Text>
           </Link>
         </VStack>
-        <HStack>
+
+        <HStack hideBelow={"940px"} spacing={8}>
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/myStory">My Story</Link>
           <Link href="/contact">Contact</Link>
         </HStack>
+
         <HStack>
-          <ButtonGroup variant="">
-            <IconButton
-              as="a"
-              href={myData.socialUrls.linkedIn}
-              aria-label="LinkedIn"
-              data-toggle="tooltip"
-              title="LinkedIn"
-              target="_blank"
-              icon={<FaLinkedin />}
-            />
-            <IconButton
-              as="a"
-              href={myData.socialUrls.github}
-              aria-label="GitHub"
-              data-toggle="tooltip"
-              title="GitHub"
-              target="_blank"
-              icon={<FaGithubAlt />}
-            />
-            <IconButton
-              as="a"
-              href={myData.socialUrls.portfolio}
-              aria-label="Portfolio"
-              data-toggle="tooltip"
-              title="Portfolio"
-              target="_blank"
-              icon={<FaEye />}
-            />
-            <IconButton
-              as="button"
-              aria-label="Color Mode"
-              data-toggle="tooltip"
-              title={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}
-              onClick={toggleColorMode}
-            >
-              {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
-            </IconButton>
-            <IconButton
-              as="button"
-              aria-label="Super Dark Mode"
-              data-toggle="tooltip"
-              title="Toggle Super Dark Mode"
-              onClick={toggleSuperDarkMode}
-            >
-              {mounted && superDark ? <MdFlashlightOff /> : <MdFlashlightOn />}
-            </IconButton>
+          <ButtonGroup variant="solid">
+            <Tooltip label="LinkedIn">
+              <IconButton
+                as="a"
+                href={myData.socialUrls.linkedIn}
+                aria-label="LinkedIn"
+                target="_blank"
+                icon={<FaLinkedin />}
+              />
+            </Tooltip>
+            <Tooltip label="GitHub">
+              <IconButton
+                as="a"
+                href={myData.socialUrls.github}
+                aria-label="GitHub"
+                target="_blank"
+                icon={<FaGithubAlt />}
+              />
+            </Tooltip>
+            <Tooltip label="Portfolio">
+              <IconButton
+                as="a"
+                href={myData.socialUrls.portfolio}
+                aria-label="Portfolio"
+                target="_blank"
+                icon={<FaEye />}
+              />
+            </Tooltip>
+            <Tooltip label={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}>
+              <IconButton as="button" aria-label="Color Mode" onClick={toggleColorMode}>
+                {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
+              </IconButton>
+            </Tooltip>
+            <Tooltip label="Toggle Super Dark Mode">
+              <IconButton as="button" aria-label="Super Dark Mode" onClick={toggleSuperDarkMode}>
+                {mounted && superDark ? <MdFlashlightOff /> : <MdFlashlightOn />}
+              </IconButton>
+            </Tooltip>
           </ButtonGroup>
         </HStack>
+      </Flex>
+
+      <HStack hideFrom={"941px"} justify={"space-evenly"} maxWidth={"90vw"} paddingY={2}>
+        <Link href="/about">About</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/myStory">My Story</Link>
+        <Link href="/contact">Contact</Link>
       </HStack>
     </Container>
   );
