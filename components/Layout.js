@@ -42,7 +42,7 @@ export default function Layout({ children, ...customMeta }) {
       <main>
         <SuperDarkMode superDark={superDark}>
           <Navbar superDark={superDark} setSuperDark={setSuperDark} />
-          <Box>{children}</Box>
+          {/* <Box>{children}</Box> */}
           <Footer />
         </SuperDarkMode>
       </main>
