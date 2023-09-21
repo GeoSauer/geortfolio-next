@@ -4,7 +4,6 @@ import SuperDarkMode from "./SuperDarkMode";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import { Box } from "@chakra-ui/react";
 
 export default function Layout({ children, ...customMeta }) {
   const [superDark, setSuperDark] = useState(false);
@@ -39,10 +38,10 @@ export default function Layout({ children, ...customMeta }) {
         <meta name="twitter:image" content={meta.image} />
         {meta.date && <meta property="article:published_time" content={meta.date} />}
       </Head>
-      <main>
+      <main style={{ width: "full" }}>
         <SuperDarkMode superDark={superDark}>
           <Navbar superDark={superDark} setSuperDark={setSuperDark} />
-          {/* <Box>{children}</Box> */}
+          {children}
           <Footer />
         </SuperDarkMode>
       </main>
