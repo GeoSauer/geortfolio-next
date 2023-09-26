@@ -12,7 +12,6 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
@@ -21,7 +20,6 @@ import Links from "./Links";
 export default function Navbar({ superDark, setSuperDark }) {
   const { toggleColorMode, colorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
-  const router = useRouter();
 
   //ensure component is mounted before rendering theme toggling UI as the server cannot know the current theme
   useEffect(() => {
@@ -33,7 +31,7 @@ export default function Navbar({ superDark, setSuperDark }) {
   };
 
   return (
-    <Container as="nav" role="navigation" minWidth="90vw" paddingY={{ base: 10, md: 20 }}>
+    <Container as="nav" role="navigation" maxWidth={"6xl"} paddingY={{ base: 10, md: 20 }}>
       <Flex justify="space-between" align="center">
         <VStack>
           <Link href="/">
