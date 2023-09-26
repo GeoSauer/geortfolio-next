@@ -16,7 +16,6 @@ export default function Hero() {
         width={{ base: "full", md: "50vw" }}
         padding={{ md: "80px" }}
         marginX={"auto"}
-        // marginTop={"-100px"}
         textAlign={{ base: "center", md: "left" }}
       >
         <RoughNotationGroup show={true}>
@@ -54,6 +53,7 @@ export default function Hero() {
             alt="A photo of Geo"
             sizes="25vw"
             style={{ width: "50%", height: "auto" }}
+            priority
           />
         </Box>
       </Box>
