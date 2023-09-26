@@ -1,26 +1,20 @@
 import myData from "@/data";
-import {
-  Box,
-  Center,
-  Container,
-  Grid,
-  Heading,
-  Link,
-  Stack,
-  Text,
-  useStyleConfig,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Grid, Heading, Link, Text, useStyleConfig } from "@chakra-ui/react";
 
 export default function LatestCode({ repositories }) {
   return (
     <Container marginTop={-40} paddingBottom={40}>
       <Box marginX={"auto"} maxWidth={"6xl"}>
-        <Stack
+        <Flex
           direction={{ base: "column", md: "row" }}
           justify={"space-between"}
           alignItems={"center"}
         >
-          <Heading fontSize={{ base: "6xl", md: "9xl" }} textAlign={{ base: "center", md: "left" }}>
+          <Heading
+            as={"h1"}
+            fontSize={{ base: "6xl", md: "9xl" }}
+            textAlign={{ base: "center", md: "left" }}
+          >
             Latest Code
           </Heading>
           <Link
@@ -35,10 +29,13 @@ export default function LatestCode({ repositories }) {
             fontWeight={"semibold"}
             color={"gray.700"}
             alignItems={"center"}
+            _hover={{
+              textDecoration: "none",
+            }}
           >
             View Github
           </Link>
-        </Stack>
+        </Flex>
       </Box>
       <Grid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
         {repositories &&
