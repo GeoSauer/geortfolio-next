@@ -26,13 +26,13 @@ export default function Links() {
           Projects
         </Text>
       </Link>
-      <Link href="/my-story">
+      <Link href="/my-journey">
         <Text
           css={{
-            ...(router.asPath === "/my-story" && { color: "#5438DC" }),
+            ...(router.asPath === "/my-journey" && { color: "#5438DC" }),
           }}
         >
-          My Story
+          My Journey
         </Text>
       </Link>
       <Link href="/contact">
