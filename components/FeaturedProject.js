@@ -3,11 +3,8 @@ import { Box, Container, Flex, Heading, Link as ChakraLink, Grid } from "@chakra
 import Image from "next/image";
 import NextLink from "next/link";
 import React from "react";
-import avatar from "/public/avatar.png";
 
 export default function FeaturedProject() {
-  const featuredImage = myData.featuredProject.imageUrl;
-
   return (
     <Box marginTop={-40} _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
       <Container maxWidth={"6xl"} px={0}>
@@ -55,13 +52,13 @@ export default function FeaturedProject() {
               overflow={"hidden"}
               shadow={"2xl"}
               width={"full"}
-              maxHeight={"2xl"}
+              height={"55vh"}
+              objectFit={"cover"}
             >
               <Image
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
-                width={1152}
-                height={832}
+                fill
                 style={{
                   transform: "scale(1)",
                   transition: "transform 2000ms ease-out",

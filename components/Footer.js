@@ -4,8 +4,10 @@ import {
   ButtonGroup,
   Container,
   Divider,
+  Flex,
   HStack,
   IconButton,
+  Stack,
   Text,
   Tooltip,
 } from "@chakra-ui/react";
@@ -15,10 +17,21 @@ export default function Footer() {
   return (
     <Box _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
       <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} />
-      <Container as="footer" role="contentinfo" maxW={"6xl"} paddingTop={10} pb={70}>
-        <HStack justify="space-between" align="center">
+      <Container
+        as="footer"
+        role="contentinfo"
+        maxW={"6xl"}
+        paddingTop={10}
+        pb={{ base: 30, md: 70 }}
+      >
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          justify="space-between"
+          align="center"
+          spacing={6}
+        >
           <Text fontSize="sm">
-            &copy; {new Date().getFullYear()} Geo Sauer, All rights reserved.
+            &copy; {new Date().getFullYear()} Geo Sauer. All rights reserved.
           </Text>
 
           <ButtonGroup variant="solid">
@@ -50,7 +63,7 @@ export default function Footer() {
               />
             </Tooltip>
           </ButtonGroup>
-        </HStack>
+        </Stack>
       </Container>
     </Box>
   );
