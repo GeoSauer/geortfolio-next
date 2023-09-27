@@ -10,7 +10,7 @@ export default function Home({ repositories }) {
     <Layout>
       <Hero />
       <FeaturedProject />
-      {/* <LatestCode repositories={repositories} /> */}
+      <LatestCode repositories={repositories} />
     </Layout>
   );
 }

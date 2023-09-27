@@ -10,7 +10,7 @@ export default function FeaturedProject() {
 
   return (
     <Box marginTop={-40} _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
-      <Container maxWidth={"6xl"}>
+      <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
           direction={{ base: "column", md: "row" }}
@@ -47,7 +47,8 @@ export default function FeaturedProject() {
             </Box>
           </NextLink>
         </Flex>
-        <Container pb={40} px={0} maxW="6xl" mt={{ base: 4, md: 0 }}>
+
+        <Container pb={40} px={0} maxW="6xl">
           <ChakraLink href={myData.featuredProject.link} isExternal>
             <Box
               position={"relative"}
@@ -55,12 +56,12 @@ export default function FeaturedProject() {
               shadow={"2xl"}
               width={"full"}
               maxHeight={"2xl"}
-              // pt={"42.857%"}
             >
               <Image
-                src={avatar}
+                src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
-                // fill
+                width={1152}
+                height={832}
                 style={{
                   transform: "scale(1)",
                   transition: "transform 2000ms ease-out",
@@ -73,10 +74,10 @@ export default function FeaturedProject() {
                 }}
               />
               <Heading
-                as={"h1"}
+                fontSize={{ base: "2xl", md: "3xl" }}
                 position={"absolute"}
-                top={10}
-                right={10}
+                top={{ base: 5, md: 10 }}
+                right={{ base: 5, md: 10 }}
                 rounded={"md"}
                 px={2}
                 background={"blue.100"}
