@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Divider, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
@@ -17,6 +17,7 @@ export default function InternalLinks() {
           About
         </Text>
       </Link>
+      <Divider orientation="vertical" sx={{ borderWidth: "1px" }} height={4} />
       <Link href="/projects">
         <Text
           css={{
@@ -26,6 +27,7 @@ export default function InternalLinks() {
           Projects
         </Text>
       </Link>
+      <Divider orientation="vertical" sx={{ borderWidth: "1px" }} height={4} />
       <Link href="/my-journey">
         <Text
           css={{
@@ -35,6 +37,7 @@ export default function InternalLinks() {
           My Journey
         </Text>
       </Link>
+      <Divider orientation="vertical" sx={{ borderWidth: "1px" }} height={4} />
       <Link href="/contact">
         <Text
           css={{

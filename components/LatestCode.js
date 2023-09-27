@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Flex,
-  Grid,
   Heading,
   Link,
   SimpleGrid,
@@ -22,13 +21,13 @@ export default function LatestCode({ repositories }) {
           alignItems={"center"}
           paddingTop={40}
           mx={10}
-          pt={{ base: 20, md: 40 }}
+          pt={20}
         >
           <Heading
             as={"h1"}
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
-            mb={{ base: 10, md: "-50px" }}
+            mb={{ base: 10, md: "-45px" }}
           >
             <p>Latest</p>
             <p>Code</p>
