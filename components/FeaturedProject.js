@@ -1,5 +1,5 @@
 import myData from "@/data";
-import { Box, Container, Flex, Heading, Link as ChakraLink, Grid } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Link as ChakraLink, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 import React from "react";
@@ -25,6 +25,7 @@ export default function FeaturedProject() {
           >
             Featured Project
           </Heading>
+          {/* <Text>{myData.featuredProject.title}</Text> */}
 
           <NextLink href="/projects">
             <Box
@@ -45,21 +46,23 @@ export default function FeaturedProject() {
           </NextLink>
         </Flex>
 
-        <Container pb={40} px={0} maxW="6xl">
+        <Container pb={40} px={0} maxW="5xl">
           <ChakraLink href={myData.featuredProject.link} isExternal>
             <Box
               position={"relative"}
               overflow={"hidden"}
               shadow={"2xl"}
               width={"full"}
-              height={"55vh"}
-              objectFit={"cover"}
+              height={{ base: "26vh", md: "55vh" }}
+              border="10px solid black"
+              rounded={"lg"}
             >
               <Image
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
                 fill
                 style={{
+                  objectFit: "cover",
                   transform: "scale(1)",
                   transition: "transform 2000ms ease-out",
                 }}
@@ -70,18 +73,18 @@ export default function FeaturedProject() {
                   e.currentTarget.style.transform = "scale(1)";
                 }}
               />
-              <Heading
+              {/* <Heading
                 fontSize={{ base: "2xl", md: "3xl" }}
                 position={"absolute"}
                 top={{ base: 5, md: 10 }}
                 right={{ base: 5, md: 10 }}
                 rounded={"md"}
                 px={2}
-                background={"blue.100"}
+                background={"blue.300"}
                 opacity={0.9}
               >
                 {myData.featuredProject.title}
-              </Heading>
+              </Heading> */}
             </Box>
           </ChakraLink>
         </Container>

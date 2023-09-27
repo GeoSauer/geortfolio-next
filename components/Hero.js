@@ -52,8 +52,19 @@ export default function Hero() {
             src={avatar}
             alt="A photo of Geo"
             sizes="25vw"
-            style={{ width: "50%", height: "auto" }}
             priority
+            style={{
+              width: "50%",
+              height: "auto",
+              transform: "scale(1)",
+              transition: "transform 2000ms ease-out",
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.transform = "scale(1.15)";
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+            }}
           />
         </Box>
       </Box>

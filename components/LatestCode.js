@@ -53,7 +53,7 @@ export default function LatestCode({ repositories }) {
           </Link>
         </Flex>
       </Container>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8} px={10} maxWidth={"6xl"} mx={"auto"}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8} px={10} maxWidth={"5xl"} mx={"auto"}>
         {repositories &&
           repositories.map((latestRepo, idx) => (
             <GithubRepoCard key={idx} latestRepo={latestRepo} />
