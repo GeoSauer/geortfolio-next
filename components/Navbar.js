@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
-import Links from "./Links";
+import InternalLinks from "./InternalLinks";
 
 export default function Navbar({ superDark, setSuperDark }) {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -42,7 +42,7 @@ export default function Navbar({ superDark, setSuperDark }) {
 
         {/* desktop nav */}
         <HStack hideBelow={"940px"} spacing={8} fontWeight={"bold"}>
-          <Links />
+          <InternalLinks />
         </HStack>
 
         <HStack>
@@ -96,7 +96,7 @@ export default function Navbar({ superDark, setSuperDark }) {
         paddingY={2}
         fontWeight={"bold"}
       >
-        <Links />
+        <InternalLinks />
       </HStack>
     </Container>
   );

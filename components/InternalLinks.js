@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 
-export default function Links() {
+export default function InternalLinks() {
   const router = useRouter();
 
   return (

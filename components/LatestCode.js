@@ -3,8 +3,8 @@ import { Box, Container, Flex, Grid, Heading, Link, Text, useStyleConfig } from 
 
 export default function LatestCode({ repositories }) {
   return (
-    <Container marginTop={-40} paddingBottom={40}>
-      <Box marginX={"auto"} maxWidth={"6xl"}>
+    <Box marginTop={-40} paddingBottom={40}>
+      <Container maxWidth={"6xl"}>
         <Flex
           direction={{ base: "column", md: "row" }}
           justify={"space-between"}
@@ -36,14 +36,14 @@ export default function LatestCode({ repositories }) {
             View Github
           </Link>
         </Flex>
-      </Box>
+      </Container>
       <Grid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
         {repositories &&
           repositories.map((latestRepo, idx) => (
             <GithubRepoCard key={idx} latestRepo={latestRepo} />
           ))}
       </Grid>
-    </Container>
+    </Box>
   );
 }
 

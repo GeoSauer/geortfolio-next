@@ -3,14 +3,14 @@ import Hero from "@/components/Hero";
 import LatestCode from "@/components/LatestCode";
 import getLatestRepos from "@/lib/getLatestRepos";
 import myData from "@/data";
-import FavoriteProjects from "@/components/FavoriteProjects";
+import FeaturedProject from "@/components/FeaturedProject";
 
 export default function Home({ repositories }) {
   return (
     <Layout>
       <Hero />
-      <FavoriteProjects />
-      <LatestCode repositories={repositories} />
+      <FeaturedProject />
+      {/* <LatestCode repositories={repositories} /> */}
     </Layout>
   );
 }
