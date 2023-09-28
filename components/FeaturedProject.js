@@ -6,6 +6,7 @@ import {
   Heading,
   Link as ChakraLink,
   useColorModeValue,
+  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -37,7 +38,6 @@ export default function FeaturedProject() {
           >
             Featured Project:
           </Heading>
-          {/* <Text>{myData.featuredProject.title}</Text> */}
 
           <NextLink href="/projects">
             <Box
@@ -53,7 +53,15 @@ export default function FeaturedProject() {
               alignItems={"center"}
               whiteSpace={"nowrap"}
             >
-              View All &rarr;
+              <Text
+                transform={"translateX(0)"}
+                transition={"transform 0.3s ease"}
+                _hover={{
+                  transform: "translateX(2px)",
+                }}
+              >
+                View All &rarr;
+              </Text>
             </Box>
           </NextLink>
         </Flex>
@@ -87,18 +95,6 @@ export default function FeaturedProject() {
                   e.currentTarget.style.transform = "scale(1)";
                 }}
               />
-              {/* <Heading
-                fontSize={{ base: "2xl", md: "3xl" }}
-                position={"absolute"}
-                top={{ base: 5, md: 10 }}
-                right={{ base: 5, md: 10 }}
-                rounded={"md"}
-                px={2}
-                background={"blue.300"}
-                opacity={0.9}
-              >
-                {myData.featuredProject.title}
-              </Heading> */}
             </Box>
           </ChakraLink>
         </Container>

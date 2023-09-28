@@ -9,7 +9,6 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  useStyleConfig,
 } from "@chakra-ui/react";
 
 export default function LatestCode({ repositories }) {
@@ -50,11 +49,20 @@ export default function LatestCode({ repositories }) {
             fontWeight={"semibold"}
             color={"gray.700"}
             alignItems={"center"}
+            textDecoration={"none"}
             _hover={{
               textDecoration: "none",
             }}
           >
-            View Github &rarr;
+            <Text
+              transform={"translateX(0)"}
+              transition={"transform 0.3s ease"}
+              _hover={{
+                transform: "translateX(2px)",
+              }}
+            >
+              View Github &rarr;
+            </Text>
           </Link>
         </Flex>
       </Container>
@@ -69,7 +77,6 @@ export default function LatestCode({ repositories }) {
 }
 
 const GithubRepoCard = ({ latestRepo }) => {
-  const styles = useStyleConfig("TransformBox");
   const color = useColorModeValue("gray.700", "gray.100");
 
   return (
@@ -80,21 +87,17 @@ const GithubRepoCard = ({ latestRepo }) => {
       <Text color={color} _dark={{ color: "gray.600" }}>
         {latestRepo.description}
       </Text>
-      <Link href={latestRepo.clone_url} style={{ textDecoration: "none" }}>
-        <Flex dir="row" fontWeight={"bold"}>
-          <Text>View Repository</Text>
-          <Box
-            as="div"
-            className="group"
-            _hover={{
-              transform: "translateX(2px)",
-              transition: "transform 0.3s",
-            }}
-            __css={styles}
-          >
-            &rarr;
-          </Box>
-        </Flex>
+      <Link
+        href={latestRepo.clone_url}
+        textDecoration={"none"}
+        fontWeight={"bold"}
+        transform={"translateX(0)"}
+        transition={"transform 0.3s ease"}
+        _hover={{
+          transform: "translateX(2px)",
+        }}
+      >
+        View Repository &rarr;
       </Link>
     </Stack>
   );
