@@ -10,7 +10,7 @@ export default function Hero() {
   const color = useColorModeValue("gray.700");
 
   return (
-    <HStack justify={"center"} justifyItems={"start"}>
+    <HStack as={"section"} role="hero" justify={"center"} justifyItems={"start"}>
       <Flex
         direction={"column"}
         align={"stretch"}

@@ -18,7 +18,7 @@ export default function FeaturedProject() {
   const border = useColorModeValue("gray.300");
 
   return (
-    <Box marginTop={-40} bg={bg}>
+    <Box as="section" marginTop={-40} bg={bg}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
@@ -36,7 +36,7 @@ export default function FeaturedProject() {
             textAlign={{ base: "center", md: "left" }}
             mb={{ base: 10, md: "-35px" }}
           >
-            Featured Project:
+            Featured Project
           </Heading>
 
           <NextLink href="/projects">

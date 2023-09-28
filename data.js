@@ -29,10 +29,11 @@ const myData = {
     },
   ],
   about: {
-    title: "TBD",
-    desc: [`Like this`, `for`, `line breaks`],
-    currentProject: "TBD",
-    currentProjectUrl: "TBD",
+    title:
+      "I'm a software engineer that loves building responsive and accessible web-based products with clean, verbose code.",
+    desc: [`Lifelong learner`, `decision to pursue code`, `code life stuff`],
+    currentProject: "this very portfolio!",
+    currentProjectUrl: "https://github.com/GeoSauer/geortfolio-next",
   },
   experience: [{ title: "", company: "", year: "", companyUrl: "", desc: "" }],
   resumeUrl: "",

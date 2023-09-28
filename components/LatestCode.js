@@ -13,9 +13,10 @@ import {
 
 export default function LatestCode({ repositories }) {
   const color = useColorModeValue("white", "gray.500");
+  const bg = useColorModeValue("gray.100", "gray.900");
 
   return (
-    <Box marginTop={-40} paddingBottom={40} _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
+    <Box as="section" marginTop={-40} paddingBottom={40} bg={bg}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
