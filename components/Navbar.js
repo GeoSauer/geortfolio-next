@@ -13,11 +13,12 @@ import {
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 import InternalLinks from "./InternalLinks";
+import CustomLink from "./CustomLink";
+import Link from "next/link";
 
 export default function Navbar({ superDark, setSuperDark }) {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -35,7 +36,15 @@ export default function Navbar({ superDark, setSuperDark }) {
   return (
     <Container as="nav" role="navigation" maxWidth={"6xl"} paddingY={{ base: 10, md: 20 }}>
       <Flex justify="space-between" align="center">
-        <VStack>
+        <VStack
+          css={{
+            transform: "translateY(0)",
+            transition: "transform 0.3s ease",
+          }}
+          _hover={{
+            transform: "translateY(-5px)",
+          }}
+        >
           <Link href="/">
             <Heading size={"md"}>{myData.name}</Heading>
             <Text color={color}>{myData.designation}</Text>
@@ -43,7 +52,7 @@ export default function Navbar({ superDark, setSuperDark }) {
         </VStack>
 
         {/* desktop nav */}
-        <HStack hideBelow={"940px"} spacing={8} fontWeight={"bold"}>
+        <HStack hideBelow={"940px"} fontWeight={"bold"}>
           <InternalLinks />
         </HStack>
 

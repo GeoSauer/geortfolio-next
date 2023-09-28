@@ -5,6 +5,7 @@ const myData = {
   avatarUrl: "/avatar.png",
   email: "geosauer89@gmail.com",
   address: "Loveland, Colorado, USA",
+  colors: ["#F4743B", "#55c1FF", "#5438DC", "#32E875"],
   featuredProject: {
     title: "Grimoire for the Modern Mage",
     link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",

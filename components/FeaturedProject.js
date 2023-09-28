@@ -78,7 +78,7 @@ export default function FeaturedProject() {
                   marginTop: "-1px",
                   objectFit: "cover",
                   transform: "scale(1)",
-                  transition: "transform 2000ms ease-out",
+                  transition: "transform 2s ease-out",
                 }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = "scale(1.25)";
