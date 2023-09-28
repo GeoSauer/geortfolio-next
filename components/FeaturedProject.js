@@ -6,6 +6,7 @@ import {
   Heading,
   Link as ChakraLink,
   useColorModeValue,
+  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -17,14 +18,14 @@ export default function FeaturedProject() {
   const border = useColorModeValue("gray.300");
 
   return (
-    <Box marginTop={-40} bg={bg}>
+    <Box as="section" marginTop={-40} bg={bg}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
           direction={{ base: "column", md: "row" }}
           justify={"space-between"}
           alignItems={"center"}
-          paddingTop={40}
+          paddingTop={60}
           mx={10}
           my={{ md: 20, lg: 0 }}
         >
@@ -33,11 +34,10 @@ export default function FeaturedProject() {
             color={color}
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
-            mb={{ base: 20, md: "-35px" }}
+            mb={{ base: 10, md: "-35px" }}
           >
-            Featured Project:
+            Featured Project
           </Heading>
-          {/* <Text>{myData.featuredProject.title}</Text> */}
 
           <NextLink href="/projects">
             <Box
@@ -53,7 +53,15 @@ export default function FeaturedProject() {
               alignItems={"center"}
               whiteSpace={"nowrap"}
             >
-              View All &rarr;
+              <Text
+                transform={"translateX(0)"}
+                transition={"transform 0.3s ease"}
+                _hover={{
+                  transform: "translateX(2px)",
+                }}
+              >
+                View All &rarr;
+              </Text>
             </Box>
           </NextLink>
         </Flex>
@@ -78,7 +86,7 @@ export default function FeaturedProject() {
                   marginTop: "-1px",
                   objectFit: "cover",
                   transform: "scale(1)",
-                  transition: "transform 2000ms ease-out",
+                  transition: "transform 2s ease-out",
                 }}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = "scale(1.25)";
@@ -87,18 +95,6 @@ export default function FeaturedProject() {
                   e.currentTarget.style.transform = "scale(1)";
                 }}
               />
-              {/* <Heading
-                fontSize={{ base: "2xl", md: "3xl" }}
-                position={"absolute"}
-                top={{ base: 5, md: 10 }}
-                right={{ base: 5, md: 10 }}
-                rounded={"md"}
-                px={2}
-                background={"blue.300"}
-                opacity={0.9}
-              >
-                {myData.featuredProject.title}
-              </Heading> */}
             </Box>
           </ChakraLink>
         </Container>

@@ -9,14 +9,14 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  useStyleConfig,
 } from "@chakra-ui/react";
 
 export default function LatestCode({ repositories }) {
   const color = useColorModeValue("white", "gray.500");
+  const bg = useColorModeValue("gray.100", "gray.900");
 
   return (
-    <Box marginTop={-40} paddingBottom={40} _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
+    <Box as="section" marginTop={-40} paddingBottom={40} bg={bg}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
@@ -50,15 +50,24 @@ export default function LatestCode({ repositories }) {
             fontWeight={"semibold"}
             color={"gray.700"}
             alignItems={"center"}
+            textDecoration={"none"}
             _hover={{
               textDecoration: "none",
             }}
           >
-            View Github &rarr;
+            <Text
+              transform={"translateX(0)"}
+              transition={"transform 0.3s ease"}
+              _hover={{
+                transform: "translateX(2px)",
+              }}
+            >
+              View Github &rarr;
+            </Text>
           </Link>
         </Flex>
       </Container>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8} px={10} maxWidth={"5xl"} mx={"auto"}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={20} px={10} maxWidth={"5xl"} mx={"auto"}>
         {repositories &&
           repositories.map((latestRepo, idx) => (
             <GithubRepoCard key={idx} latestRepo={latestRepo} />
@@ -69,7 +78,6 @@ export default function LatestCode({ repositories }) {
 }
 
 const GithubRepoCard = ({ latestRepo }) => {
-  const styles = useStyleConfig("TransformBox");
   const color = useColorModeValue("gray.700", "gray.100");
 
   return (
@@ -80,21 +88,17 @@ const GithubRepoCard = ({ latestRepo }) => {
       <Text color={color} _dark={{ color: "gray.600" }}>
         {latestRepo.description}
       </Text>
-      <Link href={latestRepo.clone_url} style={{ textDecoration: "none" }}>
-        <Flex dir="row" fontWeight={"bold"}>
-          <Text>View Repository</Text>
-          <Box
-            as="div"
-            className="group"
-            _hover={{
-              transform: "translateX(2px)",
-              transition: "transform 0.3s",
-            }}
-            __css={styles}
-          >
-            &rarr;
-          </Box>
-        </Flex>
+      <Link
+        href={latestRepo.clone_url}
+        textDecoration={"none"}
+        fontWeight={"bold"}
+        transform={"translateX(0)"}
+        transition={"transform 0.3s ease"}
+        _hover={{
+          transform: "translateX(2px)",
+        }}
+      >
+        View Repository &rarr;
       </Link>
     </Stack>
   );
