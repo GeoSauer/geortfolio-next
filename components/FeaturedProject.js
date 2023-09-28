@@ -24,7 +24,7 @@ export default function FeaturedProject() {
           direction={{ base: "column", md: "row" }}
           justify={"space-between"}
           alignItems={"center"}
-          paddingTop={40}
+          paddingTop={60}
           mx={10}
           my={{ md: 20, lg: 0 }}
         >
@@ -33,7 +33,7 @@ export default function FeaturedProject() {
             color={color}
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
-            mb={{ base: 20, md: "-35px" }}
+            mb={{ base: 10, md: "-35px" }}
           >
             Featured Project:
           </Heading>
