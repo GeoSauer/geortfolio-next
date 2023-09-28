@@ -6,11 +6,15 @@ import {
   Heading,
   Link,
   SimpleGrid,
+  Stack,
   Text,
+  useColorModeValue,
   useStyleConfig,
 } from "@chakra-ui/react";
 
 export default function LatestCode({ repositories }) {
+  const color = useColorModeValue("white", "gray.500");
+
   return (
     <Box marginTop={-40} paddingBottom={40} _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
       <Container maxWidth={"6xl"} px={0}>
@@ -25,6 +29,7 @@ export default function LatestCode({ repositories }) {
         >
           <Heading
             as={"h1"}
+            color={color}
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
             mb={{ base: 10, md: "-45px" }}
@@ -65,25 +70,32 @@ export default function LatestCode({ repositories }) {
 
 const GithubRepoCard = ({ latestRepo }) => {
   const styles = useStyleConfig("TransformBox");
+  const color = useColorModeValue("gray.700", "gray.100");
 
   return (
-    <Box>
-      <Heading fontSize={"xl"}>{latestRepo.name}</Heading>
-      <Text>{latestRepo.description}</Text>
-      <Link href={latestRepo.clone_url}>
-        <Text>View Repository</Text>
-        <Box
-          as="div"
-          className="group"
-          _hover={{
-            transform: "translateX(2px)",
-            transition: "transform 0.3s",
-          }}
-          __css={styles}
-        >
-          &rarr;
-        </Box>
+    <Stack>
+      <Heading fontSize={"xl"} color={color}>
+        {latestRepo.name}
+      </Heading>
+      <Text color={color} _dark={{ color: "gray.600" }}>
+        {latestRepo.description}
+      </Text>
+      <Link href={latestRepo.clone_url} style={{ textDecoration: "none" }}>
+        <Flex dir="row" fontWeight={"bold"}>
+          <Text>View Repository</Text>
+          <Box
+            as="div"
+            className="group"
+            _hover={{
+              transform: "translateX(2px)",
+              transition: "transform 0.3s",
+            }}
+            __css={styles}
+          >
+            &rarr;
+          </Box>
+        </Flex>
       </Link>
-    </Box>
+    </Stack>
   );
 };

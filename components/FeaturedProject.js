@@ -1,12 +1,23 @@
 import myData from "@/data";
-import { Box, Container, Flex, Heading, Link as ChakraLink, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Link as ChakraLink,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 import React from "react";
 
 export default function FeaturedProject() {
+  const color = useColorModeValue("white", "gray.500");
+  const bg = useColorModeValue("gray.100", "gray.900");
+  const border = useColorModeValue("gray.300");
+
   return (
-    <Box marginTop={-40} _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
+    <Box marginTop={-40} bg={bg}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
@@ -19,11 +30,12 @@ export default function FeaturedProject() {
         >
           <Heading
             as={"h1"}
+            color={color}
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
-            mb={{ base: 20, md: "-15px" }}
+            mb={{ base: 20, md: "-35px" }}
           >
-            Featured Project
+            Featured Project:
           </Heading>
           {/* <Text>{myData.featuredProject.title}</Text> */}
 
@@ -55,6 +67,7 @@ export default function FeaturedProject() {
               width={"full"}
               height={{ base: "26vh", md: "55vh" }}
               border="10px solid black"
+              borderColor={border}
               rounded={"lg"}
             >
               <Image
@@ -62,6 +75,7 @@ export default function FeaturedProject() {
                 alt={myData.featuredProject.title}
                 fill
                 style={{
+                  marginTop: "-1px",
                   objectFit: "cover",
                   transform: "scale(1)",
                   transition: "transform 2000ms ease-out",

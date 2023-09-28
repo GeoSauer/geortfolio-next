@@ -10,10 +10,13 @@ import {
   Stack,
   Text,
   Tooltip,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { FaLinkedin, FaGithubAlt, FaEye } from "react-icons/fa";
 
 export default function Footer() {
+  const color = useColorModeValue("gray.500", "gray.300");
+
   return (
     <Box _dark={{ backgroundColor: "gray.900" }} bg={"gray.100"}>
       <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} />
@@ -37,6 +40,7 @@ export default function Footer() {
           <ButtonGroup variant="solid">
             <Tooltip label="LinkedIn">
               <IconButton
+                color={color}
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -46,6 +50,7 @@ export default function Footer() {
             </Tooltip>
             <Tooltip label="GitHub">
               <IconButton
+                color={color}
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"
@@ -55,6 +60,7 @@ export default function Footer() {
             </Tooltip>
             <Tooltip label="Portfolio">
               <IconButton
+                color={color}
                 as="a"
                 href={myData.socialUrls.portfolio}
                 aria-label="Portfolio"

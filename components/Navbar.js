@@ -10,6 +10,8 @@ import {
   useColorMode,
   Flex,
   Tooltip,
+  Stack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -20,8 +22,8 @@ import InternalLinks from "./InternalLinks";
 export default function Navbar({ superDark, setSuperDark }) {
   const { toggleColorMode, colorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
+  const color = useColorModeValue("gray.500", "gray.300");
 
-  //ensure component is mounted before rendering theme toggling UI as the server cannot know the current theme
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -36,7 +38,7 @@ export default function Navbar({ superDark, setSuperDark }) {
         <VStack>
           <Link href="/">
             <Heading size={"md"}>{myData.name}</Heading>
-            <Text>{myData.designation}</Text>
+            <Text color={color}>{myData.designation}</Text>
           </Link>
         </VStack>
 
@@ -45,10 +47,11 @@ export default function Navbar({ superDark, setSuperDark }) {
           <InternalLinks />
         </HStack>
 
-        <HStack>
+        <Stack direction={{ base: "column", md: "row" }}>
           <ButtonGroup variant="solid">
             <Tooltip label="LinkedIn">
               <IconButton
+                color={color}
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -58,6 +61,7 @@ export default function Navbar({ superDark, setSuperDark }) {
             </Tooltip>
             <Tooltip label="GitHub">
               <IconButton
+                color={color}
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"
@@ -67,6 +71,7 @@ export default function Navbar({ superDark, setSuperDark }) {
             </Tooltip>
             <Tooltip label="Portfolio">
               <IconButton
+                color={color}
                 as="a"
                 href={myData.socialUrls.portfolio}
                 aria-label="Portfolio"
@@ -74,18 +79,30 @@ export default function Navbar({ superDark, setSuperDark }) {
                 icon={<FaEye />}
               />
             </Tooltip>
+          </ButtonGroup>
+          <ButtonGroup variant="solid" justifyContent={"end"}>
             <Tooltip label={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}>
-              <IconButton as="button" aria-label="Color Mode" onClick={toggleColorMode}>
+              <IconButton
+                as="button"
+                aria-label="Color Mode"
+                onClick={toggleColorMode}
+                color={color}
+              >
                 {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
               </IconButton>
             </Tooltip>
             <Tooltip label="Toggle Super Dark Mode">
-              <IconButton as="button" aria-label="Super Dark Mode" onClick={toggleSuperDarkMode}>
+              <IconButton
+                as="button"
+                aria-label="Super Dark Mode"
+                onClick={toggleSuperDarkMode}
+                color={color}
+              >
                 {mounted && superDark ? <MdFlashlightOff /> : <MdFlashlightOn />}
               </IconButton>
             </Tooltip>
           </ButtonGroup>
-        </HStack>
+        </Stack>
       </Flex>
 
       {/* mobile nav */}
@@ -93,7 +110,7 @@ export default function Navbar({ superDark, setSuperDark }) {
         hideFrom={"941px"}
         justify={"space-evenly"}
         maxWidth={"90vw"}
-        paddingY={2}
+        pt={6}
         fontWeight={"bold"}
       >
         <InternalLinks />
