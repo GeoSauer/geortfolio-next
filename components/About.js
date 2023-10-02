@@ -2,7 +2,6 @@ import myData from "@/data";
 import {
   Box,
   Container,
-  Divider,
   Heading,
   Link,
   SimpleGrid,

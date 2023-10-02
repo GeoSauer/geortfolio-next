@@ -8,6 +8,7 @@ import myData from "@/data";
 
 export default function Hero() {
   const color = useColorModeValue("gray.700");
+  const headingStyles = { fontSize: { base: "4xl", md: "80px" }, marginY: { md: -3 } };
 
   return (
     <HStack as={"section"} role="hero" justify={"center"} justifyItems={"start"}>
@@ -24,24 +25,16 @@ export default function Hero() {
       >
         <RoughNotationGroup show={true}>
           <RainbowHighlight color={myData.colors[0]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Engineer.
-            </Heading>
+            <Heading sx={headingStyles}>Engineer.</Heading>
           </RainbowHighlight>
           <RainbowHighlight color={myData.colors[1]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Sculptor.
-            </Heading>
+            <Heading sx={headingStyles}>Sculptor.</Heading>
           </RainbowHighlight>
           <RainbowHighlight color={myData.colors[2]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Maker.
-            </Heading>
+            <Heading sx={headingStyles}>Maker.</Heading>
           </RainbowHighlight>
           <RainbowHighlight color={myData.colors[3]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Nerd.
-            </Heading>
+            <Heading sx={headingStyles}>Nerd.</Heading>
           </RainbowHighlight>
         </RoughNotationGroup>
       </Flex>

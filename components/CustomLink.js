@@ -17,12 +17,11 @@ export default function CustomLink({ href, activeColor, children }) {
           transition: "color 0.3s ease, transform 0.3s ease",
           ...(router.asPath === href && {
             color: activeColor,
-            transform: "translateY(-5px)",
           }),
         }}
         _hover={{
           color: activeColor,
-          transform: "translateY(-5px)",
+          transform: "translateY(-3px)",
         }}
       >
         {children}
