@@ -24,18 +24,11 @@ export default function Hero() {
         color={color}
       >
         <RoughNotationGroup show={true}>
-          <RainbowHighlight color={myData.colors[0]}>
-            <Heading sx={headingStyles}>Engineer.</Heading>
-          </RainbowHighlight>
-          <RainbowHighlight color={myData.colors[1]}>
-            <Heading sx={headingStyles}>Sculptor.</Heading>
-          </RainbowHighlight>
-          <RainbowHighlight color={myData.colors[2]}>
-            <Heading sx={headingStyles}>Maker.</Heading>
-          </RainbowHighlight>
-          <RainbowHighlight color={myData.colors[3]}>
-            <Heading sx={headingStyles}>Nerd.</Heading>
-          </RainbowHighlight>
+          {myData.descriptors?.map((text, idx) => (
+            <RainbowHighlight key={idx} color={myData.colors[idx]}>
+              <Heading sx={headingStyles}>{text}</Heading>
+            </RainbowHighlight>
+          ))}
         </RoughNotationGroup>
       </Flex>
 
