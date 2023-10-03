@@ -6,7 +6,7 @@ export default function PageBody({ children }) {
 
   return (
     <Box bg={bg} mt={{ base: -20, md: -5 }}>
-      <Container maxWidth={"6xl"} pt={20}>
+      <Container maxWidth={"6xl"} pt={20} px={0}>
         {children}
       </Container>
     </Box>

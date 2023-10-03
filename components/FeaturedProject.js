@@ -15,7 +15,6 @@ import React from "react";
 export default function FeaturedProject() {
   const color = useColorModeValue("white", "gray.500");
   const bg = useColorModeValue("gray.100", "gray.900");
-  const border = useColorModeValue("gray.300");
 
   return (
     <Box as="section" marginTop={-40} bg={bg}>
@@ -74,9 +73,7 @@ export default function FeaturedProject() {
               shadow={"2xl"}
               width={"full"}
               height={{ base: "26vh", md: "55vh" }}
-              border="10px solid black"
-              borderColor={border}
-              rounded={"lg"}
+              rounded={{ md: "lg" }}
             >
               <Image
                 src={myData.featuredProject.imageUrl}

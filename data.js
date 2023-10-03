@@ -28,6 +28,21 @@ const myData = {
       link: "https://github.com/GeoSauer/carpe-dnDiem",
       imageUrl: "/avatar.png",
     },
+    {
+      title: "Grimoire for the Modern Mage",
+      link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
+      imageUrl: "/avatar.png",
+    },
+    {
+      title: "Geortfolio",
+      link: "https://github.com/GeoSauer/geortfolio-next",
+      imageUrl: "/avatar.png",
+    },
+    {
+      title: "Carpe DnDiem",
+      link: "https://github.com/GeoSauer/carpe-dnDiem",
+      imageUrl: "/avatar.png",
+    },
   ],
   about: {
     title:
