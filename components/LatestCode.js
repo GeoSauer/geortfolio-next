@@ -4,7 +4,7 @@ import {
   Container,
   Flex,
   Heading,
-  Link,
+  Link as ChakraLink,
   SimpleGrid,
   Stack,
   Text,
@@ -38,7 +38,7 @@ export default function LatestCode({ repositories }) {
             <p>Code</p>
           </Heading>
 
-          <Link
+          <ChakraLink
             href={`https://github.com/${myData.githubUsername}`}
             marginBottom={{ base: 20, md: 0 }}
             px={8}
@@ -64,7 +64,7 @@ export default function LatestCode({ repositories }) {
             >
               View Github &rarr;
             </Text>
-          </Link>
+          </ChakraLink>
         </Flex>
       </Container>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={20} px={10} maxWidth={"5xl"} mx={"auto"}>
@@ -88,7 +88,7 @@ const GithubRepoCard = ({ latestRepo }) => {
       <Text color={color} _dark={{ color: "gray.600" }}>
         {latestRepo.description}
       </Text>
-      <Link
+      <ChakraLink
         href={latestRepo.clone_url}
         textDecoration={"none"}
         fontWeight={"bold"}
@@ -99,7 +99,7 @@ const GithubRepoCard = ({ latestRepo }) => {
         }}
       >
         View Repository &rarr;
-      </Link>
+      </ChakraLink>
     </Stack>
   );
 };

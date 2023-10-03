@@ -1,5 +1,5 @@
 import myData from "@/data";
-import { Container, Link, SimpleGrid, Text } from "@chakra-ui/react";
+import { Container, Link as ChakraLink, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import { RainbowUnderline } from "./RainbowUnderline";
 import { RoughNotationGroup } from "react-rough-notation";
@@ -13,9 +13,14 @@ export default function About() {
       <PageHeading>About me.</PageHeading>
 
       <PageBody>
-        <Text as={"p"} fontSize={{ base: "3xl", md: "4xl" }} fontWeight={"semibold"}>
+        <Text
+          as={"p"}
+          fontSize={{ base: "3xl", md: "4xl" }}
+          fontWeight={"semibold"}
+          px={{ base: 8, md: 0 }}
+        >
           {myData.about.title} Currently working on{" "}
-          <Link
+          <ChakraLink
             _hover={{
               textDecoration: "none",
             }}
@@ -25,7 +30,7 @@ export default function About() {
                 {myData.about.currentProject}
               </RainbowUnderline>
             </RoughNotationGroup>
-          </Link>
+          </ChakraLink>
         </Text>
 
         <Container maxWidth={"5xl"} pt={20}>
