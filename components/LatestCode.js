@@ -40,6 +40,7 @@ export default function LatestCode({ repositories }) {
 
           <ChakraLink
             href={`https://github.com/${myData.githubUsername}`}
+            isExternal
             marginBottom={{ base: 20, md: 0 }}
             px={8}
             py={4}
@@ -90,6 +91,7 @@ const GithubRepoCard = ({ latestRepo }) => {
       </Text>
       <ChakraLink
         href={latestRepo.clone_url}
+        isExternal
         textDecoration={"none"}
         fontWeight={"bold"}
         transform={"translateX(0)"}
