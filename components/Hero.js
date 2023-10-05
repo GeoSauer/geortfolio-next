@@ -8,20 +8,19 @@ import myData from "@/data";
 
 export default function Hero() {
   const color = useColorModeValue("gray.700");
-  const headingStyles = { fontSize: { base: "4xl", md: "80px" }, marginY: { md: -3 } };
+  const headingStyles = { fontSize: { base: "4xl", md: "8xl" } };
 
   return (
-    <HStack as={"section"} role="hero" justify={"center"} justifyItems={"start"}>
+    <HStack as={"section"} role="hero" justify={"center"} align={"start"} overflow={"hidden"}>
       <Flex
         direction={"column"}
-        align={"stretch"}
-        width={{ base: "full", md: "50vw" }}
-        padding={{ md: "50px" }}
-        px={{ md: "150px" }}
-        pb={{ md: "280px" }}
+        width={{ base: "full", md: "60vw" }}
         marginX={"auto"}
+        align={"stretch"}
         textAlign={{ base: "center", md: "left" }}
         color={color}
+        p={{ md: 20 }}
+        mx={{ md: 20 }}
       >
         <RoughNotationGroup show={true}>
           {myData.descriptors?.map((text, idx) => (
@@ -34,8 +33,10 @@ export default function Hero() {
 
       <Box
         display={{ base: "none", md: "block" }}
-        width={{ md: "42vw" }}
-        marginRight={"70px"}
+        width={"40vw"}
+        maxW={"xl"}
+        mr={8}
+        position={"relative"}
         marginTop={20}
       >
         <Image
