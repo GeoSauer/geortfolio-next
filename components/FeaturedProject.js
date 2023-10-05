@@ -72,13 +72,14 @@ export default function FeaturedProject() {
               overflow={"hidden"}
               shadow={"2xl"}
               width={"full"}
-              height={{ base: "26vh", md: "55vh" }}
+              height={{ base: "26vh", md: "xl" }}
               rounded={{ md: "lg" }}
             >
               <Image
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 85vw"
                 style={{
                   marginTop: "-1px",
                   objectFit: "cover",

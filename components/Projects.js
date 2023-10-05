@@ -20,7 +20,7 @@ export default function Projects() {
                   overflow={"hidden"}
                   shadow={"2xl"}
                   width={"full"}
-                  height={{ base: "27vh", md: "xs" }}
+                  height={{ base: "26vh", md: "xs" }}
                   rounded={{ md: "lg" }}
                 >
                   <Image
