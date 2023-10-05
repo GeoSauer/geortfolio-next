@@ -134,7 +134,97 @@ const myData = {
       },
     ],
   },
-  experience: [{ title: "", company: "", year: "", companyUrl: "", desc: "" }],
+  experience: [
+    {
+      title: "Founder and Developer",
+      company: "SauerPauerStudio",
+      year: "2023",
+      companyUrl: "https://www.geosauer.com/",
+      desc: [
+        "Freelance web developer helping indie authors build their brand and expand their online presence.",
+      ],
+    },
+    {
+      title: "Founder and Developer",
+      company: "Grimoire for the Modern Mage",
+      year: "2023",
+      companyUrl: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
+      desc: [
+        "Engaged with 3 tabletop gaming groups to conduct needs assessments and recognized a common challenge: inadequate space on their spell sheets and the necessity for an additional resource to access spell information.",
+        "Designed a character creation UI with React and Chakra UI that allows users to create a profile to save multiple D&D characters stored on a PostgreSQL database.",
+        "Developed a custom and fully tested RESTful API using Node, Express, and PostgreSQL that allows users to maintain characters, automatically update character stats on level-up, accurately track spell lists and spell slots, and easily access detailed spell information.",
+      ],
+    },
+    {
+      title: "Coax Splicing Foreman",
+      company: "Sage Telecommunications Corp",
+      year: "2022",
+      companyUrl: "https://www.sagecom.net/",
+      desc: [
+        "Attained the position of foreman in just 6 months, overseeing 4+ multi-department crews on intricate infrastructure projects, and adeptly managing on-the-fly design changes.",
+        "Boosted production by 150% and reduced customer downtime by 80% by creating an optimized strategy for our most frequent job type, contributing to the generation of $1.2 million in value for the company.",
+        "Rebuilt and revitalized inter-departmental company relationships, leading to a significant increase in client trust and satisfaction.",
+      ],
+    },
+    {
+      title: "Lead TIG Welder",
+      company: "Rocky Mountain Bronze Shop",
+      year: "2020",
+      companyUrl: "https://www.rockymountainbronze.com/index.php",
+      desc: [
+        "Learned TIG welding on-the-fly to keep production schedule on track.",
+        "Worked closely with around a dozen clients though all stages of production.",
+      ],
+    },
+    {
+      title: "Barbarian",
+      company: "Knights of the Tempest",
+      year: "2019",
+      companyUrl: "https://www.geosauer.com/",
+      desc: [
+        "Catching me running around in a kilt swinging my seax at Northern Colorado Medieval Festivals.",
+      ],
+    },
+    {
+      title: "Manager",
+      company: "D.P. Dough",
+      year: "2015",
+      companyUrl: "https://www.dpdough.com/",
+      desc: ["Worked my way through college slinging calzones and managing a team of rascals."],
+    },
+    {
+      title: "BFA",
+      company: "University of Northern Colorado",
+      year: "2015",
+      companyUrl: "https://www.unco.edu/",
+      desc: [
+        "Studied Fine Art with an emphasis on bronze sculpture.",
+        "Graduated cum laude with a 3.7 GPA.",
+        "Community Foundation Grant recipient, awarded $3000 (roughly 1/3 of the total grant pool) for home studio equipment.",
+      ],
+    },
+    {
+      title: "AA",
+      company: "Aims Community College",
+      year: "2011",
+      companyUrl: "https://www.aims.edu/",
+      desc: [
+        "Continued studying both Art and Technology with classes ranging from Ceramics and Digital Photography to 3-D Modeling.",
+        "Volunteered with Aims GSA (Gay Straight Alliance).",
+      ],
+    },
+    {
+      title: "High School",
+      company: "Roosevelt High School",
+      year: "2008",
+      companyUrl: "https://www.weldre5j.k12.co.us/roosevelt",
+      desc: [
+        "Graduated with honors.",
+        "Allotted all of my elective credits to Art and Technology classes.",
+        "Scholastic Art & Writing Awards recipient for sculpture, Gold Key in Colorado, Silver Key in Nationals.",
+      ],
+    },
+  ],
   resumeUrl: "",
   socialUrls: {
     linkedIn: "https://www.linkedin.com/in/geosauer/",

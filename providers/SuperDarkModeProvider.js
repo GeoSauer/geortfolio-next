@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/react";
 
 const { createContext, useState, useContext } = require("react");
-
 const SuperDarkModeContext = createContext();
 
 export default function SuperDarkModeProvider({ children }) {
@@ -37,7 +36,7 @@ export default function SuperDarkModeProvider({ children }) {
               position: "fixed",
               pointerEvents: "none",
               background: `radial-gradient(
-              circle 10vmax at var(--cursorX) var(--cursorY),
+              circle 15vmax at var(--cursorX) var(--cursorY),
               rgba(0, 0, 0, 0) 0%,
               rgba(0, 0, 0, 0.5) 80%,
               rgba(0, 0, 0, 0.95) 100%
