@@ -11,7 +11,7 @@ export default function InternalLinks() {
   };
 
   return (
-    <HStack>
+    <HStack justify={"space-evenly"} fontWeight={"bold"}>
       <CustomLink href="/about" activeColor={myData.colors[0]}>
         About
       </CustomLink>
