@@ -141,7 +141,7 @@ const myData = {
       year: "2023",
       companyUrl: "https://www.geosauer.com/",
       desc: [
-        "Freelance web developer helping indie authors build their brand and expand their online presence.",
+        "Freelance web developer helping indie authors and other members of my community build their brand and expand their online presence.",
       ],
     },
     {
@@ -153,6 +153,16 @@ const myData = {
         "Engaged with 3 tabletop gaming groups to conduct needs assessments and recognized a common challenge: inadequate space on their spell sheets and the necessity for an additional resource to access spell information.",
         "Designed a character creation UI with React and Chakra UI that allows users to create a profile to save multiple D&D characters stored on a PostgreSQL database.",
         "Developed a custom and fully tested RESTful API using Node, Express, and PostgreSQL that allows users to maintain characters, automatically update character stats on level-up, accurately track spell lists and spell slots, and easily access detailed spell information.",
+      ],
+    },
+    {
+      title: "Full Stack Software Engineer Training",
+      company: "Alchemy Code Lab",
+      year: "2023",
+      companyUrl: "https://alchemycodelab.com/",
+      desc: [
+        "Completed 600+ hours of immersive full-time training in the PERN stack.",
+        "Collaborated remotely with teams of 4-6 to rapidly ideate and develop apps.",
       ],
     },
     {
@@ -172,17 +182,17 @@ const myData = {
       year: "2020",
       companyUrl: "https://www.rockymountainbronze.com/index.php",
       desc: [
-        "Learned TIG welding on-the-fly to keep production schedule on track.",
-        "Worked closely with around a dozen clients though all stages of production.",
+        "Ensured production timeline was maintained and advanced to the role of lead TIG welder through focused self-guided learning.",
+        "Maintained continuous communication with 10+ clients throughout the entire production process, from raw metal to the final patina, ensuring the realization of their creative vision while adhering to their precise standards.",
       ],
     },
     {
       title: "Barbarian",
       company: "Knights of the Tempest",
       year: "2019",
-      companyUrl: "https://www.geosauer.com/",
+      companyUrl: "",
       desc: [
-        "Catching me running around in a kilt swinging my seax at Northern Colorado Medieval Festivals.",
+        "Catch me running around in a kilt swinging my seax at Northern Colorado Medieval Festivals.",
       ],
     },
     {
@@ -200,6 +210,7 @@ const myData = {
       desc: [
         "Studied Fine Art with an emphasis on bronze sculpture.",
         "Graduated cum laude with a 3.7 GPA.",
+        "My sculpture, 'Blue Collar Jetpack', was purchased by the Dean and added to the University's permanent collection.",
         "Community Foundation Grant recipient, awarded $3000 (roughly 1/3 of the total grant pool) for home studio equipment.",
       ],
     },

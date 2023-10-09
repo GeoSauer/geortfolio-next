@@ -3,7 +3,6 @@ import PageHeading from "./PageHeading";
 import PageBody from "./PageBody";
 import { Box, Link as ChakraLink, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import myData from "@/data";
-import { color } from "framer-motion";
 
 export default function MyJourney() {
   return (
@@ -17,30 +16,13 @@ export default function MyJourney() {
                 title={exp.title}
                 company={exp.company}
                 year={exp.year}
-                companyUrl={exp.companyUrl}
+                companyUrl={exp.companyUrl ? exp.companyUrl : null}
                 desc={exp.desc}
               />
               {idx === myData.experience.length - 1 ? null : (
                 <Flex direction={"column"} alignItems={"center"} my={-2}>
-                  {/* <Box
-                    w={4}
-                    h={4}
-                    bg={myData.colors[2]}
-                    rounded={"full"}
-                    position={"relative"}
-                    zIndex={10}
-                  >
-                    <Box
-                      w={4}
-                      h={4}
-                      bg={myData.colors[2]}
-                      rounded={"full"}
-                      position={"relative"}
-                      animation={"ping 1s ease-in-out infinite"}
-                      zIndex={10}
-                    /> */}
-                  <Box w={1} h={24} rounded={"none"} bg={"gray.200"} />
-                  {/* </Box> */}
+                  <Box w={4} h={4} bg={myData.colors[2]} rounded={"full"} zIndex={10} mt={-2} />
+                  <Box w={1} h={24} rounded={"none"} bg={myData.colors[2]} />
                 </Flex>
               )}
             </Fragment>
@@ -80,7 +62,12 @@ const JourneyCard = ({ title, company, year, companyUrl, desc }) => {
       <Text as={"h2"} fontWeight={"semibold"} fontSize={"xl"}>
         {title}
       </Text>
-      <ChakraLink href={companyUrl} isExternal color={"gray.500"}>
+      <ChakraLink
+        href={companyUrl}
+        isExternal
+        color={"gray.500"}
+        _hover={{ textDecoration: "none" }}
+      >
         {company}
       </ChakraLink>
       {desc.map((line, idx) => (
