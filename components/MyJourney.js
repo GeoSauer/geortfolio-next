@@ -3,6 +3,7 @@ import PageHeading from "./PageHeading";
 import PageBody from "./PageBody";
 import { Box, Link as ChakraLink, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import myData from "@/data";
+import { color } from "framer-motion";
 
 export default function MyJourney() {
   return (
@@ -20,8 +21,8 @@ export default function MyJourney() {
                 desc={exp.desc}
               />
               {idx === myData.experience.length - 1 ? null : (
-                <Flex direction={"column"} alignItems={"center"} mt={-2}>
-                  <Box
+                <Flex direction={"column"} alignItems={"center"} my={-2}>
+                  {/* <Box
                     w={4}
                     h={4}
                     bg={myData.colors[2]}
@@ -37,9 +38,9 @@ export default function MyJourney() {
                       position={"relative"}
                       animation={"ping 1s ease-in-out infinite"}
                       zIndex={10}
-                    />
-                    <Box w={1} h={24} rounded={"full"} bg={"gray.200"} />
-                  </Box>
+                    /> */}
+                  <Box w={1} h={24} rounded={"none"} bg={"gray.200"} />
+                  {/* </Box> */}
                 </Flex>
               )}
             </Fragment>
@@ -53,12 +54,13 @@ export default function MyJourney() {
 const JourneyCard = ({ title, company, year, companyUrl, desc }) => {
   const bg = useColorModeValue("white", "gray.800");
   const color = useColorModeValue("gray.600", "gray.400");
+  const border = useColorModeValue("", "1px gray solid");
   return (
     <Box
       bg={bg}
       position={"relative"}
       p={4}
-      border={"1px gray solid"}
+      border={border}
       rounded={"lg"}
       shadow={"xl"}
       mx={4}
@@ -67,10 +69,11 @@ const JourneyCard = ({ title, company, year, companyUrl, desc }) => {
       <Text
         as={"h1"}
         position={"absolute"}
-        top={-10}
-        left={{ md: -10 }}
+        top={-12}
+        left={{ md: -8 }}
         fontSize={"4xl"}
         fontWeight={"bold"}
+        color={color}
       >
         {year}
       </Text>
