@@ -9,7 +9,7 @@ export default function MyJourney() {
     <>
       <PageHeading>My Journey.</PageHeading>
       <PageBody>
-        <VStack maxWidth={"xl"} mx={"auto"} py={20}>
+        <VStack maxWidth={"xl"} mx={"auto"} pt={20}>
           {myData.experience.map((exp, idx) => (
             <Fragment key={idx}>
               <JourneyCard

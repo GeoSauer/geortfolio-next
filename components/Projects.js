@@ -11,7 +11,7 @@ export default function Projects() {
       <PageHeading>Projects.</PageHeading>
 
       <PageBody>
-        <SimpleGrid columns={{ base: 1, md: 2 }} pb={20} gap={8} py={{ md: 10 }}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap={8} pt={{ md: 10 }}>
           {myData.projects?.map((project, idx) => (
             <Fragment key={idx}>
               <ChakraLink href={project.link} isExternal>

@@ -49,7 +49,6 @@ export default function About() {
             columns={{ base: 3, md: 5 }}
             spacingY={{ base: 5, md: 20 }}
             justifyItems={"center"}
-            pb={20}
           >
             {myData.about.techStack?.map((tech, idx) => (
               <Image key={idx} src={tech.imageUrl} alt={tech.name} width={80} height={80} />

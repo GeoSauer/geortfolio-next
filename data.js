@@ -7,11 +7,13 @@ const myData = {
   address: "Loveland, Colorado, USA",
   colors: ["#F4743B", "#55c1FF", "#5438DC", "#32E875"],
   descriptors: ["Engineer.", "Sculptor.", "Maker.", "Nerd."],
+
   featuredProject: {
     title: "Grimoire for the Modern Mage",
     link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
     imageUrl: "/gmm-walkthrough.webp",
   },
+
   projects: [
     {
       title: "Grimoire for the Modern Mage",
@@ -56,6 +58,7 @@ const myData = {
       imageUrl: "/for(dummyofdummies).png",
     },
   ],
+
   about: {
     title:
       "I'm a software engineer that loves building responsive and accessible web-based products with clean, verbose code.",
@@ -134,6 +137,7 @@ const myData = {
       },
     ],
   },
+
   experience: [
     {
       title: "Founder and Developer",
@@ -236,8 +240,14 @@ const myData = {
       ],
     },
   ],
-  resumeUrl: "",
+
+  contact: {
+    title:
+      "I'm currently on the lookout for new opportunities and would love to chat about how I can help your team succeed!",
+  },
+
   socialUrls: {
+    resumeUrl: "",
     linkedIn: "https://www.linkedin.com/in/geosauer/",
     github: "https://github.com/GeoSauer",
     portfolio: "https://geosauer.com/",

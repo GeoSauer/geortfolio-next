@@ -17,7 +17,7 @@ export default function Footer() {
   const bg = useColorModeValue("gray.100", "gray.900");
 
   return (
-    <Box bg={bg}>
+    <Box bg={bg} pt={20}>
       <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} />
       <Container
         as="footer"
