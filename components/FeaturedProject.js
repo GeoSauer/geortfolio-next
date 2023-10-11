@@ -15,10 +15,9 @@ import React from "react";
 export default function FeaturedProject() {
   const color = useColorModeValue("white", "gray.500");
   const bg = useColorModeValue("gray.100", "gray.900");
-  const border = useColorModeValue("gray.300");
 
   return (
-    <Box as="section" marginTop={-40} bg={bg}>
+    <Box as="section" marginTop={{ base: -40, md: -60 }} bg={bg}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
@@ -73,15 +72,14 @@ export default function FeaturedProject() {
               overflow={"hidden"}
               shadow={"2xl"}
               width={"full"}
-              height={{ base: "26vh", md: "55vh" }}
-              border="10px solid black"
-              borderColor={border}
-              rounded={"lg"}
+              height={{ base: "26vh", md: "xl" }}
+              rounded={{ md: "lg" }}
             >
               <Image
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 85vw"
                 style={{
                   marginTop: "-1px",
                   objectFit: "cover",

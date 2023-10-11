@@ -1,10 +1,13 @@
+import SuperDarkModeProvider from "@/providers/SuperDarkModeProvider";
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 
 export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider>
-      <Component {...pageProps} />
+      <SuperDarkModeProvider>
+        <Component {...pageProps} />
+      </SuperDarkModeProvider>
     </ChakraProvider>
   );
 }

@@ -1,12 +1,9 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import SuperDarkMode from "./SuperDarkMode";
-import { useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
 export default function Layout({ children, ...customMeta }) {
-  const [superDark, setSuperDark] = useState(false);
   const router = useRouter();
 
   const meta = {
@@ -38,11 +35,9 @@ export default function Layout({ children, ...customMeta }) {
         <link rel="icon" href="/favicon.ico?v=2" />
       </Head>
       <main style={{ width: "full" }}>
-        <SuperDarkMode superDark={superDark}>
-          <Navbar superDark={superDark} setSuperDark={setSuperDark} />
-          {children}
-          <Footer />
-        </SuperDarkMode>
+        <Navbar />
+        {children}
+        <Footer />
       </main>
     </>
   );

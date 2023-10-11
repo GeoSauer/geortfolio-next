@@ -1,12 +1,13 @@
 import Layout from "@/components/Layout";
+import MyJourney from "@/components/MyJourney";
 
-export default function MyJourney() {
+export default function myJourney() {
   return (
     <Layout
       title="Journey - Geo Sauer"
       description="A brief retelling of the wild ride I've enjoyed on this Little Blue Marble..."
     >
-      MyStory
+      <MyJourney />
     </Layout>
   );
 }

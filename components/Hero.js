@@ -8,48 +8,35 @@ import myData from "@/data";
 
 export default function Hero() {
   const color = useColorModeValue("gray.700");
+  const headingStyles = { fontSize: { base: "4xl", md: "8xl" } };
 
   return (
-    <HStack as={"section"} role="hero" justify={"center"} justifyItems={"start"}>
+    <HStack as={"section"} role="hero" justify={"center"} align={"start"} overflow={"hidden"}>
       <Flex
         direction={"column"}
-        align={"stretch"}
-        width={{ base: "full", md: "50vw" }}
-        padding={{ md: "50px" }}
-        px={{ md: "150px" }}
-        pb={{ md: "280px" }}
+        width={{ base: "full", md: "60vw" }}
         marginX={"auto"}
+        align={"stretch"}
         textAlign={{ base: "center", md: "left" }}
         color={color}
+        p={{ md: 20 }}
+        mx={{ md: 20 }}
       >
         <RoughNotationGroup show={true}>
-          <RainbowHighlight color={myData.colors[0]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Engineer.
-            </Heading>
-          </RainbowHighlight>
-          <RainbowHighlight color={myData.colors[1]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Sculptor.
-            </Heading>
-          </RainbowHighlight>
-          <RainbowHighlight color={myData.colors[2]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Maker.
-            </Heading>
-          </RainbowHighlight>
-          <RainbowHighlight color={myData.colors[3]}>
-            <Heading fontSize={{ base: "4xl", md: "80px" }} marginY={{ md: -3 }}>
-              Nerd.
-            </Heading>
-          </RainbowHighlight>
+          {myData.descriptors?.map((text, idx) => (
+            <RainbowHighlight key={idx} color={myData.colors[idx]}>
+              <Heading sx={headingStyles}>{text}</Heading>
+            </RainbowHighlight>
+          ))}
         </RoughNotationGroup>
       </Flex>
 
       <Box
         display={{ base: "none", md: "block" }}
-        width={{ md: "42vw" }}
-        marginRight={"70px"}
+        width={"40vw"}
+        maxW={"xl"}
+        mr={8}
+        position={"relative"}
         marginTop={20}
       >
         <Image

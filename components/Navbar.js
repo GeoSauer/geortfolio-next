@@ -1,7 +1,6 @@
 import myData from "/data";
 import {
   Container,
-  HStack,
   Heading,
   VStack,
   Text,
@@ -12,24 +11,28 @@ import {
   Tooltip,
   Stack,
   useColorModeValue,
+  Box,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
+// import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
+import { FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 import InternalLinks from "./InternalLinks";
 import Link from "next/link";
+import { useSuperDarkMode } from "@/providers/SuperDarkModeProvider";
 
-export default function Navbar({ superDark, setSuperDark }) {
+export default function Navbar() {
   const { toggleColorMode, colorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
   const color = useColorModeValue("gray.500", "gray.300");
+  const { superDarkMode, setSuperDarkMode } = useSuperDarkMode();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const toggleSuperDarkMode = () => {
-    setSuperDark(!superDark);
+    setSuperDarkMode(!superDarkMode);
   };
 
   return (
@@ -51,13 +54,13 @@ export default function Navbar({ superDark, setSuperDark }) {
         </VStack>
 
         {/* desktop nav */}
-        <HStack hideBelow={"940px"} fontWeight={"bold"}>
+        <Box display={{ base: "none", md: "block" }}>
           <InternalLinks />
-        </HStack>
+        </Box>
 
         <Stack direction={{ base: "column", md: "row" }}>
           <ButtonGroup variant="solid">
-            <Tooltip label="LinkedIn">
+            <Tooltip label="LinkedIn" display={{ base: "none", md: "block" }}>
               <IconButton
                 color={color}
                 as="a"
@@ -67,7 +70,7 @@ export default function Navbar({ superDark, setSuperDark }) {
                 icon={<FaLinkedin />}
               />
             </Tooltip>
-            <Tooltip label="GitHub">
+            <Tooltip label="GitHub" display={{ base: "none", md: "block" }}>
               <IconButton
                 color={color}
                 as="a"
@@ -77,7 +80,8 @@ export default function Navbar({ superDark, setSuperDark }) {
                 icon={<FaGithubAlt />}
               />
             </Tooltip>
-            <Tooltip label="Portfolio">
+            {/* //TODO */}
+            {/* <Tooltip label="Portfolio" display={{ base: "none", md: "block" }}>
               <IconButton
                 color={color}
                 as="a"
@@ -86,10 +90,11 @@ export default function Navbar({ superDark, setSuperDark }) {
                 target="_blank"
                 icon={<FaEye />}
               />
-            </Tooltip>
-          </ButtonGroup>
-          <ButtonGroup variant="solid" justifyContent={"end"}>
-            <Tooltip label={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}>
+            </Tooltip> */}
+            <Tooltip
+              label={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}
+              display={{ base: "none", md: "block" }}
+            >
               <IconButton
                 as="button"
                 aria-label="Color Mode"
@@ -99,14 +104,15 @@ export default function Navbar({ superDark, setSuperDark }) {
                 {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
               </IconButton>
             </Tooltip>
-            <Tooltip label="Toggle Super Dark Mode">
+            <Tooltip label="Toggle Super Dark Mode" display={{ base: "none", md: "block" }}>
               <IconButton
                 as="button"
                 aria-label="Super Dark Mode"
                 onClick={toggleSuperDarkMode}
+                hideBelow={"940px"}
                 color={color}
               >
-                {mounted && superDark ? <MdFlashlightOff /> : <MdFlashlightOn />}
+                {mounted && superDarkMode ? <MdFlashlightOff /> : <MdFlashlightOn />}
               </IconButton>
             </Tooltip>
           </ButtonGroup>
@@ -114,15 +120,9 @@ export default function Navbar({ superDark, setSuperDark }) {
       </Flex>
 
       {/* mobile nav */}
-      <HStack
-        hideFrom={"941px"}
-        justify={"space-evenly"}
-        maxWidth={"90vw"}
-        pt={6}
-        fontWeight={"bold"}
-      >
+      <Box display={{ base: "block", md: "none" }} pt={6}>
         <InternalLinks />
-      </HStack>
+      </Box>
     </Container>
   );
 }
