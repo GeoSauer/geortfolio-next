@@ -1,5 +1,5 @@
 import myData from "@/data";
-import { Container, Link as ChakraLink, SimpleGrid, Text } from "@chakra-ui/react";
+import { Container, Link as ChakraLink, SimpleGrid, Text, Box } from "@chakra-ui/react";
 import React from "react";
 import { RainbowUnderline } from "./RainbowUnderline";
 import { RoughNotationGroup } from "react-rough-notation";
@@ -8,6 +8,14 @@ import PageHeading from "./PageHeading";
 import PageBody from "./PageBody";
 
 export default function About() {
+  const color = myData.colors[0];
+
+  const subheaderStyles = {
+    fontSize: "3xl",
+    fontWeight: "semibold",
+    color: color,
+    mb: -4,
+  };
   return (
     <>
       <PageHeading>About me.</PageHeading>
@@ -35,15 +43,34 @@ export default function About() {
           </ChakraLink>
         </Text>
 
-        <Container maxWidth={"5xl"} pt={20}>
-          {myData.about.desc?.map((desc, idx) => (
-            <Text key={idx} fontSize={"2xl"} py={5}>
-              {desc}
-            </Text>
-          ))}
-        </Container>
+        <Container maxWidth={"6xl"} pt={20}>
+          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+            <Box>
+              <Text as="h2" sx={subheaderStyles}>
+                Where I&apos;ve been.
+              </Text>
+              <Text fontSize={"2xl"} py={5}>
+                {myData.about.desc[0]}
+              </Text>
+            </Box>
+            <Box>
+              <Text as="h2" sx={subheaderStyles}>
+                What I&apos;m doing.
+              </Text>
+              <Text fontSize={"2xl"} py={5}>
+                {myData.about.desc[1]}
+              </Text>
+            </Box>
+            <Box>
+              <Text as="h2" sx={subheaderStyles}>
+                What I hope to do.
+              </Text>
+              <Text fontSize={"2xl"} py={5}>
+                {myData.about.desc[2]}
+              </Text>
+            </Box>
+          </SimpleGrid>
 
-        <Container maxWidth={"5xl"} pt={20}>
           <Text as="h1" textAlign={"center"} fontSize={"4xl"} fontWeight={"bold"} py={10}>
             Tech Stack
           </Text>
