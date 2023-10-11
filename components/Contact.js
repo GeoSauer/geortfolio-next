@@ -76,7 +76,7 @@ export default function Contact() {
           rounded={{ md: "lg" }}
         >
           <VStack spacing={5}>
-            <Text sx={textStyles}>Get in touch, let's talk.</Text>
+            <Text sx={textStyles}>Get in touch, let&apos;s talk.</Text>
             <FormControl isRequired>
               <FormLabel>Your Name</FormLabel>
               <Input type="text" />
