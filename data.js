@@ -149,6 +149,16 @@ const myData = {
       ],
     },
     {
+      title: "1:1 Mentor and Reviewer",
+      company: "Code the Dream",
+      year: "2023",
+      companyUrl: "https://codethedream.org/",
+      desc: [
+        "Met with React students 1:1 to offer mentorship, answer specific questions, or resolve blockers.",
+        "Reviewed student assignments and provided insightful feedback to further their education.",
+      ],
+    },
+    {
       title: "Founder and Developer",
       company: "Grimoire for the Modern Mage",
       year: "2023",

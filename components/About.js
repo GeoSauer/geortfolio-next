@@ -21,6 +21,8 @@ export default function About() {
         >
           {myData.about.title} Currently working on{" "}
           <ChakraLink
+            href={myData.about.currentProjectUrl}
+            isExternal
             _hover={{
               textDecoration: "none",
             }}
