@@ -27,6 +27,7 @@ export default function Projects() {
                     src={project.imageUrl}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
                     style={{
                       objectFit: "cover",
                       transform: "scale(1)",
