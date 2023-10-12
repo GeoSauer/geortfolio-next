@@ -1,7 +1,6 @@
 import myData from "@/data";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
-import { RainbowUnderline } from "../RainbowUnderline";
-import { RoughNotationGroup } from "react-rough-notation";
+import AboutUnderline from "../RoughNotation/AboutUnderline";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
 import CustomLink from "../Custom/CustomLink";
@@ -28,11 +27,7 @@ export default function About() {
         >
           {myData.about.title} Currently working on{" "}
           <CustomLink href={myData.about.currentProjectUrl} target="_blank">
-            <RoughNotationGroup show={true}>
-              <RainbowUnderline color={myData.colors[0]}>
-                {myData.about.currentProject}
-              </RainbowUnderline>
-            </RoughNotationGroup>
+            <AboutUnderline color={myData.colors[0]}>{myData.about.currentProject}</AboutUnderline>
           </CustomLink>
         </Text>
 

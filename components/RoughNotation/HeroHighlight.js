@@ -1,6 +1,6 @@
 import { RoughNotation } from "react-rough-notation";
 
-export const RainbowHighlight = ({ color, children }) => {
+export default function HeroHighlight({ color, children }) {
   return (
     <RoughNotation
       type="highlight"
@@ -13,4 +13,4 @@ export const RainbowHighlight = ({ color, children }) => {
       {children}
     </RoughNotation>
   );
-};
+}

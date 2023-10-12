@@ -1,6 +1,6 @@
 import { Box, Flex, HStack, Heading, useColorModeValue } from "@chakra-ui/react";
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "../RainbowHighlight";
+import HeroHighlight from "../RoughNotation/HeroHighlight";
 import avatar from "@/public/avatar.png";
 import myData from "@/data";
 import CustomImage from "../Custom/CustomImage";
@@ -23,9 +23,9 @@ export default function Hero() {
       >
         <RoughNotationGroup show={true}>
           {myData.descriptors?.map((text, idx) => (
-            <RainbowHighlight key={idx} color={myData.colors[idx]}>
+            <HeroHighlight key={idx} color={myData.colors[idx]}>
               <Heading sx={headingStyles}>{text}</Heading>
-            </RainbowHighlight>
+            </HeroHighlight>
           ))}
         </RoughNotationGroup>
       </Flex>
