@@ -1,5 +1,5 @@
-import PageHeading from "./PageHeading";
-import PageBody from "./PageBody";
+import PageHeading from "../Layout/PageHeading";
+import PageBody from "../Layout/PageBody";
 import myData from "@/data";
 import { Flex, Link as ChakraLink, Text, VStack, Box } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";

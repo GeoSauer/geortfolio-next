@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
-import Projects from "@/components/Projects";
+import Layout from "@/components/Layout/Layout";
+import Projects from "@/components/Projects/Projects";
 
 export default function projects() {
   return (

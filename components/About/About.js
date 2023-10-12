@@ -1,11 +1,11 @@
 import myData from "@/data";
 import { Container, Link as ChakraLink, SimpleGrid, Text, Box } from "@chakra-ui/react";
 import React from "react";
-import { RainbowUnderline } from "./RainbowUnderline";
+import { RainbowUnderline } from "../RainbowUnderline";
 import { RoughNotationGroup } from "react-rough-notation";
 import Image from "next/image";
-import PageHeading from "./PageHeading";
-import PageBody from "./PageBody";
+import PageHeading from "../Layout/PageHeading";
+import PageBody from "../Layout/PageBody";
 
 export default function About() {
   const color = myData.colors[0];
@@ -16,6 +16,7 @@ export default function About() {
     color: color,
     mb: -4,
   };
+
   return (
     <>
       <PageHeading>About me</PageHeading>

@@ -17,7 +17,7 @@ import { useEffect, useState } from "react";
 // import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
-import InternalLinks from "./InternalLinks";
+import InternalLinks from "../Links/InternalLinks";
 import Link from "next/link";
 import { useSuperDarkMode } from "@/providers/SuperDarkModeProvider";
 

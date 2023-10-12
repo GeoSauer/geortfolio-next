@@ -1,9 +1,9 @@
-import Layout from "@/components/Layout";
-import Hero from "@/components/Hero";
-import LatestCode from "@/components/LatestCode";
+import Layout from "@/components/Layout/Layout";
+import Hero from "@/components/Home/Hero";
+import LatestCode from "@/components/Home/LatestCode";
 import getLatestRepos from "@/lib/getLatestRepos";
 import myData from "@/data";
-import FeaturedProject from "@/components/FeaturedProject";
+import FeaturedProject from "@/components/Home/FeaturedProject";
 
 export default function Home({ repositories }) {
   return (

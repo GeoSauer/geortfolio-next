@@ -1,5 +1,5 @@
-import Contact from "@/components/Contact";
-import Layout from "@/components/Layout";
+import Contact from "@/components/Contact/Contact";
+import Layout from "@/components/Layout/Layout";
 import myData from "@/data";
 
 export default function contact() {

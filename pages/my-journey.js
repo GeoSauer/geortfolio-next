@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
-import MyJourney from "@/components/MyJourney";
+import Layout from "@/components/Layout/Layout";
+import MyJourney from "@/components/MyJourney/MyJourney";
 
 export default function myJourney() {
   return (

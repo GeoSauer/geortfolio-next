@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import PageHeading from "./PageHeading";
-import PageBody from "./PageBody";
+import PageHeading from "../Layout/PageHeading";
+import PageBody from "../Layout/PageBody";
 import { SimpleGrid, Link as ChakraLink, Box, Text } from "@chakra-ui/react";
 import myData from "@/data";
 import Image from "next/image";

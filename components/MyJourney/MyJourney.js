@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import PageHeading from "./PageHeading";
-import PageBody from "./PageBody";
+import PageHeading from "../Layout/PageHeading";
+import PageBody from "../Layout/PageBody";
 import { Box, Link as ChakraLink, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import myData from "@/data";
 

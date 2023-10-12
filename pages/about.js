@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
-import About from "../components/About";
+import Layout from "@/components/Layout/Layout";
+import About from "../components/About/About";
 
 export default function about() {
   return (
