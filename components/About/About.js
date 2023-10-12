@@ -1,22 +1,21 @@
 import myData from "@/data";
-import { Container, Link as ChakraLink, SimpleGrid, Text, Box } from "@chakra-ui/react";
+import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
 import React from "react";
 import { RainbowUnderline } from "../RainbowUnderline";
 import { RoughNotationGroup } from "react-rough-notation";
 import Image from "next/image";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
+import CustomLink from "../Links/CustomLink";
+
+const subheaderStyles = {
+  fontSize: "3xl",
+  fontWeight: "semibold",
+  color: myData.colors[0],
+  mb: -4,
+};
 
 export default function About() {
-  const color = myData.colors[0];
-
-  const subheaderStyles = {
-    fontSize: "3xl",
-    fontWeight: "semibold",
-    color: color,
-    mb: -4,
-  };
-
   return (
     <>
       <PageHeading>About me</PageHeading>
@@ -29,19 +28,13 @@ export default function About() {
           px={{ base: 8, md: 0 }}
         >
           {myData.about.title} Currently working on{" "}
-          <ChakraLink
-            href={myData.about.currentProjectUrl}
-            isExternal
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
+          <CustomLink href={myData.about.currentProjectUrl} target="_blank">
             <RoughNotationGroup show={true}>
               <RainbowUnderline color={myData.colors[0]}>
                 {myData.about.currentProject}
               </RainbowUnderline>
             </RoughNotationGroup>
-          </ChakraLink>
+          </CustomLink>
         </Text>
 
         <Container maxWidth={"6xl"} pt={20}>

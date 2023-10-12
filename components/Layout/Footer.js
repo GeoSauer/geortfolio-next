@@ -33,7 +33,8 @@ export default function Footer() {
           spacing={6}
         >
           <Text fontSize="sm">
-            &copy; {new Date().getFullYear()} Geo Sauer. All rights reserved.
+            &copy; {new Date().getFullYear() !== 2023 ? "2023 - " : null}
+            {new Date().getFullYear()} Geo Sauer. All rights reserved.
           </Text>
 
           <ButtonGroup variant="solid">

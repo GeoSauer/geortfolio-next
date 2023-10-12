@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
-import { SimpleGrid, Link as ChakraLink, Box, Text } from "@chakra-ui/react";
+import { SimpleGrid, Box, Text } from "@chakra-ui/react";
 import myData from "@/data";
 import Image from "next/image";
+import CustomLink from "../Links/CustomLink";
 
 export default function Projects() {
   return (
@@ -14,7 +15,7 @@ export default function Projects() {
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={8} pt={{ md: 10 }}>
           {myData.projects?.map((project, idx) => (
             <Fragment key={idx}>
-              <ChakraLink href={project.link} isExternal>
+              <CustomLink href={project.link} target="_blank">
                 <Box
                   position={"relative"}
                   overflow={"hidden"}
@@ -57,7 +58,7 @@ export default function Projects() {
                     {project.title}
                   </Text>
                 </Box>
-              </ChakraLink>
+              </CustomLink>
             </Fragment>
           ))}
         </SimpleGrid>

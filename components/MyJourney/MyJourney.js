@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
-import { Box, Link as ChakraLink, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import myData from "@/data";
+import CustomLink from "../Links/CustomLink";
 
 export default function MyJourney() {
   return (
@@ -16,7 +17,7 @@ export default function MyJourney() {
                 title={exp.title}
                 company={exp.company}
                 year={exp.year}
-                companyUrl={exp.companyUrl ? exp.companyUrl : null}
+                companyUrl={exp.companyUrl}
                 desc={exp.desc}
               />
               {idx === myData.experience.length - 1 ? null : (
@@ -62,14 +63,13 @@ const JourneyCard = ({ title, company, year, companyUrl, desc }) => {
       <Text as={"h2"} fontWeight={"semibold"} fontSize={"xl"}>
         {title}
       </Text>
-      <ChakraLink
-        href={companyUrl}
-        isExternal
-        color={"gray.500"}
-        _hover={{ textDecoration: "none" }}
-      >
-        {company}
-      </ChakraLink>
+      {companyUrl ? (
+        <CustomLink href={companyUrl} target="_blank" color={"gray.500"}>
+          {company}
+        </CustomLink>
+      ) : (
+        <Text color={"gray.500"}>{company}</Text>
+      )}
       {desc.map((line, idx) => (
         <Text key={idx} as={"p"} color={color} my={2}>
           {line}

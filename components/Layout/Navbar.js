@@ -18,8 +18,8 @@ import { useEffect, useState } from "react";
 import { FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 import InternalLinks from "../Links/InternalLinks";
-import Link from "next/link";
 import { useSuperDarkMode } from "@/providers/SuperDarkModeProvider";
+import CustomLink from "../Links/CustomLink";
 
 export default function Navbar() {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -47,10 +47,10 @@ export default function Navbar() {
             transform: "translateY(-5px)",
           }}
         >
-          <Link href="/">
+          <CustomLink href="/">
             <Heading size={"md"}>{myData.name}</Heading>
             <Text color={color}>{myData.designation}</Text>
-          </Link>
+          </CustomLink>
         </VStack>
 
         {/* desktop nav */}

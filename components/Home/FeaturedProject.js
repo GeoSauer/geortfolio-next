@@ -1,16 +1,8 @@
 import myData from "/data";
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Link as ChakraLink,
-  useColorModeValue,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, useColorModeValue, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import NextLink from "next/link";
 import React from "react";
+import CustomLink from "../Links/CustomLink";
 
 export default function FeaturedProject() {
   const color = useColorModeValue("white", "gray.500");
@@ -38,7 +30,7 @@ export default function FeaturedProject() {
             Featured Project
           </Heading>
 
-          <NextLink href="/projects">
+          <CustomLink href="/projects">
             <Box
               marginBottom={{ base: 20, md: 0 }}
               px={8}
@@ -62,11 +54,11 @@ export default function FeaturedProject() {
                 View All &rarr;
               </Text>
             </Box>
-          </NextLink>
+          </CustomLink>
         </Flex>
 
         <Container pb={40} px={0} maxW="5xl">
-          <ChakraLink href={myData.featuredProject.link} isExternal>
+          <CustomLink href={myData.featuredProject.link} target="_blank">
             <Box
               position={"relative"}
               overflow={"hidden"}
@@ -94,7 +86,7 @@ export default function FeaturedProject() {
                 }}
               />
             </Box>
-          </ChakraLink>
+          </CustomLink>
         </Container>
       </Container>
     </Box>

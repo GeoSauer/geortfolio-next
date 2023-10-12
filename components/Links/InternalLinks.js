@@ -1,35 +1,59 @@
 import { Divider, HStack } from "@chakra-ui/react";
 import React from "react";
-import CustomLink from "./CustomLink";
 import myData from "@/data";
+import { useRouter } from "next/router";
+import CustomLink from "./CustomLink";
+
+const dividerStyles = {
+  borderWidth: "1px",
+  height: 4,
+  mx: { md: 3 },
+};
 
 export default function InternalLinks() {
-  const dividerStyles = {
-    borderWidth: "1px",
-    height: 4,
-    mx: { md: 3 },
-  };
-
   return (
     <HStack justify={"space-evenly"} fontWeight={"bold"}>
-      <CustomLink href="/about" activeColor={myData.colors[0]}>
+      <StyledLink href="/about" activeColor={myData.colors[0]}>
         About
-      </CustomLink>
+      </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 
-      <CustomLink href="/projects" activeColor={myData.colors[1]}>
+      <StyledLink href="/projects" activeColor={myData.colors[1]}>
         Projects
-      </CustomLink>
+      </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 
-      <CustomLink href="/my-journey" activeColor={myData.colors[2]}>
+      <StyledLink href="/my-journey" activeColor={myData.colors[2]}>
         My Journey
-      </CustomLink>
+      </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 
-      <CustomLink href="/contact" activeColor={myData.colors[3]}>
+      <StyledLink href="/contact" activeColor={myData.colors[3]}>
         Contact
-      </CustomLink>
+      </StyledLink>
     </HStack>
   );
 }
+
+const StyledLink = ({ href, activeColor, children }) => {
+  const router = useRouter();
+
+  return (
+    <CustomLink
+      href={href}
+      css={{
+        transform: "translateY(0)",
+        transition: "color 0.3s ease, transform 0.3s ease",
+        ...(router.asPath === href && {
+          color: activeColor,
+        }),
+      }}
+      _hover={{
+        color: activeColor,
+        transform: "translateY(-3px)",
+      }}
+    >
+      {children}
+    </CustomLink>
+  );
+};
