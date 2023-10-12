@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
 import { Box, Flex, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import myData from "@/data";
-import CustomLink from "../Links/CustomLink";
+import CustomLink from "../Custom/CustomLink";
 
 export default function MyJourney() {
   return (

@@ -19,7 +19,7 @@ import { FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 import InternalLinks from "../Links/InternalLinks";
 import { useSuperDarkMode } from "@/providers/SuperDarkModeProvider";
-import CustomLink from "../Links/CustomLink";
+import CustomLink from "../Custom/CustomLink";
 
 export default function Navbar() {
   const { toggleColorMode, colorMode } = useColorMode();

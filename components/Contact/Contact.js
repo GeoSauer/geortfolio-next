@@ -3,7 +3,7 @@ import PageBody from "../Layout/PageBody";
 import myData from "@/data";
 import { Flex, Text, VStack, Box } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";
-import CustomLink from "../Links/CustomLink";
+import CustomLink from "../Custom/CustomLink";
 
 const textStyles = {
   as: "p",

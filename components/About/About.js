@@ -1,12 +1,11 @@
 import myData from "@/data";
 import { Container, SimpleGrid, Text, Box } from "@chakra-ui/react";
-import React from "react";
 import { RainbowUnderline } from "../RainbowUnderline";
 import { RoughNotationGroup } from "react-rough-notation";
-import Image from "next/image";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
-import CustomLink from "../Links/CustomLink";
+import CustomLink from "../Custom/CustomLink";
+import CustomImage from "../Custom/CustomImage";
 
 const subheaderStyles = {
   fontSize: "3xl",
@@ -74,7 +73,7 @@ export default function About() {
             justifyItems={"center"}
           >
             {myData.about.techStack?.map((tech, idx) => (
-              <Image key={idx} src={tech.imageUrl} alt={tech.name} width={80} height={80} />
+              <CustomImage key={idx} src={tech.imageUrl} alt={tech.name} width={80} height={80} />
             ))}
           </SimpleGrid>
         </Container>

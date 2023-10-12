@@ -1,8 +1,7 @@
 import { Divider, HStack } from "@chakra-ui/react";
-import React from "react";
 import myData from "@/data";
 import { useRouter } from "next/router";
-import CustomLink from "./CustomLink";
+import CustomLink from "../Custom/CustomLink";
 
 const dividerStyles = {
   borderWidth: "1px",

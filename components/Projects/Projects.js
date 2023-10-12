@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
 import { SimpleGrid, Box, Text } from "@chakra-ui/react";
 import myData from "@/data";
-import Image from "next/image";
-import CustomLink from "../Links/CustomLink";
+import CustomLink from "../Custom/CustomLink";
+import CustomImage from "../Custom/CustomImage";
 
 export default function Projects() {
   return (
@@ -24,7 +24,7 @@ export default function Projects() {
                   height={{ base: "26vh", md: "xs" }}
                   rounded={{ md: "lg" }}
                 >
-                  <Image
+                  <CustomImage
                     src={project.imageUrl}
                     alt={project.title}
                     fill

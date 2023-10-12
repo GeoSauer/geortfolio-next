@@ -1,4 +1,4 @@
-import CustomLink from "../Links/CustomLink";
+import CustomLink from "../Custom/CustomLink";
 import myData from "/data";
 import {
   Box,

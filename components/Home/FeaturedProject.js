@@ -1,8 +1,7 @@
 import myData from "/data";
 import { Box, Container, Flex, Heading, useColorModeValue, Text } from "@chakra-ui/react";
-import Image from "next/image";
-import React from "react";
-import CustomLink from "../Links/CustomLink";
+import CustomLink from "../Custom/CustomLink";
+import CustomImage from "../Custom/CustomImage";
 
 export default function FeaturedProject() {
   const color = useColorModeValue("white", "gray.500");
@@ -67,7 +66,7 @@ export default function FeaturedProject() {
               height={{ base: "26vh", md: "xl" }}
               rounded={{ md: "lg" }}
             >
-              <Image
+              <CustomImage
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
                 fill

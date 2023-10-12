@@ -1,10 +1,9 @@
 import { Box, Flex, HStack, Heading, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
 import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "../RainbowHighlight";
-import NextImage from "next/image";
 import avatar from "@/public/avatar.png";
 import myData from "@/data";
+import CustomImage from "../Custom/CustomImage";
 
 export default function Hero() {
   const color = useColorModeValue("gray.700");
@@ -39,7 +38,7 @@ export default function Hero() {
         position={"relative"}
         marginTop={20}
       >
-        <NextImage src={avatar} alt="A photo of Geo" priority />
+        <CustomImage src={avatar} alt="A photo of Geo" priority rounded={"full"} />
       </Box>
     </HStack>
   );
