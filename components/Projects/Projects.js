@@ -29,6 +29,9 @@ export default function Projects() {
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                    filter={"grayscale(90%)"}
+                    transition={"filter 0.5s"}
+                    _hover={{ filter: "none" }}
                   />
                   <Text
                     as="h1"

@@ -4,7 +4,7 @@ import AboutUnderline from "../RoughNotation/AboutUnderline";
 import PageHeading from "../Layout/PageHeading";
 import PageBody from "../Layout/PageBody";
 import CustomLink from "../Custom/CustomLink";
-import CustomImage from "../Custom/CustomImage";
+import TechStack from "./TechStack";
 
 const subheaderStyles = {
   fontSize: "3xl",
@@ -59,18 +59,7 @@ export default function About() {
             </Box>
           </SimpleGrid>
 
-          <Text as="h1" textAlign={"center"} fontSize={"4xl"} fontWeight={"bold"} py={10}>
-            Tech Stack
-          </Text>
-          <SimpleGrid
-            columns={{ base: 3, md: 5 }}
-            spacingY={{ base: 5, md: 20 }}
-            justifyItems={"center"}
-          >
-            {myData.about.techStack?.map((tech, idx) => (
-              <CustomImage key={idx} src={tech.imageUrl} alt={tech.name} width={80} height={80} />
-            ))}
-          </SimpleGrid>
+          <TechStack />
         </Container>
       </PageBody>
     </>
