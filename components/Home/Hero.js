@@ -39,22 +39,7 @@ export default function Hero() {
         position={"relative"}
         marginTop={20}
       >
-        <NextImage
-          src={avatar}
-          alt="A photo of Geo"
-          priority
-          style={{
-            objectFit: "contain",
-            transform: "scale(1)",
-            transition: "transform 2s ease-out",
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = "scale(1.15)";
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-        />
+        <NextImage src={avatar} alt="A photo of Geo" priority />
       </Box>
     </HStack>
   );

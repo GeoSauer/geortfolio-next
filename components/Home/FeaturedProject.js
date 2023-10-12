@@ -72,18 +72,6 @@ export default function FeaturedProject() {
                 alt={myData.featuredProject.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 85vw"
-                style={{
-                  marginTop: "-1px",
-                  objectFit: "cover",
-                  transform: "scale(1)",
-                  transition: "transform 2s ease-out",
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "scale(1.25)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "scale(1)";
-                }}
               />
             </Box>
           </CustomLink>

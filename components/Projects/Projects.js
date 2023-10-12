@@ -29,17 +29,6 @@ export default function Projects() {
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-                    style={{
-                      objectFit: "cover",
-                      transform: "scale(1)",
-                      transition: "transform 2s ease-out",
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.transform = "scale(1.25)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.transform = "scale(1)";
-                    }}
                   />
                   <Text
                     as="h1"
@@ -47,8 +36,6 @@ export default function Projects() {
                     fontWeight={"semibold"}
                     color={"white"}
                     position={"absolute"}
-                    // ml={{ base: 2, md: -3 }}
-                    // top={-6}
                     bottom={5}
                     right={5}
                     bg={myData.colors[1]}
