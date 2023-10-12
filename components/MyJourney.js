@@ -7,7 +7,7 @@ import myData from "@/data";
 export default function MyJourney() {
   return (
     <>
-      <PageHeading>My Journey.</PageHeading>
+      <PageHeading>My Journey</PageHeading>
       <PageBody>
         <VStack maxWidth={"xl"} mx={"auto"} pt={20}>
           {myData.experience.map((exp, idx) => (

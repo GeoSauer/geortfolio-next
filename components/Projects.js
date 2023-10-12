@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Projects() {
   return (
     <>
-      <PageHeading>Projects.</PageHeading>
+      <PageHeading>Projects</PageHeading>
 
       <PageBody>
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={8} pt={{ md: 10 }}>

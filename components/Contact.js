@@ -16,7 +16,7 @@ export default function Contact() {
 
   return (
     <>
-      <PageHeading>Contact.</PageHeading>
+      <PageHeading>Contact</PageHeading>
 
       <PageBody>
         <Flex

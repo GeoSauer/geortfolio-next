@@ -18,7 +18,7 @@ export default function About() {
   };
   return (
     <>
-      <PageHeading>About me.</PageHeading>
+      <PageHeading>About me</PageHeading>
 
       <PageBody>
         <Text

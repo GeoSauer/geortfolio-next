@@ -2,7 +2,7 @@ import { Box, Flex, HStack, Heading, useColorModeValue } from "@chakra-ui/react"
 import React from "react";
 import { RoughNotationGroup } from "react-rough-notation";
 import { RainbowHighlight } from "./RainbowHighlight";
-import Image from "next/image";
+import NextImage from "next/image";
 import avatar from "../public/avatar.png";
 import myData from "@/data";
 
@@ -39,7 +39,7 @@ export default function Hero() {
         position={"relative"}
         marginTop={20}
       >
-        <Image
+        <NextImage
           src={avatar}
           alt="A photo of Geo"
           priority
