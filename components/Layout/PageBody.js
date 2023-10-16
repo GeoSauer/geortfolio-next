@@ -1,5 +1,4 @@
 import { Box, Container, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
 
 export default function PageBody({ children }) {
   const bg = useColorModeValue("gray.100", "gray.900");

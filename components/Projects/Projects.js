@@ -1,20 +1,21 @@
-import React, { Fragment } from "react";
-import PageHeading from "./PageHeading";
-import PageBody from "./PageBody";
-import { SimpleGrid, Link as ChakraLink, Box, Text } from "@chakra-ui/react";
+import { Fragment } from "react";
+import PageHeading from "../Layout/PageHeading";
+import PageBody from "../Layout/PageBody";
+import { SimpleGrid, Box, Text } from "@chakra-ui/react";
 import myData from "@/data";
-import Image from "next/image";
+import CustomLink from "../Custom/CustomLink";
+import CustomImage from "../Custom/CustomImage";
 
 export default function Projects() {
   return (
     <>
-      <PageHeading>Projects.</PageHeading>
+      <PageHeading>Projects</PageHeading>
 
       <PageBody>
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={8} pt={{ md: 10 }}>
           {myData.projects?.map((project, idx) => (
             <Fragment key={idx}>
-              <ChakraLink href={project.link} isExternal>
+              <CustomLink href={project.link} target="_blank">
                 <Box
                   position={"relative"}
                   overflow={"hidden"}
@@ -23,21 +24,14 @@ export default function Projects() {
                   height={{ base: "26vh", md: "xs" }}
                   rounded={{ md: "lg" }}
                 >
-                  <Image
+                  <CustomImage
                     src={project.imageUrl}
                     alt={project.title}
                     fill
-                    style={{
-                      objectFit: "cover",
-                      transform: "scale(1)",
-                      transition: "transform 2s ease-out",
-                    }}
-                    onMouseOver={(e) => {
-                      e.currentTarget.style.transform = "scale(1.25)";
-                    }}
-                    onMouseOut={(e) => {
-                      e.currentTarget.style.transform = "scale(1)";
-                    }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
+                    filter={"grayscale(90%)"}
+                    transition={"filter 0.5s"}
+                    _hover={{ filter: "none" }}
                   />
                   <Text
                     as="h1"
@@ -45,8 +39,6 @@ export default function Projects() {
                     fontWeight={"semibold"}
                     color={"white"}
                     position={"absolute"}
-                    // ml={{ base: 2, md: -3 }}
-                    // top={-6}
                     bottom={5}
                     right={5}
                     bg={myData.colors[1]}
@@ -56,7 +48,7 @@ export default function Projects() {
                     {project.title}
                   </Text>
                 </Box>
-              </ChakraLink>
+              </CustomLink>
             </Fragment>
           ))}
         </SimpleGrid>

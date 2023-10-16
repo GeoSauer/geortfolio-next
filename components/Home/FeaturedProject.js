@@ -1,16 +1,7 @@
 import myData from "/data";
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Link as ChakraLink,
-  useColorModeValue,
-  Text,
-} from "@chakra-ui/react";
-import Image from "next/image";
-import NextLink from "next/link";
-import React from "react";
+import { Box, Container, Flex, Heading, useColorModeValue, Text } from "@chakra-ui/react";
+import CustomLink from "../Custom/CustomLink";
+import CustomImage from "../Custom/CustomImage";
 
 export default function FeaturedProject() {
   const color = useColorModeValue("white", "gray.500");
@@ -38,7 +29,7 @@ export default function FeaturedProject() {
             Featured Project
           </Heading>
 
-          <NextLink href="/projects">
+          <CustomLink href="/projects">
             <Box
               marginBottom={{ base: 20, md: 0 }}
               px={8}
@@ -62,11 +53,11 @@ export default function FeaturedProject() {
                 View All &rarr;
               </Text>
             </Box>
-          </NextLink>
+          </CustomLink>
         </Flex>
 
         <Container pb={40} px={0} maxW="5xl">
-          <ChakraLink href={myData.featuredProject.link} isExternal>
+          <CustomLink href={myData.featuredProject.link} target="_blank">
             <Box
               position={"relative"}
               overflow={"hidden"}
@@ -75,26 +66,14 @@ export default function FeaturedProject() {
               height={{ base: "26vh", md: "xl" }}
               rounded={{ md: "lg" }}
             >
-              <Image
+              <CustomImage
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 85vw"
-                style={{
-                  marginTop: "-1px",
-                  objectFit: "cover",
-                  transform: "scale(1)",
-                  transition: "transform 2s ease-out",
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.transform = "scale(1.25)";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.transform = "scale(1)";
-                }}
               />
             </Box>
-          </ChakraLink>
+          </CustomLink>
         </Container>
       </Container>
     </Box>

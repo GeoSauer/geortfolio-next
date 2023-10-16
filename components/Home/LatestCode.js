@@ -1,10 +1,10 @@
+import CustomLink from "../Custom/CustomLink";
 import myData from "/data";
 import {
   Box,
   Container,
   Flex,
   Heading,
-  Link as ChakraLink,
   SimpleGrid,
   Stack,
   Text,
@@ -38,9 +38,9 @@ export default function LatestCode({ repositories }) {
             <p>Code</p>
           </Heading>
 
-          <ChakraLink
+          <CustomLink
             href={`https://github.com/${myData.githubUsername}`}
-            isExternal
+            target="_blank"
             marginBottom={{ base: 20, md: 0 }}
             px={8}
             py={4}
@@ -51,10 +51,6 @@ export default function LatestCode({ repositories }) {
             fontWeight={"semibold"}
             color={"gray.700"}
             alignItems={"center"}
-            textDecoration={"none"}
-            _hover={{
-              textDecoration: "none",
-            }}
           >
             <Text
               transform={"translateX(0)"}
@@ -65,7 +61,7 @@ export default function LatestCode({ repositories }) {
             >
               View Github &rarr;
             </Text>
-          </ChakraLink>
+          </CustomLink>
         </Flex>
       </Container>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={20} px={10} maxWidth={"5xl"} mx={"auto"}>
@@ -89,10 +85,9 @@ const GithubRepoCard = ({ latestRepo }) => {
       <Text color={color} _dark={{ color: "gray.600" }}>
         {latestRepo.description}
       </Text>
-      <ChakraLink
+      <CustomLink
         href={latestRepo.clone_url}
-        isExternal
-        textDecoration={"none"}
+        target="_blank"
         fontWeight={"bold"}
         transform={"translateX(0)"}
         transition={"transform 0.3s ease"}
@@ -101,7 +96,7 @@ const GithubRepoCard = ({ latestRepo }) => {
         }}
       >
         View Repository &rarr;
-      </ChakraLink>
+      </CustomLink>
     </Stack>
   );
 };

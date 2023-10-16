@@ -1,10 +1,9 @@
 import { Box, Flex, HStack, Heading, useColorModeValue } from "@chakra-ui/react";
-import React from "react";
 import { RoughNotationGroup } from "react-rough-notation";
-import { RainbowHighlight } from "./RainbowHighlight";
-import Image from "next/image";
-import avatar from "../public/avatar.png";
+import HeroHighlight from "../RoughNotation/HeroHighlight";
+import avatar from "@/public/avatar.png";
 import myData from "@/data";
+import CustomImage from "../Custom/CustomImage";
 
 export default function Hero() {
   const color = useColorModeValue("gray.700");
@@ -24,9 +23,9 @@ export default function Hero() {
       >
         <RoughNotationGroup show={true}>
           {myData.descriptors?.map((text, idx) => (
-            <RainbowHighlight key={idx} color={myData.colors[idx]}>
+            <HeroHighlight key={idx} color={myData.colors[idx]}>
               <Heading sx={headingStyles}>{text}</Heading>
-            </RainbowHighlight>
+            </HeroHighlight>
           ))}
         </RoughNotationGroup>
       </Flex>
@@ -39,22 +38,7 @@ export default function Hero() {
         position={"relative"}
         marginTop={20}
       >
-        <Image
-          src={avatar}
-          alt="A photo of Geo"
-          priority
-          style={{
-            objectFit: "contain",
-            transform: "scale(1)",
-            transition: "transform 2s ease-out",
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = "scale(1.15)";
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-        />
+        <CustomImage src={avatar} alt="A photo of Geo" priority rounded={"full"} />
       </Box>
     </HStack>
   );
