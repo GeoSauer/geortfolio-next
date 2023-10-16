@@ -1,5 +1,4 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import React from "react";
 import CustomImage from "../Custom/CustomImage";
 import myData from "@/data";
 

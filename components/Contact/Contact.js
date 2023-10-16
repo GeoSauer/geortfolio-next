@@ -21,7 +21,7 @@ export default function Contact() {
 
       <PageBody>
         <Flex
-          direction={{ base: "column" }}
+          direction={"column"}
           sx={textStyles}
           justify={"space-between"}
           mb={{ base: 10, md: 20 }}
@@ -34,19 +34,34 @@ export default function Contact() {
           <VStack align={{ base: "center", md: "end" }} pt={10}>
             <Text>
               Check out my{" "}
-              <CustomLink href="" color={color} target="_blank">
+              <CustomLink
+                href="/GeoSauer_Resume.pdf"
+                color={color}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Resume.
               </CustomLink>
             </Text>
             <Text>
               And my{" "}
-              <CustomLink href={myData.socialUrls.linkedIn} color={color} target="_blank">
+              <CustomLink
+                href={myData.socialUrls.linkedIn}
+                color={color}
+                target="_blank"
+                rel="noreferrer"
+              >
                 LinkedIn.
               </CustomLink>
             </Text>
             <Text>
               Maybe even my{" "}
-              <CustomLink href={myData.socialUrls.github} color={color} target="_blank">
+              <CustomLink
+                href={myData.socialUrls.github}
+                color={color}
+                target="_blank"
+                rel="noreferrer"
+              >
                 GitHub.
               </CustomLink>
             </Text>

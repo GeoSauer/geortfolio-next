@@ -63,7 +63,10 @@ const myData = {
     title:
       "I'm a software engineer that loves building responsive and accessible web-based products with clean, verbose, and maintainable code.",
     desc: [
-      `Growing up in beautiful Northern Colorado I've had a lifelong affinity for the outdoors. I love paddle boarding, mountain biking, and puttering around on my Royal Enfield Himalayan all along the front range. When I'm not outdoors I can typically be found playing video or tabletop games, or tinkering around with my 3-D printer. I'm a lifelong maker and love diving into technical processes head-on and figuring them out. This is part of what drove me to study bronze sculpture in my undergrad and fueled my 3.5 year stint in the bronze industry.`,
+      `Growing up in beautiful Northern Colorado I've had a lifelong affinity for the outdoors.
+			I love paddle boarding, mountain biking, and puttering around on my Royal Enfield Himalayan all along the front range. 
+			When I'm not outdoors I can typically be found playing video or tabletop games, or tinkering around with my 3-D printer. 
+			I'm a lifelong maker and love diving into technical processes head-on and figuring them out. This is part of what drove me to study bronze sculpture in my undergrad and fueled my 3.5 year stint in the bronze industry.`,
 
       `In 2022 I made the decision to dive into yet another technical process head-on by enrolling in Alchemy Code Lab, a full-stack coding bootcamp. Unfortunately, the school abruptly closed out from under me in early 2023. Luckily for me I was absolutely hooked and had found a new passion in web development, so I set out to find a problem worth solving. Working with local D&D groups I developed Grimoire for the Modern Mage, my first full stack app. I was also looking for a way to give back and began volunteering as a mentor with Codethedream.org.`,
 
