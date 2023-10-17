@@ -19,7 +19,6 @@ export default function SuperDarkModeProvider({ children }) {
     }
 
     document.addEventListener("mousemove", update);
-    document.addEventListener("touchmove", update);
   }
 
   return (
