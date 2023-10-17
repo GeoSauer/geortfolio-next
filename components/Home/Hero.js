@@ -10,7 +10,14 @@ export default function Hero() {
   const headingStyles = { fontSize: { base: "4xl", md: "8xl" } };
 
   return (
-    <HStack as={"section"} role="hero" justify={"center"} align={"start"} overflow={"hidden"}>
+    <HStack
+      as={"section"}
+      role="hero"
+      // justify={"center"}
+      align={"start"}
+      // overflow={"hidden"}
+      mt={{ base: -145, md: -350 }}
+    >
       <Flex
         direction={"column"}
         width={{ base: "full", md: "60vw" }}

@@ -1,23 +1,18 @@
 import Layout from "@/components/Layout/Layout";
-import Hero from "@/components/Home/Hero";
-import LatestCode from "@/components/Home/LatestCode";
 import getLatestRepos from "@/lib/getLatestRepos";
 import myData from "@/data";
-import FeaturedProject from "@/components/Home/FeaturedProject";
+import Home from "@/components/Home/Home";
 
-export default function Home({ repositories }) {
+export default function home({ repositories }) {
   return (
     <Layout>
-      <Hero />
-      <FeaturedProject />
-      <LatestCode repositories={repositories} />
+      <Home repositories={repositories} />
     </Layout>
   );
 }
 
 export const getServerSideProps = async () => {
   let token = process.env.GITHUB_AUTH_TOKEN;
-
   const repositories = await getLatestRepos(myData, token);
 
   return {
