@@ -5,7 +5,7 @@ const theme = extendTheme({
     colors: {
       bgPrimary: {
         default: "",
-        _dark: "",
+        _dark: "red",
       },
       bgSecondary: {
         default: "",

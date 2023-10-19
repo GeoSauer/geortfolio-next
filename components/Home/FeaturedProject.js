@@ -5,10 +5,9 @@ import CustomImage from "../Custom/CustomImage";
 
 export default function FeaturedProject() {
   const color = useColorModeValue("white", "gray.500");
-  const bg = useColorModeValue("gray.100", "gray.900");
 
   return (
-    <Box as="section" marginTop={{ base: -40, md: -60 }} bg={bg}>
+    <Box as="section" marginTop={{ base: -40, md: -60 }}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}

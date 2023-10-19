@@ -14,10 +14,9 @@ import { FaLinkedin, FaGithubAlt, FaEye } from "react-icons/fa";
 
 export default function Footer() {
   const color = useColorModeValue("gray.500", "gray.300");
-  const bg = useColorModeValue("gray.100", "gray.900");
 
   return (
-    <Box bg={bg} pt={20}>
+    <Box bg="bgPrimary" pt={20}>
       <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} />
       <Container
         as="footer"
