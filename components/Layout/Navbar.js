@@ -10,11 +10,9 @@ import {
   Flex,
   Tooltip,
   Stack,
-  useColorModeValue,
   Box,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-// import { FaEye, FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 import InternalLinks from "../Links/InternalLinks";
@@ -24,7 +22,6 @@ import CustomLink from "../Custom/CustomLink";
 export default function Navbar() {
   const { toggleColorMode, colorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
-  const color = useColorModeValue("gray.500", "gray.300");
   const { superDarkMode, setSuperDarkMode } = useSuperDarkMode();
 
   useEffect(() => {
@@ -44,8 +41,10 @@ export default function Navbar() {
           }}
         >
           <CustomLink href="/">
-            <Heading size={"md"}>{myData.name}</Heading>
-            <Text color={color}>{myData.designation}</Text>
+            <Heading size={"md"} color="textPrimary">
+              {myData.name}
+            </Heading>
+            <Text color="textSecondary">{myData.designation}</Text>
           </CustomLink>
         </VStack>
 
@@ -58,7 +57,7 @@ export default function Navbar() {
           <ButtonGroup variant="solid">
             <Tooltip label="LinkedIn" display={{ base: "none", md: "block" }}>
               <IconButton
-                color={color}
+                color="icon"
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -66,9 +65,10 @@ export default function Navbar() {
                 icon={<FaLinkedin />}
               />
             </Tooltip>
+
             <Tooltip label="GitHub" display={{ base: "none", md: "block" }}>
               <IconButton
-                color={color}
+                color="icon"
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"
@@ -76,17 +76,7 @@ export default function Navbar() {
                 icon={<FaGithubAlt />}
               />
             </Tooltip>
-            {/* //TODO */}
-            {/* <Tooltip label="Portfolio" display={{ base: "none", md: "block" }}>
-              <IconButton
-                color={color}
-                as="a"
-                href={myData.socialUrls.portfolio}
-                aria-label="Portfolio"
-                target="_blank"
-                icon={<FaEye />}
-              />
-            </Tooltip> */}
+
             <Tooltip
               label={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}
               display={{ base: "none", md: "block" }}
@@ -95,18 +85,19 @@ export default function Navbar() {
                 as="button"
                 aria-label="Color Mode"
                 onClick={toggleColorMode}
-                color={color}
+                color="icon"
               >
                 {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
               </IconButton>
             </Tooltip>
+
             <Tooltip label="Toggle Super Dark Mode" display={{ base: "none", md: "block" }}>
               <IconButton
                 as="button"
                 aria-label="Super Dark Mode"
                 onClick={() => setSuperDarkMode(!superDarkMode)}
                 hideBelow={"940px"}
-                color={color}
+                color="icon"
               >
                 {mounted && superDarkMode ? <MdFlashlightOff /> : <MdFlashlightOn />}
               </IconButton>
