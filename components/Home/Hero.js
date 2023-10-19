@@ -45,7 +45,12 @@ export default function Hero() {
         position={"relative"}
         marginTop={20}
       >
-        <CustomImage src={avatar} alt="A photo of Geo" priority rounded={"full"} />
+        <CustomImage
+          src={avatar}
+          alt="A photo of Geo"
+          priority
+          rounded={"45% 55% 74% 26% / 36% 65% 35% 64%"}
+        />
       </Box>
     </HStack>
   );
