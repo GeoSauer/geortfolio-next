@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading } from "@chakra-ui/react";
 import { RoughNotationGroup } from "react-rough-notation";
 import HeroHighlight from "../RoughNotation/HeroHighlight";
 import avatar from "@/public/avatar.png";
@@ -6,8 +6,7 @@ import myData from "@/data";
 import CustomImage from "../Custom/CustomImage";
 
 export default function Hero() {
-  const color = useColorModeValue("gray.700");
-  const headingStyles = { fontSize: { base: "4xl", md: "8xl" } };
+  const headingStyles = { fontSize: { base: "4xl", md: "8xl" }, color: "textPrimary" };
 
   return (
     <HStack
@@ -24,7 +23,7 @@ export default function Hero() {
         marginX={"auto"}
         align={"stretch"}
         textAlign={{ base: "center", md: "left" }}
-        color={color}
+        // color="textPrimary"
         p={{ md: 20 }}
         mx={{ md: 20 }}
       >
