@@ -6,6 +6,7 @@ export default function about() {
     <Layout
       title="About - Geo Sauer"
       description="A deeper dive into my interests and what fuels me as an engineer."
+      heading="About me"
     >
       <About />
     </Layout>

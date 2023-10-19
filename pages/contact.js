@@ -7,6 +7,7 @@ export default function contact() {
     <Layout
       title="Contact - Geo Sauer"
       description={`Feel free to connect with me at ${myData.socialUrls.linkedIn} or send me a message at ${myData.email}.`}
+      heading="Contact"
     >
       <Contact />
     </Layout>

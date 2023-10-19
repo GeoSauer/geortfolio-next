@@ -1,5 +1,3 @@
-import PageHeading from "../Layout/PageHeading";
-import PageBody from "../Layout/PageBody";
 import myData from "@/data";
 import { Flex, Text, VStack, Box } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";
@@ -17,59 +15,50 @@ const color = myData.colors[3];
 export default function Contact() {
   return (
     <>
-      <PageHeading>Contact</PageHeading>
+      <Flex
+        direction={"column"}
+        sx={textStyles}
+        justify={"space-between"}
+        mb={{ base: 10, md: 20 }}
+      >
+        <Box maxWidth={{ md: "60vw" }}>
+          <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }}>
+            {myData.contact.title}
+          </Text>
+        </Box>
+        <VStack align={{ base: "center", md: "end" }} pt={10}>
+          <Text>
+            Check out my{" "}
+            <CustomLink href="/GeoSauer_Resume.pdf" color={color} target="_blank" rel="noreferrer">
+              Resume.
+            </CustomLink>
+          </Text>
+          <Text>
+            And my{" "}
+            <CustomLink
+              href={myData.socialUrls.linkedIn}
+              color={color}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn.
+            </CustomLink>
+          </Text>
+          <Text>
+            Maybe even my{" "}
+            <CustomLink
+              href={myData.socialUrls.github}
+              color={color}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub.
+            </CustomLink>
+          </Text>
+        </VStack>
+      </Flex>
 
-      <PageBody>
-        <Flex
-          direction={"column"}
-          sx={textStyles}
-          justify={"space-between"}
-          mb={{ base: 10, md: 20 }}
-        >
-          <Box maxWidth={{ md: "60vw" }}>
-            <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }}>
-              {myData.contact.title}
-            </Text>
-          </Box>
-          <VStack align={{ base: "center", md: "end" }} pt={10}>
-            <Text>
-              Check out my{" "}
-              <CustomLink
-                href="/GeoSauer_Resume.pdf"
-                color={color}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Resume.
-              </CustomLink>
-            </Text>
-            <Text>
-              And my{" "}
-              <CustomLink
-                href={myData.socialUrls.linkedIn}
-                color={color}
-                target="_blank"
-                rel="noreferrer"
-              >
-                LinkedIn.
-              </CustomLink>
-            </Text>
-            <Text>
-              Maybe even my{" "}
-              <CustomLink
-                href={myData.socialUrls.github}
-                color={color}
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub.
-              </CustomLink>
-            </Text>
-          </VStack>
-        </Flex>
-
-        <ContactForm />
-      </PageBody>
+      <ContactForm />
     </>
   );
 }

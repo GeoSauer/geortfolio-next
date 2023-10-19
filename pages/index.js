@@ -12,6 +12,7 @@ export default function home({ repositories }) {
 }
 
 export const getServerSideProps = async () => {
+  //TODO crack Next env variables because this isn't working properly
   let token = process.env.GITHUB_AUTH_TOKEN;
   const repositories = await getLatestRepos(myData, token);
 

@@ -6,6 +6,7 @@ export default function myJourney() {
     <Layout
       title="Journey - Geo Sauer"
       description="A brief retelling of the wild ride I've enjoyed on this Little Blue Marble..."
+      heading="My Journey"
     >
       <MyJourney />
     </Layout>

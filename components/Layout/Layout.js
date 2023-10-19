@@ -2,8 +2,10 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import PageHeading from "./PageHeading";
+import PageBody from "./PageBody";
 
-export default function Layout({ children, ...customMeta }) {
+export default function Layout({ children, heading, ...customMeta }) {
   const router = useRouter();
 
   const meta = {
@@ -36,7 +38,8 @@ export default function Layout({ children, ...customMeta }) {
       </Head>
       <main style={{ width: "full" }}>
         <Navbar />
-        {children}
+        <PageHeading>{heading}</PageHeading>
+        <PageBody>{children}</PageBody>
         <Footer />
       </main>
     </>

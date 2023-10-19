@@ -6,6 +6,7 @@ export default function projects() {
     <Layout
       title="Projects - Geo Sauer"
       description="Here's some examples of coding projects I've worked on."
+      heading="Projects"
     >
       <Projects />
     </Layout>
