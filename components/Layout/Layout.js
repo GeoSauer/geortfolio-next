@@ -36,7 +36,7 @@ export default function Layout({ children, heading, ...customMeta }) {
         {meta.date && <meta property="article:published_time" content={meta.date} />}
         <link rel="icon" href="/favicon.ico?v=2" />
       </Head>
-      <main style={{ width: "full" }}>
+      <main>
         <Navbar />
         <PageHeading>{heading}</PageHeading>
         <PageBody>{children}</PageBody>

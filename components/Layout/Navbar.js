@@ -31,10 +31,6 @@ export default function Navbar() {
     setMounted(true);
   }, []);
 
-  const toggleSuperDarkMode = () => {
-    setSuperDarkMode(!superDarkMode);
-  };
-
   return (
     <Container as="nav" role="navigation" maxWidth={"6xl"} paddingY={{ base: 10, md: 20 }}>
       <Flex justify="space-between" align="center">
@@ -108,7 +104,7 @@ export default function Navbar() {
               <IconButton
                 as="button"
                 aria-label="Super Dark Mode"
-                onClick={toggleSuperDarkMode}
+                onClick={() => setSuperDarkMode(!superDarkMode)}
                 hideBelow={"940px"}
                 color={color}
               >
