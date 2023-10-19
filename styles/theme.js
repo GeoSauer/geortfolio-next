@@ -1,15 +1,21 @@
 const { extendTheme } = require("@chakra-ui/react");
 
+const config = {
+  initialColorMode: "system",
+  useSystemColorMode: "true",
+};
+
 const theme = extendTheme({
+  config,
   semanticTokens: {
     colors: {
       bgPrimary: {
-        default: "",
+        default: "pink",
         _dark: "red",
       },
       bgSecondary: {
-        default: "",
-        _dark: "",
+        default: "teal",
+        _dark: "blue",
       },
     },
   },
