@@ -37,6 +37,8 @@ export default function Footer() {
             <Tooltip label="LinkedIn">
               <IconButton
                 color="icon"
+                bg="iconBG"
+                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -48,6 +50,8 @@ export default function Footer() {
             <Tooltip label="GitHub">
               <IconButton
                 color="icon"
+                bg="iconBG"
+                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"

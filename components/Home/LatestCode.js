@@ -1,19 +1,8 @@
 import CustomLink from "../Custom/CustomLink";
 import myData from "/data";
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 
 export default function LatestCode({ repositories }) {
-  const color = useColorModeValue("white", "gray.500");
-
   return (
     <Box as="section" marginTop={-40} paddingBottom={40}>
       <Container maxWidth={"6xl"} px={0}>
@@ -28,7 +17,7 @@ export default function LatestCode({ repositories }) {
         >
           <Heading
             as={"h1"}
-            color={color}
+            color="title"
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
             mb={{ base: 10, md: "-45px" }}
@@ -44,11 +33,11 @@ export default function LatestCode({ repositories }) {
             px={8}
             py={4}
             rounded={"md"}
-            bg={"white"}
-            shadow={"lg"}
+            bg="button"
+            color="buttonText"
+            shadow={"xl"}
             fontSize={"xl"}
-            fontWeight={"semibold"}
-            color={"gray.700"}
+            fontWeight={"bold"}
             alignItems={"center"}
           >
             <Text
@@ -74,19 +63,18 @@ export default function LatestCode({ repositories }) {
 }
 
 const GithubRepoCard = ({ latestRepo }) => {
-  const color = useColorModeValue("gray.700", "gray.100");
-
   return (
     <Stack>
-      <Heading fontSize={"xl"} color={color}>
+      <Heading fontSize={"2xl"} color="textPrimary">
         {latestRepo.name}
       </Heading>
-      <Text color={color} _dark={{ color: "gray.600" }}>
+      <Text color="textSecondary" fontWeight={"semibold"}>
         {latestRepo.description}
       </Text>
       <CustomLink
         href={latestRepo.clone_url}
         target="_blank"
+        color="textPrimary"
         fontWeight={"bold"}
         transform={"translateX(0)"}
         transition={"transform 0.3s ease"}

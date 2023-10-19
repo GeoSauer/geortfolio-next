@@ -58,6 +58,8 @@ export default function Navbar() {
             <Tooltip label="LinkedIn" display={{ base: "none", md: "block" }}>
               <IconButton
                 color="icon"
+                bg="iconBG"
+                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -69,6 +71,8 @@ export default function Navbar() {
             <Tooltip label="GitHub" display={{ base: "none", md: "block" }}>
               <IconButton
                 color="icon"
+                bg="iconBG"
+                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"
@@ -83,6 +87,8 @@ export default function Navbar() {
             >
               <IconButton
                 as="button"
+                bg="iconBG"
+                _hover={{ bg: "iconHover" }}
                 aria-label="Color Mode"
                 onClick={toggleColorMode}
                 color="icon"
@@ -94,6 +100,8 @@ export default function Navbar() {
             <Tooltip label="Toggle Super Dark Mode" display={{ base: "none", md: "block" }}>
               <IconButton
                 as="button"
+                bg="iconBG"
+                _hover={{ bg: "iconHover" }}
                 aria-label="Super Dark Mode"
                 onClick={() => setSuperDarkMode(!superDarkMode)}
                 hideBelow={"940px"}

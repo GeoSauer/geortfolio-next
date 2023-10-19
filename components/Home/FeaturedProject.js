@@ -1,11 +1,9 @@
 import myData from "/data";
-import { Box, Container, Flex, Heading, useColorModeValue, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 import CustomImage from "../Custom/CustomImage";
 
 export default function FeaturedProject() {
-  const color = useColorModeValue("white", "gray.500");
-
   return (
     <Box as="section" marginTop={{ base: -40, md: -60 }}>
       <Container maxWidth={"6xl"} px={0}>
@@ -20,7 +18,7 @@ export default function FeaturedProject() {
         >
           <Heading
             as={"h1"}
-            color={color}
+            color="title"
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
             mb={{ base: 10, md: "-35px" }}
@@ -34,11 +32,11 @@ export default function FeaturedProject() {
               px={8}
               py={4}
               rounded={"md"}
-              bg={"white"}
-              shadow={"lg"}
+              bg="button"
+              color="buttonText"
+              shadow={"xl"}
               fontSize={"xl"}
-              fontWeight={"semibold"}
-              color={"gray.700"}
+              fontWeight={"bold"}
               alignItems={"center"}
               whiteSpace={"nowrap"}
             >
