@@ -1,14 +1,21 @@
 import Layout from "@/components/Layout/Layout";
 import Projects from "@/components/Projects/Projects";
+import Head from "next/head";
 
 export default function projects() {
   return (
-    <Layout
-      title="Projects - Geo Sauer"
-      description="Here's some examples of coding projects I've worked on."
-      heading="Projects"
-    >
-      <Projects />
-    </Layout>
+    <>
+      <Head>
+        <title>Projects - Geo Sauer</title>
+        <meta
+          name="description"
+          content="Here's some examples of coding projects I've worked on."
+        />
+      </Head>
+
+      <Layout heading="Projects">
+        <Projects />
+      </Layout>
+    </>
   );
 }

@@ -1,14 +1,21 @@
 import Layout from "@/components/Layout/Layout";
 import MyJourney from "@/components/MyJourney/MyJourney";
+import Head from "next/head";
 
 export default function myJourney() {
   return (
-    <Layout
-      title="Journey - Geo Sauer"
-      description="A brief retelling of the wild ride I've enjoyed on this Little Blue Marble..."
-      heading="My Journey"
-    >
-      <MyJourney />
-    </Layout>
+    <>
+      <Head>
+        <title>Journey - Geo Sauer</title>
+        <meta
+          name="description"
+          content="A brief retelling of the wild ride I've enjoyed on this Little Blue Marble..."
+        />
+      </Head>
+
+      <Layout heading="My Journey">
+        <MyJourney />
+      </Layout>
+    </>
   );
 }
