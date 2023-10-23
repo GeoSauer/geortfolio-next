@@ -26,30 +26,32 @@ export default function FeaturedProject() {
             Featured Project
           </Heading>
 
-          <CustomLink href="/projects">
-            <Box
-              marginBottom={{ base: 20, md: 0 }}
-              px={8}
-              py={4}
-              rounded={"md"}
-              bg="button"
-              color="buttonText"
-              shadow={"xl"}
+          <CustomLink
+            href="/projects"
+            marginBottom={{ base: 20, md: 0 }}
+            px={8}
+            py={4}
+            rounded={"md"}
+            bg="button"
+            color="buttonText"
+            shadow={"xl"}
+            alignItems={"center"}
+            whiteSpace={"nowrap"}
+            _hover={{
+              "& .hover": {
+                transform: "translateX(2px)",
+              },
+            }}
+          >
+            <Text
+              className="hover"
               fontSize={"xl"}
               fontWeight={"bold"}
-              alignItems={"center"}
-              whiteSpace={"nowrap"}
+              transform={"translateX(0)"}
+              transition={"transform 0.3s ease"}
             >
-              <Text
-                transform={"translateX(0)"}
-                transition={"transform 0.3s ease"}
-                _hover={{
-                  transform: "translateX(2px)",
-                }}
-              >
-                View All &rarr;
-              </Text>
-            </Box>
+              View All &rarr;
+            </Text>
           </CustomLink>
         </Flex>
 

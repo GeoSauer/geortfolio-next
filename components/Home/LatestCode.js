@@ -36,16 +36,19 @@ export default function LatestCode({ repositories }) {
             bg="button"
             color="buttonText"
             shadow={"xl"}
-            fontSize={"xl"}
-            fontWeight={"bold"}
             alignItems={"center"}
+            _hover={{
+              "& .hover": {
+                transform: "translateX(2px)",
+              },
+            }}
           >
             <Text
+              className="hover"
+              fontSize={"xl"}
+              fontWeight={"bold"}
               transform={"translateX(0)"}
               transition={"transform 0.3s ease"}
-              _hover={{
-                transform: "translateX(2px)",
-              }}
             >
               View Github &rarr;
             </Text>
