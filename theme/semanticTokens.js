@@ -1,11 +1,11 @@
 const semanticTokens = {
   colors: {
     bgPrimary: {
-      default: "yellow.200",
+      default: "yellow.100",
       _dark: "rgb(0,33,43)",
     },
     bgSecondary: {
-      default: "yellow.100",
+      default: "yellow.50",
       _dark: "rgb(0,43,53)",
     },
     textPrimary: {
@@ -25,8 +25,8 @@ const semanticTokens = {
       _dark: "gray.400",
     },
     iconBG: {
-      default: "yellow.300",
-      _dark: "teal.900",
+      default: "yellow.100",
+      _dark: "rgb(0,33,43)",
     },
     iconHover: {
       default: "yellow.200",
@@ -37,12 +37,28 @@ const semanticTokens = {
       _dark: "gray.400",
     },
     button: {
-      default: "yellow.500",
+      default: "yellow.300",
       _dark: "gray.200",
     },
     buttonText: {
-      default: "yellow.100",
+      default: "yellow.50",
       _dark: "gray.600",
+    },
+    contactForm: {
+      default: "yellow.50",
+      _dark: "rgb(0,43,53)",
+    },
+    submitButton: {
+      default: "yellow.300",
+      _dark: "teal.700",
+    },
+    submitText: {
+      default: "gray.600",
+      _dark: "gray.400",
+    },
+    submitHover: {
+      default: "yellow.200",
+      _dark: "teal.800",
     },
   },
 };

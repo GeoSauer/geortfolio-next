@@ -8,6 +8,7 @@ const textStyles = {
   fontSize: { base: "2xl", md: "3xl" },
   fontWeight: "semibold",
   px: { base: 8, md: 0 },
+  color: "textPrimary",
 };
 
 const color = myData.colors[3];
@@ -22,14 +23,20 @@ export default function Contact() {
         mb={{ base: 10, md: 20 }}
       >
         <Box maxWidth={{ md: "60vw" }}>
-          <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }}>
+          <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }} color="textPrimary">
             {myData.contact.title}
           </Text>
         </Box>
         <VStack align={{ base: "center", md: "end" }} pt={10}>
           <Text>
             Check out my{" "}
-            <CustomLink href="/GeoSauer_Resume.pdf" color={color} target="_blank" rel="noreferrer">
+            <CustomLink
+              href="/GeoSauer_Resume.pdf"
+              color={color}
+              fontWeight={"bold"}
+              target="_blank"
+              rel="noreferrer"
+            >
               Resume.
             </CustomLink>
           </Text>
@@ -38,6 +45,7 @@ export default function Contact() {
             <CustomLink
               href={myData.socialUrls.linkedIn}
               color={color}
+              fontWeight={"bold"}
               target="_blank"
               rel="noreferrer"
             >
@@ -49,6 +57,7 @@ export default function Contact() {
             <CustomLink
               href={myData.socialUrls.github}
               color={color}
+              fontWeight={"bold"}
               target="_blank"
               rel="noreferrer"
             >
