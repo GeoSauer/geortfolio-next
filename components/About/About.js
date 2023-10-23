@@ -9,6 +9,7 @@ const subheaderStyles = {
   fontWeight: "semibold",
   color: myData.colors[0],
   mb: -4,
+  paddingBottom: 10,
 };
 
 export default function About() {
@@ -27,30 +28,36 @@ export default function About() {
       </Text>
 
       <Container maxWidth={"6xl"} pt={20}>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} color="textSecondary">
           <Box>
             <Text as="h2" sx={subheaderStyles}>
               Where I&apos;ve been.
             </Text>
-            <Text fontSize={"2xl"} py={5}>
-              {myData.about.desc[0]}
-            </Text>
+            {myData.about.desc[0].map((sentence, idx) => (
+              <Text key={idx} fontSize={"2xl"} paddingBottom={2}>
+                {sentence}
+              </Text>
+            ))}
           </Box>
           <Box>
             <Text as="h2" sx={subheaderStyles}>
               What I&apos;m doing.
             </Text>
-            <Text fontSize={"2xl"} py={5}>
-              {myData.about.desc[1]}
-            </Text>
+            {myData.about.desc[1].map((sentence, idx) => (
+              <Text key={idx} fontSize={"2xl"} paddingBottom={2}>
+                {sentence}
+              </Text>
+            ))}
           </Box>
           <Box>
             <Text as="h2" sx={subheaderStyles}>
               What I hope to do.
             </Text>
-            <Text fontSize={"2xl"} py={5}>
-              {myData.about.desc[2]}
-            </Text>
+            {myData.about.desc[2].map((sentence, idx) => (
+              <Text key={idx} fontSize={"2xl"} paddingBottom={2}>
+                {sentence}
+              </Text>
+            ))}
           </Box>
         </SimpleGrid>
       </Container>
