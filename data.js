@@ -112,8 +112,10 @@ const myData = {
         ],
       ],
     ],
+
     currentProject: "this very portfolio!",
     currentProjectUrl: "https://github.com/GeoSauer/geortfolio-next",
+
     techStack: [
       {
         name: "JavaScript",

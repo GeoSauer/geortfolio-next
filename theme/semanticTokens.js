@@ -1,7 +1,7 @@
 const semanticTokens = {
   colors: {
     bgPrimary: {
-      default: "yellow.400",
+      default: "yellow.200",
       _dark: "rgb(0,33,43)",
     },
     bgSecondary: {
@@ -17,7 +17,7 @@ const semanticTokens = {
       _dark: "gray.400",
     },
     title: {
-      default: "yellow.100",
+      default: "yellow.300",
       _dark: "teal.800",
     },
     icon: {
