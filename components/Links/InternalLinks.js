@@ -5,14 +5,13 @@ import CustomLink from "../Custom/CustomLink";
 
 const dividerStyles = {
   borderWidth: "1px",
-  borderColor: "divider",
   height: 4,
   mx: { md: 3 },
 };
 
 export default function InternalLinks() {
   return (
-    <HStack justify={"space-evenly"} fontWeight={"bold"} color="textPrimary">
+    <HStack justify={"space-evenly"} fontWeight={"bold"}>
       <StyledLink href="/about" activeColor={myData.colors[0]}>
         About
       </StyledLink>

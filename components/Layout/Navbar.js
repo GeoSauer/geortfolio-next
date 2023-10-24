@@ -41,9 +41,7 @@ export default function Navbar() {
           }}
         >
           <CustomLink href="/">
-            <Heading size={"md"} color="textPrimary">
-              {myData.name}
-            </Heading>
+            <Heading size={"md"}>{myData.name}</Heading>
             <Text color="textSecondary">{myData.designation}</Text>
           </CustomLink>
         </VStack>
@@ -54,12 +52,9 @@ export default function Navbar() {
         </Box>
 
         <Stack direction={{ base: "column", md: "row" }}>
-          <ButtonGroup variant="solid">
+          <ButtonGroup variant="ghost">
             <Tooltip label="LinkedIn" display={{ base: "none", md: "block" }}>
               <IconButton
-                color="icon"
-                bg="iconBG"
-                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -70,9 +65,6 @@ export default function Navbar() {
 
             <Tooltip label="GitHub" display={{ base: "none", md: "block" }}>
               <IconButton
-                color="icon"
-                bg="iconBG"
-                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"
@@ -85,14 +77,7 @@ export default function Navbar() {
               label={`Toggle ${colorMode === "light" ? "Dark" : "Light"} Mode`}
               display={{ base: "none", md: "block" }}
             >
-              <IconButton
-                as="button"
-                bg="iconBG"
-                _hover={{ bg: "iconHover" }}
-                aria-label="Color Mode"
-                onClick={toggleColorMode}
-                color="icon"
-              >
+              <IconButton as="button" aria-label="Color Mode" onClick={toggleColorMode}>
                 {mounted && colorMode === "light" ? <FaMoon /> : <FaSun />}
               </IconButton>
             </Tooltip>
@@ -100,12 +85,9 @@ export default function Navbar() {
             <Tooltip label="Toggle Super Dark Mode" display={{ base: "none", md: "block" }}>
               <IconButton
                 as="button"
-                bg="iconBG"
-                _hover={{ bg: "iconHover" }}
                 aria-label="Super Dark Mode"
                 onClick={() => setSuperDarkMode(!superDarkMode)}
                 hideBelow={"940px"}
-                color="icon"
               >
                 {mounted && superDarkMode ? <MdFlashlightOff /> : <MdFlashlightOn />}
               </IconButton>

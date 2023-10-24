@@ -6,7 +6,7 @@ import myData from "@/data";
 import CustomImage from "../Custom/CustomImage";
 
 export default function Hero() {
-  const headingStyles = { fontSize: { base: "4xl", md: "8xl" }, color: "textPrimary" };
+  const headingStyles = { fontSize: { base: "4xl", md: "8xl" } };
 
   return (
     <HStack

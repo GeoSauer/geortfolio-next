@@ -13,8 +13,8 @@ import { FaLinkedin, FaGithubAlt } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <Box bg="bgPrimary" pt={20}>
-      <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} borderColor="divider" />
+    <Box pt={20} bg="bgPrimary">
+      <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} />
       <Container
         as="footer"
         role="contentinfo"
@@ -33,12 +33,9 @@ export default function Footer() {
             {new Date().getFullYear()} Geo Sauer. All rights reserved.
           </Text>
 
-          <ButtonGroup variant="solid">
+          <ButtonGroup variant="ghost">
             <Tooltip label="LinkedIn">
               <IconButton
-                color="icon"
-                bg="iconBG"
-                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -49,9 +46,6 @@ export default function Footer() {
 
             <Tooltip label="GitHub">
               <IconButton
-                color="icon"
-                bg="iconBG"
-                _hover={{ bg: "iconHover" }}
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"

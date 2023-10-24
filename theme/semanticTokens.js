@@ -1,8 +1,8 @@
 const semanticTokens = {
   colors: {
     bgPrimary: {
-      default: "yellow.100",
-      _dark: "rgb(0,33,43)",
+      default: "gray.50",
+      _dark: "gray.900",
     },
     bgSecondary: {
       default: "yellow.50",
@@ -13,12 +13,12 @@ const semanticTokens = {
       _dark: "gray.200",
     },
     textSecondary: {
-      default: "gray.600",
+      default: "gray.700",
       _dark: "gray.400",
     },
     title: {
-      default: "yellow.300",
-      _dark: "teal.800",
+      default: "gray.300",
+      _dark: "gray.700",
     },
     icon: {
       default: "gray.600",
@@ -33,16 +33,16 @@ const semanticTokens = {
       _dark: "teal.800",
     },
     divider: {
-      default: "gray.600",
+      default: "gray.900",
       _dark: "gray.400",
     },
     button: {
-      default: "yellow.300",
-      _dark: "gray.200",
+      default: "gray.100",
+      _dark: "gray.100",
     },
     buttonText: {
-      default: "yellow.50",
-      _dark: "gray.600",
+      default: "gray.900",
+      _dark: "gray.700",
     },
     contactForm: {
       default: "yellow.50",

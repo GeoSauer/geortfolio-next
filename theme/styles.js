@@ -2,7 +2,6 @@ const styles = {
   global: {
     body: {
       width: "full",
-      bg: "bgSecondary",
     },
   },
 };

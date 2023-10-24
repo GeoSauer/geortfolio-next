@@ -18,10 +18,10 @@ export default function FeaturedProject() {
         >
           <Heading
             as={"h1"}
-            color="title"
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
             mb={{ base: 10, md: "-35px" }}
+            color="title"
           >
             Featured Project
           </Heading>

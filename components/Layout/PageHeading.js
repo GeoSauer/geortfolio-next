@@ -8,7 +8,6 @@ export default function PageHeading({ children }) {
         mb={{ base: 20, md: 5 }}
         textAlign={{ base: "center", md: "left" }}
         py={{ base: 5, md: 20 }}
-        color="title"
       >
         {children}
       </Heading>

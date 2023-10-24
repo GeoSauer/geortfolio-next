@@ -68,16 +68,13 @@ export default function LatestCode({ repositories }) {
 const GithubRepoCard = ({ latestRepo }) => {
   return (
     <Stack>
-      <Heading fontSize={"2xl"} color="textPrimary">
-        {latestRepo.name}
-      </Heading>
+      <Heading fontSize={"2xl"}>{latestRepo.name}</Heading>
       <Text color="textSecondary" fontWeight={"semibold"}>
         {latestRepo.description}
       </Text>
       <CustomLink
         href={latestRepo.clone_url}
         target="_blank"
-        color="textPrimary"
         fontWeight={"bold"}
         transform={"translateX(0)"}
         transition={"transform 0.3s ease"}
