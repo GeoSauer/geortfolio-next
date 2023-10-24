@@ -24,6 +24,14 @@ const semanticTokens = {
       default: "gray.900",
       _dark: "gray.700",
     },
+    cardBG: {
+      default: "gray.50",
+      _dark: "gray.800",
+    },
+    cardText: {
+      default: "gray.600",
+      _dark: "gray.400",
+    },
   },
 };
 
