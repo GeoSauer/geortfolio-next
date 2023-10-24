@@ -19,11 +19,10 @@ export default function Hero() {
     >
       <Flex
         direction={"column"}
-        width={{ base: "full", md: "60vw" }}
+        width={{ base: "full", lg: "60vw" }}
         marginX={"auto"}
         align={"stretch"}
         textAlign={{ base: "center", md: "left" }}
-        // color="textPrimary"
         p={{ md: 20 }}
         mx={{ md: 20 }}
       >
@@ -37,7 +36,7 @@ export default function Hero() {
       </Flex>
 
       <Box
-        display={{ base: "none", md: "block" }}
+        display={{ base: "none", lg: "block" }}
         width={"40vw"}
         maxW={"xl"}
         mr={8}
