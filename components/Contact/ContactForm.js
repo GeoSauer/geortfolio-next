@@ -64,14 +64,9 @@ export default function ContactForm() {
   };
 
   return (
-    <Container maxWidth={"xl"} p={5} align={"center"} bg="contactForm" rounded={{ md: "lg" }}>
+    <Container maxWidth={"xl"} p={5} align={"center"} rounded={{ md: "lg" }}>
       <VStack spacing={5}>
-        <Text
-          fontSize={{ base: "2xl", md: "3xl" }}
-          fontWeight={"semibold"}
-          px={{ base: 8, md: 0 }}
-          color="textPrimary"
-        >
+        <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight={"semibold"} px={{ base: 8, md: 0 }}>
           {messageSent ? "Thanks! I'll get back to you soon." : "Get in touch, let's talk."}
         </Text>
 
@@ -85,9 +80,7 @@ export default function ContactForm() {
               <Field name="name">
                 {({ field, form }) => (
                   <FormControl isInvalid={form.errors.name && form.touched.name} sx={inputStyles}>
-                    <FormLabel htmlFor="name" color="textSecondary">
-                      Name
-                    </FormLabel>
+                    <FormLabel htmlFor="name">Name</FormLabel>
                     <Input {...field} id="name" placeholder="Your name" />
                     <ErrorMessage name="name" />
                   </FormControl>
@@ -97,9 +90,7 @@ export default function ContactForm() {
               <Field name="email">
                 {({ field, form }) => (
                   <FormControl isInvalid={form.errors.email && form.touched.email} sx={inputStyles}>
-                    <FormLabel htmlFor="email" color="textSecondary">
-                      Email
-                    </FormLabel>
+                    <FormLabel htmlFor="email">Email</FormLabel>
                     <Input {...field} id="email" placeholder="Your email" />
                     <ErrorMessage name="email" />
                   </FormControl>
@@ -112,23 +103,14 @@ export default function ContactForm() {
                     isInvalid={form.errors.message && form.touched.message}
                     sx={inputStyles}
                   >
-                    <FormLabel htmlFor="message" color="textSecondary">
-                      Message
-                    </FormLabel>
+                    <FormLabel htmlFor="message">Message</FormLabel>
                     <Textarea {...field} id="message" placeholder="Your message" />
                     <ErrorMessage name="message" />
                   </FormControl>
                 )}
               </Field>
 
-              <Button
-                isLoading={isSubmitting}
-                type="submit"
-                mt={4}
-                bg="submitButton"
-                color="submitText"
-                _hover={{ bg: "submitHover" }}
-              >
+              <Button isLoading={isSubmitting} type="submit" mt={4}>
                 Submit
               </Button>
             </Form>

@@ -8,7 +8,6 @@ const textStyles = {
   fontSize: { base: "2xl", md: "3xl" },
   fontWeight: "semibold",
   px: { base: 8, md: 0 },
-  color: "textPrimary",
 };
 
 const color = myData.colors[3];
@@ -23,7 +22,7 @@ export default function Contact() {
         mb={{ base: 10, md: 20 }}
       >
         <Box maxWidth={{ md: "60vw" }}>
-          <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }} color="textPrimary">
+          <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }}>
             {myData.contact.title}
           </Text>
         </Box>
