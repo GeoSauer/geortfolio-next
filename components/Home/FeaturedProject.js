@@ -5,22 +5,21 @@ import CustomImage from "../Custom/CustomImage";
 
 export default function FeaturedProject() {
   return (
-    <Box as="section" marginTop={{ base: -40, md: -60 }}>
+    <Box as="section" marginTop={-20}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
-          direction={{ base: "column", md: "row" }}
+          direction={"row"}
           justify={"space-between"}
           alignItems={"center"}
           paddingTop={60}
-          mx={10}
-          my={{ md: 20, lg: 0 }}
+          mx={{ base: 2, md: 10 }}
         >
           <Heading
             as={"h1"}
             fontSize={{ base: "6xl", md: "9xl" }}
-            textAlign={{ base: "center", md: "left" }}
-            mb={{ base: 10, md: "-35px" }}
+            textAlign={"left"}
+            mb={{ md: "-35px" }}
             color="title"
           >
             Featured Project
@@ -28,9 +27,8 @@ export default function FeaturedProject() {
 
           <CustomLink
             href="/projects"
-            marginBottom={{ base: 20, md: 0 }}
-            px={8}
-            py={4}
+            px={{ base: 2, md: 6 }}
+            py={{ base: 2, md: 4 }}
             rounded={"md"}
             bg="button"
             color="buttonText"
@@ -45,7 +43,7 @@ export default function FeaturedProject() {
           >
             <Text
               className="hover"
-              fontSize={"xl"}
+              fontSize={{ base: "md", md: "xl" }}
               fontWeight={"bold"}
               transform={"translateX(0)"}
               transition={"transform 0.3s ease"}
@@ -55,7 +53,7 @@ export default function FeaturedProject() {
           </CustomLink>
         </Flex>
 
-        <Container pb={40} px={0} maxW="5xl">
+        <Container px={0} maxW="5xl">
           <CustomLink href={myData.featuredProject.link} target="_blank">
             <AspectRatio ratio={16 / 9}>
               <CustomImage
