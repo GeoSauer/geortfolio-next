@@ -1,43 +1,19 @@
-import { Fragment } from "react";
-import { SimpleGrid, Text, AspectRatio } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import myData from "@/data";
-import CustomLink from "../Custom/CustomLink";
-import CustomImage from "../Custom/CustomImage";
+import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
   return (
-    <SimpleGrid columns={{ base: 1, md: 2 }} gap={8} pt={{ md: 10 }}>
+    <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8} pt={{ md: 10 }}>
       {myData.projects?.map((project, idx) => (
-        <Fragment key={idx}>
-          <CustomLink href={project.link} target="_blank">
-            <AspectRatio ratio={16 / 9}>
-              <CustomImage
-                src={project.imageUrl}
-                alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
-                filter={"grayscale(90%)"}
-                transition={"filter 0.5s"}
-                _hover={{ filter: "none" }}
-                rounded={{ base: "none", md: "lg" }}
-              />
-            </AspectRatio>
-            <Text
-              as="h1"
-              fontSize={"2xl"}
-              fontWeight={"semibold"}
-              color={"white"}
-              position={"absolute"}
-              bottom={5}
-              right={5}
-              bg={myData.colors[1]}
-              rounded={"lg"}
-              px={2}
-            >
-              {project.title}
-            </Text>
-          </CustomLink>
-        </Fragment>
+        <ProjectCard
+          key={idx}
+          href={project.link}
+          src={project.imageUrl}
+          alt={project.title}
+          title={project.title}
+          color={myData.colors[1]}
+        />
       ))}
     </SimpleGrid>
   );
