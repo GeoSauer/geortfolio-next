@@ -53,7 +53,7 @@ export default function FeaturedProject() {
           </CustomLink>
         </Flex>
 
-        <Container pb={40} px={0} maxW="5xl">
+        <Container px={0} maxW="5xl">
           <CustomLink href={myData.featuredProject.link} target="_blank">
             <AspectRatio ratio={16 / 9}>
               <CustomImage

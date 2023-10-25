@@ -4,14 +4,14 @@ import { Box, Container, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-
 
 export default function LatestCode({ repositories }) {
   return (
-    <Box as="section" paddingBottom={40}>
+    <Box as="section" paddingBottom={{ base: 20, md: 40 }}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
           direction={"row"}
           justify={"space-between"}
           alignItems={"center"}
-          paddingTop={{ md: 40 }}
+          paddingTop={{ base: 40, md: 60 }}
           mx={{ base: 2, md: 10 }}
         >
           <Heading
