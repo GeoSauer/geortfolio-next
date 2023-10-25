@@ -12,7 +12,7 @@ export default function Hero() {
   const { superDarkMode } = useSuperDarkMode();
 
   return (
-    <HStack as={"section"} role="hero" align={"start"} mt={{ base: -145, md: -350 }}>
+    <HStack as={"section"} role="hero" align={"start"} mt={{ base: -100, md: -250 }}>
       <Flex
         direction={"column"}
         width={{ base: "full", lg: "60vw" }}

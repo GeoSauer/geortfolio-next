@@ -4,34 +4,33 @@ import { Box, Container, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-
 
 export default function LatestCode({ repositories }) {
   return (
-    <Box as="section" marginTop={-40} paddingBottom={40}>
+    <Box as="section" paddingBottom={40}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
-          direction={{ base: "column", md: "row" }}
+          direction={"row"}
           justify={"space-between"}
           alignItems={"center"}
-          paddingTop={40}
-          mx={10}
-          pt={20}
+          paddingTop={{ md: 40 }}
+          mx={{ base: 2, md: 10 }}
         >
           <Heading
             as={"h1"}
-            color="title"
             fontSize={{ base: "6xl", md: "9xl" }}
-            textAlign={{ base: "center", md: "left" }}
-            mb={{ base: 10, md: "-45px" }}
+            textAlign={"left"}
+            mb={{ md: "-45px" }}
+            color="title"
           >
-            <p>Latest</p>
-            <p>Code</p>
+            Latest
+            <br />
+            Code
           </Heading>
 
           <CustomLink
             href={`https://github.com/${myData.githubUsername}`}
             target="_blank"
-            marginBottom={{ base: 20, md: 0 }}
-            px={8}
-            py={4}
+            px={{ base: 2, md: 6 }}
+            py={{ base: 2, md: 4 }}
             rounded={"md"}
             bg="button"
             color="buttonText"
@@ -45,7 +44,7 @@ export default function LatestCode({ repositories }) {
           >
             <Text
               className="hover"
-              fontSize={"xl"}
+              fontSize={{ base: "md", md: "xl" }}
               fontWeight={"bold"}
               transform={"translateX(0)"}
               transition={"transform 0.3s ease"}
@@ -55,6 +54,7 @@ export default function LatestCode({ repositories }) {
           </CustomLink>
         </Flex>
       </Container>
+
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={20} px={10} maxWidth={"5xl"} mx={"auto"}>
         {repositories &&
           repositories.map((latestRepo, idx) => (
