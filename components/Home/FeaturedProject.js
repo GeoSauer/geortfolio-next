@@ -1,5 +1,5 @@
 import myData from "/data";
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { AspectRatio, Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 import CustomImage from "../Custom/CustomImage";
 
@@ -57,21 +57,15 @@ export default function FeaturedProject() {
 
         <Container pb={40} px={0} maxW="5xl">
           <CustomLink href={myData.featuredProject.link} target="_blank">
-            <Box
-              position={"relative"}
-              overflow={"hidden"}
-              shadow={"2xl"}
-              width={"full"}
-              height={{ base: "26vh", md: "xl" }}
-              rounded={{ md: "lg" }}
-            >
+            <AspectRatio ratio={16 / 9}>
               <CustomImage
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 85vw"
+                rounded={{ base: "none", lg: "lg" }}
               />
-            </Box>
+            </AspectRatio>
           </CustomLink>
         </Container>
       </Container>

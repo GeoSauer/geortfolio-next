@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { SimpleGrid, Box, Text } from "@chakra-ui/react";
+import { SimpleGrid, Text, AspectRatio } from "@chakra-ui/react";
 import myData from "@/data";
 import CustomLink from "../Custom/CustomLink";
 import CustomImage from "../Custom/CustomImage";
@@ -10,14 +10,7 @@ export default function Projects() {
       {myData.projects?.map((project, idx) => (
         <Fragment key={idx}>
           <CustomLink href={project.link} target="_blank">
-            <Box
-              position={"relative"}
-              overflow={"hidden"}
-              shadow={"2xl"}
-              width={"full"}
-              height={{ base: "26vh", md: "xs" }}
-              rounded={{ md: "lg" }}
-            >
+            <AspectRatio ratio={16 / 9}>
               <CustomImage
                 src={project.imageUrl}
                 alt={project.title}
@@ -26,22 +19,23 @@ export default function Projects() {
                 filter={"grayscale(90%)"}
                 transition={"filter 0.5s"}
                 _hover={{ filter: "none" }}
+                rounded={{ base: "none", md: "lg" }}
               />
-              <Text
-                as="h1"
-                fontSize={"2xl"}
-                fontWeight={"semibold"}
-                color={"white"}
-                position={"absolute"}
-                bottom={5}
-                right={5}
-                bg={myData.colors[1]}
-                rounded={"lg"}
-                px={2}
-              >
-                {project.title}
-              </Text>
-            </Box>
+            </AspectRatio>
+            <Text
+              as="h1"
+              fontSize={"2xl"}
+              fontWeight={"semibold"}
+              color={"white"}
+              position={"absolute"}
+              bottom={5}
+              right={5}
+              bg={myData.colors[1]}
+              rounded={"lg"}
+              px={2}
+            >
+              {project.title}
+            </Text>
           </CustomLink>
         </Fragment>
       ))}
