@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading } from "@chakra-ui/react";
 import { RoughNotationGroup } from "react-rough-notation";
 import HeroHighlight from "../RoughNotation/HeroHighlight";
 import avatar from "@/public/avatar.png";
@@ -6,18 +6,23 @@ import myData from "@/data";
 import CustomImage from "../Custom/CustomImage";
 
 export default function Hero() {
-  const color = useColorModeValue("gray.700");
   const headingStyles = { fontSize: { base: "4xl", md: "8xl" } };
 
   return (
-    <HStack as={"section"} role="hero" justify={"center"} align={"start"} overflow={"hidden"}>
+    <HStack
+      as={"section"}
+      role="hero"
+      // justify={"center"}
+      align={"start"}
+      // overflow={"hidden"}
+      mt={{ base: -145, md: -350 }}
+    >
       <Flex
         direction={"column"}
-        width={{ base: "full", md: "60vw" }}
+        width={{ base: "full", lg: "60vw" }}
         marginX={"auto"}
         align={"stretch"}
         textAlign={{ base: "center", md: "left" }}
-        color={color}
         p={{ md: 20 }}
         mx={{ md: 20 }}
       >
@@ -31,14 +36,19 @@ export default function Hero() {
       </Flex>
 
       <Box
-        display={{ base: "none", md: "block" }}
+        display={{ base: "none", lg: "block" }}
         width={"40vw"}
         maxW={"xl"}
         mr={8}
         position={"relative"}
         marginTop={20}
       >
-        <CustomImage src={avatar} alt="A photo of Geo" priority rounded={"full"} />
+        <CustomImage
+          src={avatar}
+          alt="A photo of Geo"
+          priority
+          rounded={"45% 55% 74% 26% / 36% 65% 35% 64%"}
+        />
       </Box>
     </HStack>
   );

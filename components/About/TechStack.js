@@ -5,7 +5,14 @@ import myData from "@/data";
 export default function TechStack() {
   return (
     <>
-      <Text as="h1" textAlign={"center"} fontSize={"4xl"} fontWeight={"bold"} py={10}>
+      <Text
+        as="h1"
+        textAlign={"center"}
+        fontSize={"4xl"}
+        fontWeight={"bold"}
+        py={10}
+        color="textPrimary"
+      >
         Tech Stack
       </Text>
       <SimpleGrid

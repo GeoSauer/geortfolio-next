@@ -64,14 +64,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Container
-      maxWidth={"xl"}
-      p={5}
-      align={"center"}
-      bg={"gray.300"}
-      _dark={{ bg: "gray.800" }}
-      rounded={{ md: "lg" }}
-    >
+    <Container maxWidth={"xl"} p={5} align={"center"} rounded={{ md: "lg" }}>
       <VStack spacing={5}>
         <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight={"semibold"} px={{ base: 8, md: 0 }}>
           {messageSent ? "Thanks! I'll get back to you soon." : "Get in touch, let's talk."}

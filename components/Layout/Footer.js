@@ -8,16 +8,12 @@ import {
   Stack,
   Text,
   Tooltip,
-  useColorModeValue,
 } from "@chakra-ui/react";
-import { FaLinkedin, FaGithubAlt, FaEye } from "react-icons/fa";
+import { FaLinkedin, FaGithubAlt } from "react-icons/fa";
 
 export default function Footer() {
-  const color = useColorModeValue("gray.500", "gray.300");
-  const bg = useColorModeValue("gray.100", "gray.900");
-
   return (
-    <Box bg={bg} pt={20}>
+    <Box pt={20} bg="bgPrimary">
       <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} />
       <Container
         as="footer"
@@ -32,15 +28,14 @@ export default function Footer() {
           align="center"
           spacing={6}
         >
-          <Text fontSize="sm">
+          <Text fontSize="sm" color="textPrimary">
             &copy; {new Date().getFullYear() !== 2023 ? "2023 - " : null}
             {new Date().getFullYear()} Geo Sauer. All rights reserved.
           </Text>
 
-          <ButtonGroup variant="solid">
+          <ButtonGroup variant="ghost">
             <Tooltip label="LinkedIn">
               <IconButton
-                color={color}
                 as="a"
                 href={myData.socialUrls.linkedIn}
                 aria-label="LinkedIn"
@@ -48,24 +43,14 @@ export default function Footer() {
                 icon={<FaLinkedin />}
               />
             </Tooltip>
+
             <Tooltip label="GitHub">
               <IconButton
-                color={color}
                 as="a"
                 href={myData.socialUrls.github}
                 aria-label="GitHub"
                 target="_blank"
                 icon={<FaGithubAlt />}
-              />
-            </Tooltip>
-            <Tooltip label="Portfolio">
-              <IconButton
-                color={color}
-                as="a"
-                href={myData.socialUrls.portfolio}
-                aria-label="Portfolio"
-                target="_blank"
-                icon={<FaEye />}
               />
             </Tooltip>
           </ButtonGroup>

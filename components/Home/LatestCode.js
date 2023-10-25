@@ -1,22 +1,10 @@
 import CustomLink from "../Custom/CustomLink";
 import myData from "/data";
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  SimpleGrid,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 
 export default function LatestCode({ repositories }) {
-  const color = useColorModeValue("white", "gray.500");
-  const bg = useColorModeValue("gray.100", "gray.900");
-
   return (
-    <Box as="section" marginTop={-40} paddingBottom={40} bg={bg}>
+    <Box as="section" marginTop={-40} paddingBottom={40}>
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
@@ -29,7 +17,7 @@ export default function LatestCode({ repositories }) {
         >
           <Heading
             as={"h1"}
-            color={color}
+            color="title"
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={{ base: "center", md: "left" }}
             mb={{ base: 10, md: "-45px" }}
@@ -45,19 +33,22 @@ export default function LatestCode({ repositories }) {
             px={8}
             py={4}
             rounded={"md"}
-            bg={"white"}
-            shadow={"lg"}
-            fontSize={"xl"}
-            fontWeight={"semibold"}
-            color={"gray.700"}
+            bg="button"
+            color="buttonText"
+            shadow={"xl"}
             alignItems={"center"}
+            _hover={{
+              "& .hover": {
+                transform: "translateX(2px)",
+              },
+            }}
           >
             <Text
+              className="hover"
+              fontSize={"xl"}
+              fontWeight={"bold"}
               transform={"translateX(0)"}
               transition={"transform 0.3s ease"}
-              _hover={{
-                transform: "translateX(2px)",
-              }}
             >
               View Github &rarr;
             </Text>
@@ -75,14 +66,10 @@ export default function LatestCode({ repositories }) {
 }
 
 const GithubRepoCard = ({ latestRepo }) => {
-  const color = useColorModeValue("gray.700", "gray.100");
-
   return (
     <Stack>
-      <Heading fontSize={"xl"} color={color}>
-        {latestRepo.name}
-      </Heading>
-      <Text color={color} _dark={{ color: "gray.600" }}>
+      <Heading fontSize={"2xl"}>{latestRepo.name}</Heading>
+      <Text color="textSecondary" fontWeight={"semibold"}>
         {latestRepo.description}
       </Text>
       <CustomLink

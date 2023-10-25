@@ -1,10 +1,8 @@
-import { Box, Container, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 
 export default function PageBody({ children }) {
-  const bg = useColorModeValue("gray.100", "gray.900");
-
   return (
-    <Box bg={bg} mt={{ base: "-126px", md: -5 }}>
+    <Box mt={{ base: "-126px", md: -5 }} bg="bgPrimary">
       <Container maxWidth={"6xl"} pt={20} px={0}>
         {children}
       </Container>

@@ -1,40 +1,25 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Oh hey, it's my portfolio repo
 
-First, run the development server:
+I had a great time creating this minimalistic portfolio with Next.js and Chakra UI. Originally inspired by [this](https://github.com/manuarora700/simple-developer-portfolio-website) tutorial site.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun run dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Responsive layout that reacts to multiple breakpoints.
+- Dark/Light mode that automatically configures to the OS settings of the viewer.
+- Super Dark Mode (I had soooo much fun with this one 😄).
+- Utilizes a custom Chakra theme for maintainability.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Built with [Next.js](https://nextjs.org/) and deployed on [Vercel](https://vercel.com/).
+- Styled with [Chakra UI](https://chakra-ui.com/).
+- Highlight and underline effects via [React Rough Notation](https://roughnotation.com/).
+- Tech stack icons from [Devicon](https://devicon.dev/).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Takeaways
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- This was an incredibly fun project and great way to learn Next and Vercel.
+- I gained a much deeper understanding of advanced Chakra concepts and gained much more respect for how powerful and beautifully designed it is.
+- Rough React Notation was a new package (to me) and I really enjoy using it to tie accent colors into a design.
