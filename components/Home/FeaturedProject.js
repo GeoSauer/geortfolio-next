@@ -2,6 +2,7 @@ import myData from "/data";
 import { AspectRatio, Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 import CustomImage from "../Custom/CustomImage";
+import ViewMoreLink from "./ViewMoreLink";
 
 export default function FeaturedProject() {
   return (
@@ -25,32 +26,7 @@ export default function FeaturedProject() {
             Featured Project
           </Heading>
 
-          <CustomLink
-            href="/projects"
-            px={{ base: 2, md: 6 }}
-            py={{ base: 2, md: 4 }}
-            rounded={"md"}
-            bg="button"
-            color="buttonText"
-            shadow={"xl"}
-            alignItems={"center"}
-            whiteSpace={"nowrap"}
-            _hover={{
-              "& .hover": {
-                transform: "translateX(2px)",
-              },
-            }}
-          >
-            <Text
-              className="hover"
-              fontSize={{ base: "md", md: "xl" }}
-              fontWeight={"bold"}
-              transform={"translateX(0)"}
-              transition={"transform 0.3s ease"}
-            >
-              View All &rarr;
-            </Text>
-          </CustomLink>
+          <ViewMoreLink href="/projects" whiteSpace={"nowrap"} destination="View All &rarr;" />
         </Flex>
 
         <Container px={0} maxW="5xl">
