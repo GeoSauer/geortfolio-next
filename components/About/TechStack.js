@@ -20,8 +20,14 @@ export default function TechStack() {
         spacingY={{ base: 5, md: 20 }}
         justifyItems={"center"}
       >
-        {myData.about.techStack?.map((tech, idx) => (
-          <CustomImage key={idx} src={tech.imageUrl} alt={tech.name} width={100} height={100} />
+        {myData.about.techStack?.map((tech) => (
+          <CustomImage
+            key={tech.name}
+            src={tech.imageUrl}
+            alt={tech.name}
+            width={100}
+            height={100}
+          />
         ))}
       </SimpleGrid>
     </>

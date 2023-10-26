@@ -25,8 +25,8 @@ export default function JourneyCard({ title, company, year, companyUrl, desc }) 
       ) : (
         <Text color="textSecondary">{company}</Text>
       )}
-      {desc.map((line, idx) => (
-        <Text key={idx} as={"p"} color="cardText" my={2}>
+      {desc.map((line) => (
+        <Text key={line} as={"p"} color="cardText" my={2}>
           {line}
         </Text>
       ))}

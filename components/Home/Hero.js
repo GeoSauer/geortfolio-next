@@ -24,7 +24,7 @@ export default function Hero() {
       >
         <RoughNotationGroup show={true}>
           {myData.descriptors?.map((text, idx) => (
-            <HeroHighlight key={idx} color={myData.colors[idx]}>
+            <HeroHighlight key={text} color={myData.colors[idx]}>
               <Heading sx={headingStyles}>{text}</Heading>
             </HeroHighlight>
           ))}
