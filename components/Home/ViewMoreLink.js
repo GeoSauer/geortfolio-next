@@ -4,6 +4,7 @@ import CustomLink from "../Custom/CustomLink";
 export default function ViewMoreLink({ destination, ...props }) {
   return (
     <CustomLink
+      {...props}
       px={{ base: 2, md: 6 }}
       py={{ base: 2, md: 4 }}
       rounded={"md"}
@@ -16,7 +17,6 @@ export default function ViewMoreLink({ destination, ...props }) {
           transform: "translateX(2px)",
         },
       }}
-      {...props}
     >
       <Text
         className="hover"

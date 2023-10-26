@@ -308,7 +308,7 @@ const myData = {
   },
 
   socialUrls: {
-    resumeUrl: "",
+    resumeUrl: "/GeoSauer_Resume.pdf",
     linkedIn: "https://www.linkedin.com/in/geosauer/",
     github: "https://github.com/GeoSauer",
     portfolio: "https://geosauer.com/",

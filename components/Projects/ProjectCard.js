@@ -3,14 +3,13 @@ import CustomLink from "../Custom/CustomLink";
 import { AspectRatio, useColorMode } from "@chakra-ui/react";
 import CustomImage from "../Custom/CustomImage";
 
-export default function ProjectCard({ href, src, alt }) {
+export default function ProjectCard({ href, ...props }) {
   const { colorMode } = useColorMode();
   return (
     <CustomLink href={href} target="_blank">
       <AspectRatio ratio={16 / 9}>
         <CustomImage
-          src={src}
-          alt={alt}
+          {...props}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
           filter={colorMode === "dark" ? "grayscale(100%)" : null}
