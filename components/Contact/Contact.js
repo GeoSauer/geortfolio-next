@@ -19,9 +19,9 @@ export default function Contact() {
         direction={"column"}
         sx={textStyles}
         justify={"space-between"}
-        mb={{ base: 10, md: 20 }}
+        mb={{ base: 20, md: 40 }}
       >
-        <Box maxWidth={{ md: "60vw" }}>
+        <Box maxWidth={{ md: "60vw" }} mb={{ base: 20, md: 40 }}>
           <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }}>
             {myData.contact.title}
           </Text>
