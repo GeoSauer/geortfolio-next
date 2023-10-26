@@ -1,7 +1,8 @@
 import myData from "@/data";
-import { Flex, Text, VStack, Box } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";
-import CustomLink from "../Custom/CustomLink";
+import ContactTitle from "./ContactTitle";
+import ContactMethod from "./ContactMethod";
 
 const textStyles = {
   as: "p",
@@ -15,56 +16,20 @@ const color = myData.colors[3];
 export default function Contact() {
   return (
     <>
-      <Flex
-        direction={"column"}
-        sx={textStyles}
-        justify={"space-between"}
-        mb={{ base: 10, md: 20 }}
-      >
-        <Box maxWidth={{ md: "60vw" }}>
-          <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }}>
-            {myData.contact.title}
-          </Text>
-        </Box>
-        <VStack align={{ base: "center", md: "end" }} pt={10}>
-          <Text>
-            Check out my{" "}
-            <CustomLink
-              href="/GeoSauer_Resume.pdf"
-              color={color}
-              fontWeight={"bold"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Resume.
-            </CustomLink>
-          </Text>
-          <Text>
-            And my{" "}
-            <CustomLink
-              href={myData.socialUrls.linkedIn}
-              color={color}
-              fontWeight={"bold"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn.
-            </CustomLink>
-          </Text>
-          <Text>
-            Maybe even my{" "}
-            <CustomLink
-              href={myData.socialUrls.github}
-              color={color}
-              fontWeight={"bold"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub.
-            </CustomLink>
-          </Text>
-        </VStack>
-      </Flex>
+      <ContactTitle color={color} />
+
+      <VStack align={{ base: "center", md: "end" }} py={10}>
+        {myData.contact.contactMethods.map((method) => (
+          <ContactMethod
+            key={method.destination}
+            text={method.text}
+            destination={method.destination}
+            href={method.href}
+            color={color}
+            sx={textStyles}
+          />
+        ))}
+      </VStack>
 
       <ContactForm />
     </>
