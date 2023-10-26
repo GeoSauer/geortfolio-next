@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, VStack } from "@chakra-ui/react";
 import myData from "@/data";
-import CustomLink from "../Custom/CustomLink";
+import JourneyCard from "./JourneyCard";
 
 export default function MyJourney() {
   let previousYear = null;
@@ -13,7 +13,7 @@ export default function MyJourney() {
         previousYear = exp.year;
 
         return (
-          <Fragment key={idx}>
+          <Fragment key={exp.title}>
             <JourneyCard
               title={exp.title}
               company={exp.company}
@@ -33,36 +33,3 @@ export default function MyJourney() {
     </VStack>
   );
 }
-
-const JourneyCard = ({ title, company, year, companyUrl, desc }) => {
-  return (
-    <Box bg="cardBG" position={"relative"} p={4} rounded={"lg"} shadow={"xl"} mx={4} zIndex={10}>
-      <Text
-        as={"h1"}
-        position={"absolute"}
-        top={-12}
-        left={{ md: -8 }}
-        fontSize={"4xl"}
-        fontWeight={"bold"}
-        color="cardText"
-      >
-        {year}
-      </Text>
-      <Text as={"h2"} fontWeight={"semibold"} fontSize={"xl"}>
-        {title}
-      </Text>
-      {companyUrl ? (
-        <CustomLink href={companyUrl} target="_blank" color="textSecondary">
-          {company}
-        </CustomLink>
-      ) : (
-        <Text color="textSecondary">{company}</Text>
-      )}
-      {desc.map((line, idx) => (
-        <Text key={idx} as={"p"} color="cardText" my={2}>
-          {line}
-        </Text>
-      ))}
-    </Box>
-  );
-};
