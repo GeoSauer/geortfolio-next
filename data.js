@@ -14,51 +14,6 @@ const myData = {
     imageUrl: "/gmm-walkthrough.webp",
   },
 
-  projects: [
-    {
-      title: "Grimoire for the Modern Mage",
-      link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
-      repo: "",
-      // gifUrl: "/gmm-walkthrough.webp",
-      imageUrl: "/gmm.png",
-    },
-    {
-      title: "Geortfolio",
-      link: "https://www.geosauer.com/",
-      repo: "https://github.com/GeoSauer/geortfolio-next",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/geortfolio.png",
-    },
-    {
-      title: "Carpe DnDiem",
-      link: "https://github.com/GeoSauer/carpe-dnDiem",
-      repo: "https://github.com/GeoSauer/carpe-dnDiem",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/carpedndiem.png",
-    },
-    {
-      title: "Pokedex",
-      link: "https://geos-pokedex.netlify.app/",
-      repo: "https://github.com/GeoSauer/react-pokedex",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/pokedex.png",
-    },
-    {
-      title: "Tic-Tac-Geo",
-      link: "https://react-tic-tac-geo.netlify.app/",
-      repo: "https://github.com/GeoSauer/Tic-Tac-Geo",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/tic-tac-geo.png",
-    },
-    {
-      title: "for (dummy of dummies)",
-      link: "https://dummy-of-dummies.netlify.app/auth/?redirectUrl=https%3A%2F%2Fdummy-of-dummies.netlify.app%2F",
-      repo: "https://github.com/GeoSauer/dummy-of-dummies",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/for(dummyofdummies).png",
-    },
-  ],
-
   about: {
     title:
       "I'm a software engineer that loves building responsive and accessible web-based products with clean, verbose, and maintainable code.",
@@ -181,6 +136,51 @@ const myData = {
     ],
   },
 
+  projects: [
+    {
+      title: "Grimoire for the Modern Mage",
+      link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
+      repo: "",
+      // gifUrl: "/gmm-walkthrough.webp",
+      imageUrl: "/gmm.png",
+    },
+    {
+      title: "Geortfolio",
+      link: "https://www.geosauer.com/",
+      repo: "https://github.com/GeoSauer/geortfolio-next",
+      // gifUrl: "/avatar.png",
+      imageUrl: "/geortfolio.png",
+    },
+    {
+      title: "Carpe DnDiem",
+      link: "https://github.com/GeoSauer/carpe-dnDiem",
+      repo: "https://github.com/GeoSauer/carpe-dnDiem",
+      // gifUrl: "/avatar.png",
+      imageUrl: "/carpedndiem.png",
+    },
+    {
+      title: "Pokedex",
+      link: "https://geos-pokedex.netlify.app/",
+      repo: "https://github.com/GeoSauer/react-pokedex",
+      // gifUrl: "/avatar.png",
+      imageUrl: "/pokedex.png",
+    },
+    {
+      title: "Tic-Tac-Geo",
+      link: "https://react-tic-tac-geo.netlify.app/",
+      repo: "https://github.com/GeoSauer/Tic-Tac-Geo",
+      // gifUrl: "/avatar.png",
+      imageUrl: "/tic-tac-geo.png",
+    },
+    {
+      title: "for (dummy of dummies)",
+      link: "https://dummy-of-dummies.netlify.app/auth/?redirectUrl=https%3A%2F%2Fdummy-of-dummies.netlify.app%2F",
+      repo: "https://github.com/GeoSauer/dummy-of-dummies",
+      // gifUrl: "/avatar.png",
+      imageUrl: "/for(dummyofdummies).png",
+    },
+  ],
+
   experience: [
     {
       title: "Founder and Developer",
@@ -295,8 +295,16 @@ const myData = {
   ],
 
   contact: {
-    title:
-      "I'm currently on the lookout for new opportunities and would love to chat about how I can help your team succeed!",
+    title: {
+      beginning: "I'm currently on the lookout for ",
+      underline: "new opportunities",
+      end: " and would love to chat about how I can help your team succeed!",
+    },
+    contactMethods: [
+      { text: "Check out my ", destination: "Resume.", href: "/GeoSauer_Resume.pdf" },
+      { text: "And my ", destination: "LinkedIn.", href: "https://www.linkedin.com/in/geosauer/" },
+      { text: "Maybe even my ", destination: "GitHub.", href: "https://github.com/GeoSauer" },
+    ],
   },
 
   socialUrls: {
