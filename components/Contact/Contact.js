@@ -21,7 +21,7 @@ export default function Contact() {
         justify={"space-between"}
         mb={{ base: 20, md: 40 }}
       >
-        <Box maxWidth={{ md: "60vw" }} mb={{ base: 20, md: 40 }}>
+        <Box maxWidth={{ md: "60vw" }} mb={20}>
           <Text fontWeight={"semibold"} fontSize={{ base: "3xl", md: "4xl" }}>
             {myData.contact.title}
           </Text>

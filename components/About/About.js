@@ -27,7 +27,7 @@ export default function About() {
         </CustomLink>
       </Text>
 
-      <Container maxWidth={"6xl"} pt={20}>
+      <Container maxWidth={"6xl"} py={20}>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8} color="textSecondary">
           <Box>
             <Text as="h2" sx={subheaderStyles}>
