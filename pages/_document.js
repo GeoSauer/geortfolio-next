@@ -5,7 +5,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>{"Geo Sauer - Engineer, Sculptor, Maker, Nerd"}</title>
           <meta name="robots" content="follow, index" />
           <meta
             content={`PERN stack engineer constantly adding new tech to my toolbox. Get in touch with me to learn more!`}
