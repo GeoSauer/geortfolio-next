@@ -301,6 +301,11 @@ const myData = {
       end: " and would love to chat about how I can help your team succeed!",
     },
     contactMethods: [
+      {
+        text: "Let's hop on a ",
+        destination: "Video Call.",
+        href: "https://calendly.com/geo-sauer",
+      },
       { text: "Check out my ", destination: "Resume.", href: "/GeoSauer_Resume.pdf" },
       { text: "And my ", destination: "LinkedIn.", href: "https://www.linkedin.com/in/geosauer/" },
       { text: "Maybe even my ", destination: "GitHub.", href: "https://github.com/GeoSauer" },
