@@ -13,7 +13,7 @@ export default function MyJourney() {
         previousYear = exp.year;
 
         return (
-          <Fragment key={exp.title}>
+          <Fragment key={exp.desc}>
             <JourneyCard
               title={exp.title}
               company={exp.company}
