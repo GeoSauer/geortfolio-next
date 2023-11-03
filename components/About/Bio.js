@@ -1,4 +1,4 @@
-import myData from "@/data";
+import myData from "/data";
 import { Box, Container, SimpleGrid, Text } from "@chakra-ui/react";
 
 const subheaderStyles = {

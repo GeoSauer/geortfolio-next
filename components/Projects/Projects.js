@@ -1,5 +1,5 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import myData from "@/data";
+import myData from "/data";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {

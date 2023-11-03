@@ -1,5 +1,5 @@
 import { Divider, HStack } from "@chakra-ui/react";
-import myData from "@/data";
+import myData from "/data";
 import { useRouter } from "next/router";
 import CustomLink from "../Custom/CustomLink";
 

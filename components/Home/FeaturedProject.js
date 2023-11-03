@@ -1,5 +1,5 @@
 import myData from "/data";
-import { AspectRatio, Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { AspectRatio, Box, Container, Flex, Heading } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 import CustomImage from "../Custom/CustomImage";
 import ViewMoreLink from "./ViewMoreLink";

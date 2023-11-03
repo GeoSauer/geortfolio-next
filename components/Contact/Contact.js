@@ -1,4 +1,4 @@
-import myData from "@/data";
+import myData from "/data";
 import { VStack } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";
 import ContactTitle from "./ContactTitle";

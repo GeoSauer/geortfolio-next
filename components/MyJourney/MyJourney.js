@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Box, Flex, VStack } from "@chakra-ui/react";
-import myData from "@/data";
+import myData from "/data";
 import JourneyCard from "./JourneyCard";
 
 export default function MyJourney() {

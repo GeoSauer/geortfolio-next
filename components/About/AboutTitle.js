@@ -1,4 +1,4 @@
-import myData from "@/data";
+import myData from "/data";
 import { Text } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 import Underline from "../RoughNotation/Underline";

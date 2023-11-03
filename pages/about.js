@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout/Layout";
-import About from "../components/About/About";
+import About from "@/components/About/About";
 import Head from "next/head";
 
 export default function about() {

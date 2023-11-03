@@ -1,4 +1,4 @@
-import myData from "@/data";
+import myData from "/data";
 import { Box, Text } from "@chakra-ui/react";
 import Underline from "../RoughNotation/Underline";
 

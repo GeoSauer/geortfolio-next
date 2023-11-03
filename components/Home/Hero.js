@@ -1,9 +1,9 @@
 import { Box, Flex, HStack, Heading } from "@chakra-ui/react";
 import { RoughNotationGroup } from "react-rough-notation";
 import HeroHighlight from "../RoughNotation/HeroHighlight";
-import avatar from "@/public/avatar.png";
-import spookyAvatar from "@/public/spooky-avatar.png";
-import myData from "@/data";
+import avatar from "/public/avatar.png";
+import spookyAvatar from "/public/spooky-avatar.png";
+import myData from "/data";
 import CustomImage from "../Custom/CustomImage";
 import { useSuperDarkMode } from "@/providers/SuperDarkModeProvider";
 

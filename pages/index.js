@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout/Layout";
 import getLatestRepos from "@/lib/getLatestRepos";
-import myData from "@/data";
+import myData from "/data";
 import Home from "@/components/Home/Home";
 
 export default function home({ repositories }) {
