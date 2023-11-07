@@ -1,7 +1,7 @@
-import SuperDarkModeProvider from "@/providers/SuperDarkModeProvider";
 import Head from "next/head";
 import { AppProps } from "next/app";
 import Chakra from "@/providers/Chakra";
+import SuperDarkModeProvider from "@/providers/SuperDarkModeProvider";
 
 interface MyPageProps extends AppProps {
   pageProps: {

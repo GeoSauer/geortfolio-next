@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "providers/SuperDarkModeProvider.js",
+    "providers/SuperDarkModeProvider.tsx",
     "pages/index.tsx"
   ],
   "exclude": ["node_modules"]
