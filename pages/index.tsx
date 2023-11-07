@@ -1,11 +1,11 @@
-import Layout from "@/components/Layout/Layout";
 import Home from "@/components/Home/Home";
+import Layout from "@/components/Layout/Layout";
 import myData from "@/data";
 import getLatestRepos, { Repositories } from "@/lib/getLatestRepos";
 
 export default function home({ repositories }: Repositories) {
   return (
-    <Layout heading={undefined}>
+    <Layout>
       <Home repositories={repositories} />
     </Layout>
   );

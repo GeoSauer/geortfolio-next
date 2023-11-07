@@ -1,11 +1,16 @@
 import myData from "@/data";
 import { Container, Heading } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import { ReactNode } from "react";
 
-export default function PageHeading({ children }) {
+type PageHeadingProps = {
+  children: ReactNode;
+};
+
+export default function PageHeading({ children }: PageHeadingProps) {
   const router = useRouter();
 
-  let color = null;
+  let color: string | undefined = undefined;
   switch (router.asPath) {
     case "/about":
       color = myData.colors[0];
@@ -27,7 +32,7 @@ export default function PageHeading({ children }) {
         mb={{ base: 20, md: 5 }}
         textAlign={{ base: "center", md: "left" }}
         py={{ base: 5, md: 20 }}
-        color={color}
+        color={color || undefined}
       >
         {children}
       </Heading>
