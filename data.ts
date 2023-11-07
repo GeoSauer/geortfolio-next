@@ -1,10 +1,10 @@
-interface FeaturedProject {
+type FeaturedProject = {
   title: string;
   link: string;
   imageUrl: string;
-}
+};
 
-interface AboutSection {
+type AboutSection = {
   title: string;
   desc: {
     title: string;
@@ -16,24 +16,24 @@ interface AboutSection {
     name: string;
     imageUrl: string;
   }[];
-}
+};
 
-interface ProjectItem {
+type ProjectItem = {
   title: string;
   link: string;
   repo: string;
   imageUrl: string;
-}
+};
 
-interface ExperienceItem {
+type ExperienceItem = {
   title: string;
   company: string;
   year: string;
   companyUrl: string;
   desc: string[];
-}
+};
 
-interface ContactInfo {
+type ContactInfo = {
   title: {
     beginning: string;
     underline: string;
@@ -44,16 +44,16 @@ interface ContactInfo {
     destination: string;
     href: string;
   }[];
-}
+};
 
-interface SocialUrls {
+type SocialUrls = {
   resumeUrl: string;
   linkedIn: string;
   github: string;
   portfolio: string;
-}
+};
 
-interface MyData {
+type MyData = {
   name: string;
   githubUsername: string;
   designation: string;
@@ -68,7 +68,7 @@ interface MyData {
   experience: ExperienceItem[];
   contact: ContactInfo;
   socialUrls: SocialUrls;
-}
+};
 
 const myData: MyData = {
   name: "Geo Sauer",

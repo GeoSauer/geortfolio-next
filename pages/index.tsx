@@ -3,9 +3,17 @@ import getLatestRepos from "@/lib/getLatestRepos";
 import Home from "@/components/Home/Home";
 import myData from "@/data";
 
-export default function home({ repositories }) {
+type Repos = {
+  repositories: {
+    name: string;
+    description: string | null;
+    clone_url: string;
+  }[];
+};
+
+export default function home({ repositories }: Repos) {
   return (
-    <Layout>
+    <Layout heading={undefined}>
       <Home repositories={repositories} />
     </Layout>
   );
