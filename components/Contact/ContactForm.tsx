@@ -1,4 +1,4 @@
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik, Field, Form, ErrorMessage, FieldProps } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
 import {
@@ -12,6 +12,12 @@ import {
   VStack,
   useToast,
 } from "@chakra-ui/react";
+
+type ContactFormValues = {
+  email: string;
+  message: string;
+  name: string;
+};
 
 export default function ContactForm() {
   const [messageSent, setMessageSent] = useState(false);
@@ -28,13 +34,13 @@ export default function ContactForm() {
     message: Yup.string().required("Message is required"),
   });
 
-  const handleSubmit = async (values, actions) => {
+  const handleSubmit = async (values: ContactFormValues, actions: any) => {
     try {
       const formData = new FormData();
       formData.append("access_key", "b5d7f4fb-2f18-4607-a4cb-c1784d31f117");
-      for (const key in values) {
-        formData.append(key, values[key]);
-      }
+      formData.append("email", values.email);
+      formData.append("name", values.name);
+      formData.append("message", values.message);
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -64,7 +70,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Container maxWidth={"xl"} p={5} align={"center"} rounded={{ md: "lg" }}>
+    <Container maxWidth={"xl"} p={5} textAlign={"center"} rounded={{ md: "lg" }}>
       <VStack spacing={5}>
         <Text fontSize={{ base: "2xl", md: "3xl" }} fontWeight={"semibold"} px={{ base: 8, md: 0 }}>
           {messageSent ? "Thanks! I'll get back to you soon." : "Get in touch, let's talk."}
@@ -78,8 +84,11 @@ export default function ContactForm() {
           {({ isSubmitting }) => (
             <Form>
               <Field name="name">
-                {({ field, form }) => (
-                  <FormControl isInvalid={form.errors.name && form.touched.name} sx={inputStyles}>
+                {({ field, form }: FieldProps) => (
+                  <FormControl
+                    isInvalid={!!(form.errors.name && form.touched.name)}
+                    sx={inputStyles}
+                  >
                     <FormLabel htmlFor="name">Name</FormLabel>
                     <Input {...field} id="name" placeholder="Your name" />
                     <ErrorMessage name="name" />
@@ -88,8 +97,11 @@ export default function ContactForm() {
               </Field>
 
               <Field name="email">
-                {({ field, form }) => (
-                  <FormControl isInvalid={form.errors.email && form.touched.email} sx={inputStyles}>
+                {({ field, form }: FieldProps) => (
+                  <FormControl
+                    isInvalid={!!(form.errors.email && form.touched.email)}
+                    sx={inputStyles}
+                  >
                     <FormLabel htmlFor="email">Email</FormLabel>
                     <Input {...field} id="email" placeholder="Your email" />
                     <ErrorMessage name="email" />
@@ -98,9 +110,9 @@ export default function ContactForm() {
               </Field>
 
               <Field name="message">
-                {({ field, form }) => (
+                {({ field, form }: FieldProps) => (
                   <FormControl
-                    isInvalid={form.errors.message && form.touched.message}
+                    isInvalid={!!(form.errors.message && form.touched.message)}
                     sx={inputStyles}
                   >
                     <FormLabel htmlFor="message">Message</FormLabel>
