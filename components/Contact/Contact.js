@@ -1,8 +1,8 @@
-import myData from "/data";
 import { VStack } from "@chakra-ui/react";
 import ContactForm from "./ContactForm";
 import ContactTitle from "./ContactTitle";
 import ContactMethod from "./ContactMethod";
+import myData from "@/data";
 
 const textStyles = {
   as: "p",

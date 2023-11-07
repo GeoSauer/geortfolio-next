@@ -1,4 +1,4 @@
-import myData from "/data";
+import myData from "@/data";
 import {
   Box,
   ButtonGroup,

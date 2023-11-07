@@ -1,6 +1,6 @@
-import myData from "/data";
 import { Box, Text } from "@chakra-ui/react";
 import Underline from "../RoughNotation/Underline";
+import myData from "@/data";
 
 const title = myData.contact.title;
 

@@ -1,4 +1,76 @@
-const myData = {
+interface FeaturedProject {
+  title: string;
+  link: string;
+  imageUrl: string;
+}
+
+interface AboutSection {
+  title: string;
+  desc: {
+    title: string;
+    body: string[];
+  }[];
+  currentProject: string;
+  currentProjectUrl: string;
+  techStack: {
+    name: string;
+    imageUrl: string;
+  }[];
+}
+
+interface ProjectItem {
+  title: string;
+  link: string;
+  repo: string;
+  imageUrl: string;
+}
+
+interface ExperienceItem {
+  title: string;
+  company: string;
+  year: string;
+  companyUrl: string;
+  desc: string[];
+}
+
+interface ContactInfo {
+  title: {
+    beginning: string;
+    underline: string;
+    end: string;
+  };
+  contactMethods: {
+    text: string;
+    destination: string;
+    href: string;
+  }[];
+}
+
+interface SocialUrls {
+  resumeUrl: string;
+  linkedIn: string;
+  github: string;
+  portfolio: string;
+}
+
+interface MyData {
+  name: string;
+  githubUsername: string;
+  designation: string;
+  avatarUrl: string;
+  email: string;
+  address: string;
+  colors: string[];
+  descriptors: string[];
+  featuredProject: FeaturedProject;
+  about: AboutSection;
+  projects: ProjectItem[];
+  experience: ExperienceItem[];
+  contact: ContactInfo;
+  socialUrls: SocialUrls;
+}
+
+const myData: MyData = {
   name: "Geo Sauer",
   githubUsername: "GeoSauer",
   designation: "Full-Stack Engineer",
@@ -22,15 +94,14 @@ const myData = {
         title: "Where I've been.",
         body: [
           "Growing up in beautiful Northern Colorado I've had a lifelong affinity for the outdoors.",
-          ,
+
           "I love paddle boarding, mountain biking, and puttering around on my Royal Enfield Himalayan all along the front range.",
-          ,
+
           "When I'm not outdoors I can typically be found playing video or tabletop games, or tinkering around with my 3-D printer.",
-          ,
+
           "I'm a lifelong maker and love diving into technical processes head-on and figuring them out.",
-          ,
+
           "This is part of what drove me to study bronze sculpture in my undergrad and fueled my 3.5 year stint in the bronze industry.",
-          ,
         ],
       },
 
@@ -38,15 +109,14 @@ const myData = {
         title: "What I'm doing.",
         body: [
           "In 2022 I made the decision to dive into yet another technical process head-on by enrolling in Alchemy Code Lab, a full-stack coding bootcamp.",
-          ,
+
           "Unfortunately, the school closed abruptly and permanently in early 2023.",
 
           "Luckily for me I was absolutely hooked and had found a new passion in web development, so I set out to find a problem worth solving.",
-          ,
+
           "Working with local D&D groups I developed Grimoire for the Modern Mage, my first full stack app.",
-          ,
+
           "I was also looking for a way to give back and began volunteering as a mentor with Codethedream.org.",
-          ,
         ],
       },
 
@@ -54,13 +124,12 @@ const myData = {
         title: "What I hope to do.",
         body: [
           "One of the most attractive aspects of software engineering for me is the ability for my labor to go towards real, tangible good in the world.",
-          ,
+
           "I also have a passion for learning and teaching, and love being on either side of a mentor/mentee relationship.",
-          ,
+
           "While I've been keeping busy doing freelance work for folks in my community, I'm looking for full-time employment as a frontend/full-stack software engineer.",
-          ,
+
           "I'm excited to bring my strong coding skills and high emotional intelligence to a team built around empathetic communication and mindful collaboration.",
-          ,
         ],
       },
     ],

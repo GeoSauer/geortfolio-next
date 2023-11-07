@@ -1,6 +1,6 @@
+import myData from "@/data";
 import GithubRepoCard from "./GithubRepoCard";
 import ViewMoreLink from "./ViewMoreLink";
-import myData from "/data";
 import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 
 export default function LatestCode({ repositories }) {

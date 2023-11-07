@@ -1,4 +1,3 @@
-import myData from "/data";
 import {
   Container,
   Heading,
@@ -18,6 +17,7 @@ import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
 import InternalLinks from "../Links/InternalLinks";
 import { useSuperDarkMode } from "@/providers/SuperDarkModeProvider";
 import CustomLink from "../Custom/CustomLink";
+import myData from "@/data";
 
 export default function Navbar() {
   const { toggleColorMode, colorMode } = useColorMode();

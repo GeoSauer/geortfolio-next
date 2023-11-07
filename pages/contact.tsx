@@ -1,6 +1,6 @@
 import Contact from "@/components/Contact/Contact";
 import Layout from "@/components/Layout/Layout";
-import myData from "/data";
+import myData from "@/data";
 import Head from "next/head";
 
 export default function contact() {
