@@ -1,8 +1,8 @@
 import { AspectRatio, Box, Container, Flex, Heading } from "@chakra-ui/react";
-import CustomLink from "../Custom/CustomLink";
-import CustomImage from "../Custom/CustomImage";
 import ViewMoreLink from "./ViewMoreLink";
 import myData from "@/data";
+import CustomImage from "../Custom/CustomImage";
+import CustomLink from "../Custom/CustomLink";
 
 export default function FeaturedProject() {
   return (
