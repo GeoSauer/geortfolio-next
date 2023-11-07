@@ -1,6 +1,7 @@
 import NextImage, { type ImageProps as NextImageProps } from "next/image";
 import { chakra } from "@chakra-ui/react";
 
+/** - Accepts props for both the Chakra UI and Next Image components */
 const CustomImage = chakra<typeof NextImage, NextImageProps>(NextImage, {
   shouldForwardProp: (prop) =>
     [
