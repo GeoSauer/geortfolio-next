@@ -1,6 +1,11 @@
 import "@fontsource/chivo";
 
-const fonts = {
+type Font = {
+  body: string;
+  heading: string;
+};
+
+const fonts: Font = {
   body: `'Chivo', sans-serif`,
   heading: `'Chivo', sans-serif`,
 };

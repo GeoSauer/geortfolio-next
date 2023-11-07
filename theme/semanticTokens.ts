@@ -1,4 +1,22 @@
-const semanticTokens = {
+type SemanticColorToken = {
+  default: string;
+  _dark: string;
+};
+
+type SemanticTokens = {
+  colors: {
+    bgPrimary: SemanticColorToken;
+    textPrimary: SemanticColorToken;
+    textSecondary: SemanticColorToken;
+    title: SemanticColorToken;
+    button: SemanticColorToken;
+    buttonText: SemanticColorToken;
+    cardBG: SemanticColorToken;
+    cardText: SemanticColorToken;
+  };
+};
+
+const semanticTokens: SemanticTokens = {
   colors: {
     bgPrimary: {
       default: "gray.50",
