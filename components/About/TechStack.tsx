@@ -1,6 +1,6 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import CustomImage from "../Custom/CustomImage";
-import myData from "/data";
+import myData from "@/data";
 
 export default function TechStack() {
   return (
