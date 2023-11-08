@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import { Box, Flex, VStack } from "@chakra-ui/react";
-import myData from "/data";
 import JourneyCard from "./JourneyCard";
+import myData from "@/data";
 
 export default function MyJourney() {
-  let previousYear = null;
+  let previousYear: string = "";
 
   return (
     <VStack maxWidth={"xl"} mx={"auto"} pt={20}>
@@ -13,11 +13,11 @@ export default function MyJourney() {
         previousYear = exp.year;
 
         return (
-          <Fragment key={exp.desc}>
+          <Fragment key={idx}>
             <JourneyCard
               title={exp.title}
               company={exp.company}
-              year={showYear ? exp.year : null}
+              year={showYear ? exp.year : ""}
               companyUrl={exp.companyUrl}
               desc={exp.desc}
             />

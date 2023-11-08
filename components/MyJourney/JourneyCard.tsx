@@ -1,7 +1,15 @@
 import { Box, Text } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 
-export default function JourneyCard({ title, company, year, companyUrl, desc }) {
+type JourneyCardProps = {
+  title: string;
+  company: string;
+  year: string;
+  companyUrl: string;
+  desc: string[];
+};
+
+export default function JourneyCard({ title, company, year, companyUrl, desc }: JourneyCardProps) {
   return (
     <Box bg="cardBG" position={"relative"} p={4} rounded={"lg"} shadow={"xl"} mx={4} zIndex={10}>
       <Text
