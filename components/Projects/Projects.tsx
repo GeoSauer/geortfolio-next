@@ -1,6 +1,6 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import myData from "/data";
 import ProjectCard from "./ProjectCard";
+import myData from "@/data";
 
 export default function Projects() {
   return (
@@ -11,8 +11,8 @@ export default function Projects() {
           href={project.link}
           src={project.imageUrl}
           alt={project.title}
-          title={project.title}
-          color={myData.colors[1]}
+          // title={project.title}
+          // color={myData.colors[1]}
         />
       ))}
     </SimpleGrid>
