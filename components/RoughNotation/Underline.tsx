@@ -1,6 +1,12 @@
+import { ReactNode } from "react";
 import { RoughNotation } from "react-rough-notation";
 
-export default function Underline({ color, children }) {
+type UnderlineProps = {
+  color: string;
+  children: ReactNode;
+};
+
+export default function Underline({ color, children }: UnderlineProps) {
   return (
     <RoughNotation
       type="underline"

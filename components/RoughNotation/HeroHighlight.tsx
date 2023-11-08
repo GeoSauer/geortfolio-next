@@ -1,6 +1,12 @@
+import { ReactNode } from "react";
 import { RoughNotation } from "react-rough-notation";
 
-export default function HeroHighlight({ color, children }) {
+type HeroHighlightProps = {
+  color: string;
+  children: ReactNode;
+};
+
+export default function HeroHighlight({ color, children }: HeroHighlightProps) {
   return (
     <RoughNotation
       type="highlight"
