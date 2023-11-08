@@ -2,6 +2,7 @@ import { Divider, HStack } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import myData from "@/data";
 import CustomLink from "../Custom/CustomLink";
+import { ReactNode } from "react";
 
 const dividerStyles = {
   borderWidth: "1px",
@@ -34,7 +35,13 @@ export default function InternalLinks() {
   );
 }
 
-const StyledLink = ({ href, activeColor, children }) => {
+type StyledLinkProps = {
+  href: string;
+  activeColor: string;
+  children: ReactNode;
+};
+
+const StyledLink = ({ href, activeColor, children }: StyledLinkProps) => {
   const router = useRouter();
 
   return (

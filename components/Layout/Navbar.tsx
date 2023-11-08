@@ -14,10 +14,10 @@ import {
 import { useEffect, useState } from "react";
 import { FaGithubAlt, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
 import { MdFlashlightOn, MdFlashlightOff } from "react-icons/md";
-import InternalLinks from "../Links/InternalLinks";
 import myData from "@/data";
 import { useSuperDarkMode } from "@/providers/SuperDarkModeProvider";
 import CustomLink from "../Custom/CustomLink";
+import InternalLinks from "../Links/InternalLinks";
 
 export default function Navbar() {
   const { toggleColorMode, colorMode } = useColorMode();
