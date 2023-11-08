@@ -1,9 +1,9 @@
-import React from "react";
-import Hero from "./Hero";
+import { Repositories } from "@/lib/getLatestRepos";
 import FeaturedProject from "./FeaturedProject";
+import Hero from "./Hero";
 import LatestCode from "./LatestCode";
 
-export default function Home({ repositories }) {
+export default function Home({ repositories }: Repositories) {
   return (
     <>
       <Hero />

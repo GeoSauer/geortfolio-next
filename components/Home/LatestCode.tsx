@@ -1,9 +1,10 @@
 import myData from "@/data";
 import GithubRepoCard from "./GithubRepoCard";
-import ViewMoreLink from "./ViewMoreLink";
 import { Box, Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Repositories } from "@/lib/getLatestRepos";
+import ViewMoreLink from "./ViewMoreLink";
 
-export default function LatestCode({ repositories }) {
+export default function LatestCode({ repositories }: Repositories) {
   return (
     <Box as="section" paddingBottom={{ base: 20, md: 40 }}>
       <Container maxWidth={"6xl"} px={0}>
@@ -29,6 +30,7 @@ export default function LatestCode({ repositories }) {
 
           <ViewMoreLink
             href={myData.socialUrls.github}
+            as="a"
             target="_blank"
             destination="View Github &rarr;"
           />

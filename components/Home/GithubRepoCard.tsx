@@ -1,7 +1,15 @@
 import { Heading, Stack, Text } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 
-export default function GithubRepoCard({ latestRepo }) {
+type LatestRepo = {
+  latestRepo: {
+    name: string;
+    description?: string;
+    clone_url: string;
+  };
+};
+
+export default function GithubRepoCard({ latestRepo }: LatestRepo) {
   return (
     <Stack>
       <Heading fontSize={"2xl"}>{latestRepo.name}</Heading>

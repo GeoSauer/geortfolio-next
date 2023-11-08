@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from "axios";
 export type Repositories = {
   repositories: {
     name: string;
-    description: string | null;
+    description?: string;
     clone_url: string;
   }[];
 };

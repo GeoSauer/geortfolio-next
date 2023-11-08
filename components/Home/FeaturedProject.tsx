@@ -1,8 +1,8 @@
 import { AspectRatio, Box, Container, Flex, Heading } from "@chakra-ui/react";
-import ViewMoreLink from "./ViewMoreLink";
 import myData from "@/data";
 import CustomImage from "../Custom/CustomImage";
 import CustomLink from "../Custom/CustomLink";
+import ViewMoreLink from "./ViewMoreLink";
 
 export default function FeaturedProject() {
   return (
@@ -26,7 +26,12 @@ export default function FeaturedProject() {
             Featured Project
           </Heading>
 
-          <ViewMoreLink href="/projects" whiteSpace={"nowrap"} destination="View All &rarr;" />
+          <ViewMoreLink
+            href="/projects"
+            as="a"
+            whiteSpace={"nowrap"}
+            destination="View All &rarr;"
+          />
         </Flex>
 
         <Container px={0} maxW="5xl">
