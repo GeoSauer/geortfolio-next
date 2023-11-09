@@ -26,12 +26,7 @@ export default function FeaturedProject() {
             Featured Project
           </Heading>
 
-          <ViewMoreLink
-            href="/projects"
-            as="a"
-            whiteSpace={"nowrap"}
-            destination="View All &rarr;"
-          />
+          <ViewMoreLink href="/projects" whiteSpace="nowrap" destination="View All &rarr;" />
         </Flex>
 
         <Container px={0} maxW="5xl">

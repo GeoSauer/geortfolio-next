@@ -30,7 +30,6 @@ export default function LatestCode({ repositories }: Repositories) {
 
           <ViewMoreLink
             href={myData.socialUrls.github}
-            as="a"
             target="_blank"
             destination="View Github &rarr;"
           />

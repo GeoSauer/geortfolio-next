@@ -1,10 +1,32 @@
 import { Text } from "@chakra-ui/react";
 import CustomLink from "../Custom/CustomLink";
 
-export default function ViewMoreLink({ destination, ...props }) {
+type ViewMoreLinkProps = {
+  href: string;
+  destination: string;
+  target?: string;
+  whiteSpace?:
+    | "-moz-pre-wrap"
+    | "break-spaces"
+    | "normal"
+    | "nowrap"
+    | "pre"
+    | "pre-line"
+    | "pre-wrap";
+};
+
+export default function ViewMoreLink({
+  href,
+  target,
+  whiteSpace = "normal",
+  destination,
+  ...props
+}: ViewMoreLinkProps) {
   return (
     <CustomLink
-      {...props}
+      href={href}
+      target={target}
+      whiteSpace={whiteSpace}
       px={{ base: 2, md: 6 }}
       py={{ base: 2, md: 4 }}
       rounded={"md"}
@@ -17,6 +39,7 @@ export default function ViewMoreLink({ destination, ...props }) {
           transform: "translateX(2px)",
         },
       }}
+      {...props}
     >
       <Text
         className="hover"
