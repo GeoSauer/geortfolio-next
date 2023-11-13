@@ -4,7 +4,7 @@ import JourneyCard from "./JourneyCard";
 import myData from "@/data";
 
 export default function MyJourney() {
-  let previousYear: string = "";
+  let previousYear = "";
 
   return (
     <VStack maxWidth={"xl"} mx={"auto"} pt={20}>

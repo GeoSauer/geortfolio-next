@@ -4,6 +4,12 @@ import myData from "@/data";
 import CustomLink from "../Custom/CustomLink";
 import { ReactNode } from "react";
 
+type StyledLinkProps = {
+  href: string;
+  activeColor: string;
+  children: ReactNode;
+};
+
 const dividerStyles = {
   borderWidth: "1px",
   height: 4,
@@ -34,12 +40,6 @@ export default function InternalLinks() {
     </HStack>
   );
 }
-
-type StyledLinkProps = {
-  href: string;
-  activeColor: string;
-  children: ReactNode;
-};
 
 const StyledLink = ({ href, activeColor, children }: StyledLinkProps) => {
   const router = useRouter();

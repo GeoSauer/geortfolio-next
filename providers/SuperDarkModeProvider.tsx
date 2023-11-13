@@ -3,7 +3,8 @@ import { ReactNode, createContext, useContext, useEffect, useState } from "react
 
 type SuperDarkModeContextValue = {
   superDarkMode: boolean;
-  setSuperDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+  // setSuperDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+  setSuperDarkMode: (arg: boolean) => void;
 };
 
 type SuperDarkModeProviderProps = {
