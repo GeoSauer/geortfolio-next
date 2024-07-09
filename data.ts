@@ -75,7 +75,7 @@ const myData: MyData = {
   githubUsername: "GeoSauer",
   designation: "Full-Stack Engineer",
   avatarUrl: "/avatar.png",
-  email: "geosauer89@gmail.com",
+  email: "geo.sauer89@gmail.com",
   address: "Loveland, Colorado, USA",
   colors: ["#F4743B", "#55c1FF", "#5438DC", "#32E875"],
   descriptors: ["Engineer.", "Sculptor.", "Maker.", "Nerd."],
@@ -207,6 +207,20 @@ const myData: MyData = {
 
   projects: [
     {
+      title: "HazAdapt",
+      link: "https://www.hazadapt.com/",
+      repo: "",
+      // gifUrl: "/gmm-walkthrough.webp",
+      imageUrl: "/hazadapt.png",
+    },
+    {
+      title: "Bootcampr",
+      link: "https://landing.bootcampr.io/",
+      repo: "",
+      // gifUrl: "/gmm-walkthrough.webp",
+      imageUrl: "/bootcampr.png",
+    },
+    {
       title: "Grimoire for the Modern Mage",
       link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
       repo: "",
@@ -220,13 +234,13 @@ const myData: MyData = {
       // gifUrl: "/avatar.png",
       imageUrl: "/geortfolio.png",
     },
-    {
-      title: "Carpe DnDiem",
-      link: "https://github.com/GeoSauer/carpe-dnDiem",
-      repo: "https://github.com/GeoSauer/carpe-dnDiem",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/carpedndiem.png",
-    },
+    // {
+    //   title: "Carpe DnDiem",
+    //   link: "https://github.com/GeoSauer/carpe-dnDiem",
+    //   repo: "https://github.com/GeoSauer/carpe-dnDiem",
+    //   // gifUrl: "/avatar.png",
+    //   imageUrl: "/carpedndiem.png",
+    // },
     {
       title: "Pokedex",
       link: "https://geos-pokedex.netlify.app/",
@@ -241,16 +255,38 @@ const myData: MyData = {
       // gifUrl: "/avatar.png",
       imageUrl: "/tic-tac-geo.png",
     },
-    {
-      title: "for (dummy of dummies)",
-      link: "https://dummy-of-dummies.netlify.app/auth/?redirectUrl=https%3A%2F%2Fdummy-of-dummies.netlify.app%2F",
-      repo: "https://github.com/GeoSauer/dummy-of-dummies",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/for(dummyofdummies).png",
-    },
+    // {
+    //   title: "for (dummy of dummies)",
+    //   link: "https://dummy-of-dummies.netlify.app/auth/?redirectUrl=https%3A%2F%2Fdummy-of-dummies.netlify.app%2F",
+    //   repo: "https://github.com/GeoSauer/dummy-of-dummies",
+    //   // gifUrl: "/avatar.png",
+    //   imageUrl: "/for(dummyofdummies).png",
+    // },
   ],
 
   experience: [
+    {
+      title: "Software Engineer",
+      company: "HazAdapt",
+      year: "2024",
+      companyUrl: "https://www.hazadapt.com/",
+      desc: [
+        "Contributed to the development of a mobile app and two web-based products, leveraging expertise in React/Native, MUI, and TypesScript.",
+        "Worked closely with design team to complete drastic UI refactors.",
+        "Conducted rigorous manual QA testing, identifying and documenting issues to ensure product quality and reliability.",
+      ],
+    },
+    {
+      title: "Software Engineer",
+      company: "Bootcampr",
+      year: "2023",
+      companyUrl: "https://bootcampr.io/",
+      desc: [
+        "Ensured pixel-perfect fidelity between Figma designs and implemented UI components, playing a pivotal role in achieving MVP launch goals.",
+        "Spearheaded the development and adoption of reusable, modular components, enhancing scalability and maintainability across the product.",
+        "Championed and implemented initiatives to enhance platform accessibility, ensuring inclusivity and compliance with accessibility standards.",
+      ],
+    },
     {
       title: "Founder and Developer",
       company: "SauerPauerStudio",
@@ -268,6 +304,7 @@ const myData: MyData = {
       desc: [
         "Met with React students 1:1 to offer mentorship, answer specific questions, or resolve blockers.",
         "Provided code review of student assignments and offered insightful feedback to further their education.",
+        "Earned Mentor of the Month - March 2024",
       ],
     },
     {

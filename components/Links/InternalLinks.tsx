@@ -24,8 +24,8 @@ export default function InternalLinks() {
       </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 
-      <StyledLink href="/projects" activeColor={myData.colors[1]}>
-        Projects
+      <StyledLink href="/products" activeColor={myData.colors[1]}>
+        Products
       </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 

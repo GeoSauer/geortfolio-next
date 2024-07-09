@@ -15,7 +15,7 @@ export default function PageHeading({ children }: PageHeadingProps) {
     case "/about":
       color = myData.colors[0];
       break;
-    case "/projects":
+    case "/products":
       color = myData.colors[1];
       break;
     case "/my-journey":

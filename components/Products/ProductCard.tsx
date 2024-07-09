@@ -3,7 +3,7 @@ import CustomLink from "../Custom/CustomLink";
 import { AspectRatio } from "@chakra-ui/react";
 import CustomImage from "../Custom/CustomImage";
 
-type ProjectCardProps = {
+type ProductCardProps = {
   href: string;
   src: string;
   alt: string;
@@ -17,7 +17,7 @@ type ProjectCardProps = {
   };
 };
 
-export default function ProjectCard({
+export default function ProductCard({
   href,
   src,
   alt,
@@ -27,7 +27,7 @@ export default function ProjectCard({
   // title,
   // color,
   ...props
-}: ProjectCardProps) {
+}: ProductCardProps) {
   return (
     <CustomLink href={href} target="_blank">
       <AspectRatio ratio={16 / 9}>
