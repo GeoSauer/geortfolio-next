@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/landing", "destination": "https://portfolio-landing-page-bay.vercel.app/" }
+  ]
+}
