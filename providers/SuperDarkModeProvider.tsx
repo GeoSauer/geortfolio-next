@@ -41,7 +41,6 @@ export default function SuperDarkModeProvider({ children }: SuperDarkModeProvide
     <SuperDarkModeContext.Provider value={value}>
       <Box
         css={{
-          cursor: superDarkMode ? "none" : "auto",
           ...(superDarkMode && {
             ":before": {
               content: '""',
