@@ -73,7 +73,7 @@ type MyData = {
 const myData: MyData = {
   name: "Geo Sauer",
   githubUsername: "GeoSauer",
-  designation: "Full-Stack Engineer",
+  designation: "Frontend Software Engineer",
   avatarUrl: "/avatar.png",
   email: "geo.sauer89@gmail.com",
   address: "Loveland, Colorado, USA",
@@ -266,17 +266,6 @@ const myData: MyData = {
 
   experience: [
     {
-      title: "Software Engineering Fellow",
-      company: "Headstarter AI",
-      year: "2024",
-      companyUrl: "https://www.headstarter.co/",
-      desc: [
-        "7 week intensive program that includes building 5+ AI apps and APIs using NextJS, OpenAI, Pinecone, and StripeAPI.",
-        "Developed products from design to deployment leading 3-4 engineering fellows using MVC design patterns.",
-        "Coached by Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git and microservice patterns.",
-      ],
-    },
-    {
       title: "Software Engineer",
       company: "HazAdapt",
       year: "2024",
@@ -289,7 +278,7 @@ const myData: MyData = {
     },
     {
       title: "Software Engineer Intern",
-      company: "Bootcampr",
+      company: "Collabify",
       year: "2023",
       companyUrl: "https://bootcampr.io/",
       desc: [
