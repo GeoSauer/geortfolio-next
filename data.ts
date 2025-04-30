@@ -73,7 +73,7 @@ type MyData = {
 const myData: MyData = {
   name: "Geo Sauer",
   githubUsername: "GeoSauer",
-  designation: "Full-Stack Engineer",
+  designation: "Frontend Software Engineer",
   avatarUrl: "/avatar.png",
   email: "geo.sauer89@gmail.com",
   address: "Loveland, Colorado, USA",
@@ -286,7 +286,7 @@ const myData: MyData = {
     },
     {
       title: "Software Engineer Intern",
-      company: "Bootcampr",
+      company: "Collabify",
       year: "2023",
       companyUrl: "https://bootcampr.io/",
       desc: [
