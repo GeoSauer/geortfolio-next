@@ -8,13 +8,11 @@ export type Repositories = {
   }[];
 };
 
-const getLatestRepos = async (githubUsername: string, token?: string): Promise<Repositories[]> => {
+const getLatestRepos = async (githubUsername: string): Promise<Repositories[]> => {
   try {
     const apiUrl = `https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`;
 
-    const headers = token ? { Authorization: `token ${token}` } : {};
-
-    const res: AxiosResponse<Repositories[]> = await axios.get(apiUrl, { headers });
+    const res: AxiosResponse<Repositories[]> = await axios.get(apiUrl);
     const repos: Repositories[] = res.data;
 
     return repos;

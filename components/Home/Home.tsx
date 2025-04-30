@@ -8,7 +8,7 @@ export default function Home({ repositories }: Repositories) {
     <>
       <Hero />
       <FeaturedProject />
-      <LatestCode repositories={repositories} />
+      {repositories && <LatestCode repositories={repositories} />}
     </>
   );
 }

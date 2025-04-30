@@ -11,14 +11,14 @@ export default function home({ repositories }: Repositories) {
   );
 }
 
-export const getServerSideProps = async () => {
-  //TODO crack Next env variables because this isn't working properly
-  let token = process.env.GITHUB_AUTH_TOKEN;
-  const repositories = await getLatestRepos(myData.githubUsername, token);
+export const getStaticProps = async () => {
+  const repositories = await getLatestRepos(myData.githubUsername);
 
   return {
     props: {
       repositories,
     },
+    // Revalidate every hour (3600 seconds)
+    revalidate: 3600,
   };
 };
