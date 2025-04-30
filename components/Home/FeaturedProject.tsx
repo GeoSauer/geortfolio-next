@@ -23,7 +23,7 @@ export default function FeaturedProject() {
             mb={{ md: "-35px" }}
             color="title"
           >
-            Featured Product
+            Current Project
           </Heading>
 
           <ViewMoreLink href="/products" whiteSpace="nowrap" destination="View All &rarr;" />
@@ -31,7 +31,7 @@ export default function FeaturedProject() {
 
         <Container px={0} maxW="5xl">
           <CustomLink href={myData.featuredProject.link} target="_blank">
-            <AspectRatio ratio={16 / 9}>
+            <AspectRatio ratio={1.5}>
               <CustomImage
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}

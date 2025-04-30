@@ -81,9 +81,9 @@ const myData: MyData = {
   descriptors: ["Engineer.", "Sculptor.", "Maker.", "Nerd."],
 
   featuredProject: {
-    title: "Grimoire for the Modern Mage",
-    link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
-    imageUrl: "/gmm-walkthrough.webp",
+    title: "Next.js DecapCMS Template",
+    link: "https://nextjs-decapcms-template.netlify.app/",
+    imageUrl: "/nextjs-decapcms-template.png",
   },
 
   about: {
@@ -207,6 +207,13 @@ const myData: MyData = {
 
   projects: [
     {
+      title: "Next.js + DecapCMS Template",
+      link: "https://nextjs-decapcms-template.netlify.app/",
+      repo: "https://github.com/GeoSauer/nextjs-decapcms-template",
+      // gifUrl: "/gmm-walkthrough.webp",
+      imageUrl: "/nextjs-decapcms-template.png",
+    },
+    {
       title: "HazAdapt",
       link: "https://www.hazadapt.com/",
       repo: "",
@@ -266,25 +273,15 @@ const myData: MyData = {
 
   experience: [
     {
-      title: "Software Engineering Fellow",
-      company: "Headstarter AI",
-      year: "2024",
-      companyUrl: "https://www.headstarter.co/",
-      desc: [
-        "7 week intensive program that includes building 5+ AI apps and APIs using NextJS, OpenAI, Pinecone, and StripeAPI.",
-        "Developed products from design to deployment leading 3-4 engineering fellows using MVC design patterns.",
-        "Coached by Amazon, Bloomberg, and Capital One engineers on Agile, CI/CD, Git and microservice patterns.",
-      ],
-    },
-    {
       title: "Software Engineer",
       company: "HazAdapt",
       year: "2024",
       companyUrl: "https://www.hazadapt.com/",
       desc: [
-        "Contributed to the development of a mobile app and two web-based products, leveraging expertise in React/Native, MUI, and TypesScript.",
-        "Worked closely with design team to complete drastic UI refactors.",
-        "Conducted rigorous manual QA testing, identifying and documenting issues to ensure product quality and reliability.",
+        "Developing and maintaining a data analytics platform for real-time data visualization of application usage metrics, using React, TypeScript, Chart.js, and Mapbox GL, to deliver interactive charts and geospatial insights for monitoring and analysis.",
+        "Leading the architecture and development of critical features like site navigation, subscriptions billing flows, and expanded insight views, improving user experience and platform scalability.",
+        "Proactively enhancing accessibility by collaborating with designers to address WCAG compliance, ensuring inclusivity while maintaining high design standards.",
+        "Streamlining development by creating reusable components and custom hooks, promoting clean, maintainable code and reducing duplication across the codebase.",
       ],
     },
     {

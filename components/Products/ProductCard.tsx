@@ -1,6 +1,6 @@
 import React from "react";
 import CustomLink from "../Custom/CustomLink";
-import { AspectRatio } from "@chakra-ui/react";
+import { AspectRatio, Box } from "@chakra-ui/react";
 import CustomImage from "../Custom/CustomImage";
 
 type ProductCardProps = {
@@ -29,19 +29,21 @@ export default function ProductCard({
   ...props
 }: ProductCardProps) {
   return (
-    <CustomLink href={href} target="_blank">
-      <AspectRatio ratio={16 / 9}>
-        <CustomImage
-          src={src}
-          alt={alt}
-          fill={fill}
-          sizes={sizes}
-          rounded={rounded}
-          // title={title}
-          // color={color}
-          {...props}
-        />
-      </AspectRatio>
-    </CustomLink>
+    <Box transition={"transform 0.3s ease"} sx={{ "&:hover": { transform: "scale(1.05)" } }}>
+      <CustomLink href={href} target="_blank">
+        <AspectRatio ratio={1.5}>
+          <CustomImage
+            src={src}
+            alt={alt}
+            fill={fill}
+            sizes={sizes}
+            rounded={rounded}
+            // title={title}
+            // color={color}
+            {...props}
+          />
+        </AspectRatio>
+      </CustomLink>
+    </Box>
   );
 }
