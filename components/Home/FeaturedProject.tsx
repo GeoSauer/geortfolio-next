@@ -31,7 +31,7 @@ export default function FeaturedProject() {
 
         <Container px={0} maxW="5xl">
           <CustomLink href={myData.featuredProject.link} target="_blank">
-            <AspectRatio ratio={1.5}>
+            <AspectRatio ratio={16 / 9}>
               <CustomImage
                 src={myData.featuredProject.imageUrl}
                 alt={myData.featuredProject.title}

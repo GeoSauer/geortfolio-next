@@ -31,7 +31,7 @@ export default function ProductCard({
   return (
     <Box transition={"transform 0.3s ease"} sx={{ "&:hover": { transform: "scale(1.05)" } }}>
       <CustomLink href={href} target="_blank">
-        <AspectRatio ratio={1.5}>
+        <AspectRatio ratio={16 / 9}>
           <CustomImage
             src={src}
             alt={alt}
