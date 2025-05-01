@@ -8,7 +8,9 @@ export default function Home({ repositories }: Repositories) {
     <>
       <Hero />
       <FeaturedProject />
-      {repositories && <LatestCode repositories={repositories} />}
+      {Array.isArray(repositories) && repositories.length && (
+        <LatestCode repositories={repositories} />
+      )}
     </>
   );
 }

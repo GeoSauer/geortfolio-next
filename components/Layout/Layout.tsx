@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import PageBody from "./PageBody";
 import PageHeading from "./PageHeading";
+import { Analytics } from "@vercel/analytics/react";
 
 type LayoutProps = {
   children: ReactNode;
@@ -16,6 +17,7 @@ export default function Layout({ children, heading }: LayoutProps) {
       <PageHeading>{heading}</PageHeading>
       <PageBody>{children}</PageBody>
       <Footer />
+      <Analytics />
     </>
   );
 }
