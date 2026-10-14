@@ -8,10 +8,10 @@ export default function Products() {
       {myData.projects?.map((project) => (
         <ProductCard
           key={project.title}
-          href={project.link}
+          href={project?.link}
           src={project.imageUrl}
           alt={project.title}
-          // title={project.title}
+          title={project.title}
           // color={myData.colors[1]}
         />
       ))}

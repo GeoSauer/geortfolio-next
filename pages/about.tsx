@@ -9,7 +9,7 @@ export default function about() {
         <title>About - Geo Sauer</title>
         <meta
           name="description"
-          content="A deeper dive into my interests and what fuels me as an engineer"
+          content="I'm a Senior Software Engineer at HazAdapt, building accessible, data-rich products. Learn about my engineering work, creative background, and life along Colorado's Front Range."
         />
       </Head>
 

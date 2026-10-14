@@ -20,8 +20,8 @@ type AboutSection = {
 
 type ProjectItem = {
   title: string;
-  link: string;
-  repo: string;
+  link?: string;
+  repo?: string;
   imageUrl: string;
 };
 
@@ -81,67 +81,70 @@ const myData: MyData = {
   descriptors: ["Engineer.", "Sculptor.", "Maker.", "Nerd."],
 
   featuredProject: {
-    title: "Next.js DecapCMS Template",
-    link: "https://nextjs-decapcms-template.netlify.app/",
-    imageUrl: "/nextjs-decapcms-template.png",
+    title: "ResiliencePoint",
+    link: "https://rp.hazadapt.com/",
+    imageUrl: "/resilience-point.png",
   },
 
   about: {
     title:
-      "I'm a software engineer that loves building responsive and accessible web-based products with clean, verbose, and maintainable code.",
+      "I'm a Senior Software Engineer at HazAdapt, building accessible, data-rich products that turn complex information into clear, useful experiences. I bring a frontend-first perspective to full-stack work and care about the details that make software intuitive, reliable, and maintainable.",
     desc: [
       {
-        title: "Where I've been.",
+        title: "What I do.",
         body: [
-          "Growing up in beautiful Northern Colorado I've had a lifelong affinity for the outdoors.",
-
-          "I love paddle boarding, mountain biking, and puttering around on my Royal Enfield Himalayan all along the front range.",
-
-          "When I'm not outdoors I can typically be found playing video or tabletop games, or tinkering around with my 3-D printer.",
-
-          "I'm a lifelong maker and love diving into technical processes head-on and figuring them out.",
-
-          "This is part of what drove me to study bronze sculpture in my undergrad and fueled my 3.5 year stint in the bronze industry.",
+          "At HazAdapt, I build and evolve production web and mobile products, working across React and TypeScript interfaces, Node.js APIs, data visualization, and the systems behind them.",
+          "After taking on technical leadership across three production applications, I was promoted to Senior Software Engineer. I help guide architecture and delivery while staying hands-on with the code.",
+          "I care about accessibility, performance, and thoughtful user experience as part of how a product works, not as polish added at the end.",
         ],
       },
 
       {
-        title: "What I'm doing.",
+        title: "What shaped me.",
         body: [
-          "In 2022 I made the decision to dive into yet another technical process head-on by enrolling in Alchemy Code Lab, a full-stack coding bootcamp.",
-
-          "Unfortunately, the school closed abruptly and permanently in early 2023.",
-
-          "Luckily for me I was absolutely hooked and had found a new passion in web development, so I set out to find a problem worth solving.",
-
-          "Working with local D&D groups I developed Grimoire for the Modern Mage, my first full stack app.",
-
-          "I was also looking for a way to give back and began volunteering as a mentor with Codethedream.org.",
+          "Before software, I studied bronze sculpture and spent three and a half years in the bronze industry. That work taught me patience, precision, and how to turn complex processes into tangible results.",
+          "I found software engineering in 2022. The medium changed, but the part I love stayed the same: learning how a system works, solving a real problem, and making something people can use.",
+          "Mentoring aspiring developers has been another meaningful part of my journey. I volunteered with Code the Dream to support people as they built their skills.",
         ],
       },
 
       {
-        title: "What I hope to do.",
+        title: "Outside of work.",
         body: [
-          "One of the most attractive aspects of software engineering for me is the ability for my labor to go towards real, tangible good in the world.",
-
-          "I also have a passion for learning and teaching, and love being on either side of a mentor/mentee relationship.",
-
-          "While I've been keeping busy doing freelance work for folks in my community, I'm looking for full-time employment as a frontend/full-stack software engineer.",
-
-          "I'm excited to bring my strong coding skills and high emotional intelligence to a team built around empathetic communication and mindful collaboration.",
+          "I'm happiest outside along the Front Range: mountain biking, paddle boarding, or exploring on my Royal Enfield Himalayan.",
+          "At home, I'm usually playing a video or tabletop game, tinkering with my 3D printer, or finding my next thing to learn.",
+          "Making has always been a through line for me, whether that's software, sculpture, or something I haven't figured out how to build yet.",
         ],
       },
     ],
-
+		
     currentProject: "this very portfolio!",
     currentProjectUrl: "https://github.com/GeoSauer/geortfolio-next",
-
+		
     techStack: [
+			{
+				name: "React.js",
+				imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+			},
+			{
+				name: "TypeScript",
+				imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+			},
+			{
+				name: "Node.js",
+				imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+			},
+			{
+				name: "Express",
+				imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+			},
+			{
+				name: "PostgreSQL",
+				imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+			},
       {
         name: "JavaScript",
-        imageUrl:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
       },
       {
         name: "HTML",
@@ -152,30 +155,12 @@ const myData: MyData = {
         imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
       },
       {
-        name: "React.js",
-        imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      },
-      {
         name: "Next.js",
         imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       },
       {
-        name: "Node.js",
-        imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      },
-      {
-        name: "Express",
-        imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      },
-      {
-        name: "PostgreSQL",
-        imageUrl:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-      },
-      {
         name: "Discord.js",
-        imageUrl:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg",
+        imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg",
       },
       {
         name: "Jest",
@@ -197,15 +182,38 @@ const myData: MyData = {
         name: "VSCode",
         imageUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
       },
-      {
-        name: "TypeScript",
-        imageUrl:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      },
     ],
   },
 
   projects: [
+		{
+			title: "ResiliencePoint",
+			link: "https://rp.hazadapt.com/",
+			// repo: "",
+			// gifUrl: "/gmm-walkthrough.webp",
+			imageUrl: "/resilience-point.png",
+		},
+    {
+      title: "HazAdapt",
+      link: "https://www.hazadapt.com/",
+      // repo: "",
+      // gifUrl: "/gmm-walkthrough.webp",
+      imageUrl: "/hazadapt.png",
+    },
+    {
+      title: "HazAdapt (Mobile App)",
+      link: "https://get.hazadapt.com/",
+      // repo: "https://github.com/GeoSauer/nextjs-decapcms-template",
+      // gifUrl: "/gmm-walkthrough.webp",
+      imageUrl: "/hazadapt-mobile.png",
+    },
+    {
+      title: "Warts and All Therapy",
+      link: "https://wartsandalltherapy.com/",
+      // repo: "",
+      // gifUrl: "/gmm-walkthrough.webp",
+      imageUrl: "/warts-and-all-therapy.png",
+    },
     {
       title: "Next.js + DecapCMS Template",
       link: "https://nextjs-decapcms-template.netlify.app/",
@@ -214,33 +222,26 @@ const myData: MyData = {
       imageUrl: "/nextjs-decapcms-template.png",
     },
     {
-      title: "HazAdapt",
-      link: "https://www.hazadapt.com/",
-      repo: "",
-      // gifUrl: "/gmm-walkthrough.webp",
-      imageUrl: "/hazadapt.png",
-    },
-    {
       title: "Bootcampr",
-      link: "https://landing.bootcampr.io/",
-      repo: "",
+      // link: "https://landing.bootcampr.io/",
+      // repo: "",
       // gifUrl: "/gmm-walkthrough.webp",
       imageUrl: "/bootcampr.png",
     },
     {
       title: "Grimoire for the Modern Mage",
-      link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
-      repo: "",
+      // link: "https://grimoire-for-the-modern-mage.netlify.app/welcome",
+      repo: "https://github.com/GeoSauer/GMM-frontend",
       // gifUrl: "/gmm-walkthrough.webp",
       imageUrl: "/gmm.png",
     },
-    {
-      title: "Geortfolio",
-      link: "https://www.geosauer.com/",
-      repo: "https://github.com/GeoSauer/geortfolio-next",
-      // gifUrl: "/avatar.png",
-      imageUrl: "/geortfolio.png",
-    },
+    // {
+    //   title: "Geortfolio",
+    //   link: "https://www.geosauer.com/",
+    //   repo: "https://github.com/GeoSauer/geortfolio-next",
+    //   // gifUrl: "/avatar.png",
+    //   imageUrl: "/geortfolio.png",
+    // },
     // {
     //   title: "Carpe DnDiem",
     //   link: "https://github.com/GeoSauer/carpe-dnDiem",
@@ -278,10 +279,13 @@ const myData: MyData = {
       year: "2024",
       companyUrl: "https://www.hazadapt.com/",
       desc: [
-        "Developing and maintaining a data analytics platform for real-time data visualization of application usage metrics, using React, TypeScript, Chart.js, and Mapbox GL, to deliver interactive charts and geospatial insights for monitoring and analysis.",
-        "Leading the architecture and development of critical features like site navigation, subscriptions billing flows, and expanded insight views, improving user experience and platform scalability.",
-        "Proactively enhancing accessibility by collaborating with designers to address WCAG compliance, ensuring inclusivity while maintaining high design standards.",
-        "Streamlining development by creating reusable components and custom hooks, promoting clean, maintainable code and reducing duplication across the codebase.",
+        "Assumed technical leadership of 3 production applications, expanding from frontend-focused role to include backend development, release management, and team leadership while maintaining production stability.",
+        "Extended Node.js/Express backend services by implementing new API routes, middleware for authentication and error handling, and automated reporting systems via cron jobs.",
+        "Managed a two-engineer team, conducting code reviews, prioritizing technical roadmap, and making architectural decisions to balance feature delivery with technical debt.",
+        "Proposed, designed, and executed an expanded insight view for analytics data that reduced API overhead by 90% by refactoring data fetching architecture and implementing a fullscreen overlay pattern that eliminated redundant calls and enabled instant insight switching.",
+        "Built analytics features using React, TypeScript, Chart.js, and Mapbox GL, delivering both assigned work and self-initiated features from concept to production.",
+        "Implemented and iterated on core product flows including site navigation, subscription billing, and insight views, improving conversion rates and system performance.",
+        "Maintained and improved accessibility across web (React/MUI) and mobile (React Native) apps, ensuring WCAG compliance and inclusive user experiences.",
       ],
     },
     {
@@ -290,9 +294,9 @@ const myData: MyData = {
       year: "2023",
       companyUrl: "https://bootcampr.io/",
       desc: [
-        "Ensured pixel-perfect fidelity between Figma designs and implemented UI components, playing a pivotal role in achieving MVP launch goals.",
-        "Spearheaded the development and adoption of reusable, modular components, enhancing scalability and maintainability across the product.",
-        "Championed and implemented initiatives to enhance platform accessibility, ensuring inclusivity and compliance with accessibility standards.",
+        "Built responsive UI components for a React and TypeScript MVP, translating Figma designs into polished, production-ready interfaces.",
+        "Helped establish a reusable component library using MUI and SCSS, reducing code duplication and improving team velocity.",
+        "Conducted accessibility audits using Lighthouse and implemented WCAG-compliant improvements, raising scores by 30% and improving screen reader navigation.",
       ],
     },
     {
@@ -310,8 +314,9 @@ const myData: MyData = {
       year: "2023",
       companyUrl: "https://codethedream.org/",
       desc: [
-        "Met with React students 1:1 to offer mentorship, answer specific questions, or resolve blockers.",
-        "Provided code review of student assignments and offered insightful feedback to further their education.",
+        "Provided one-on-one mentorship to React students, addressing blockers and knowledge gaps through tailored guidance and live support.",
+        "Delivered weekly code reviews for 7+ mentees, oﬀering actionable feedback to improve code quality, reinforce engineering fundamentals, and encourage best practices.",
+        "Diagnosed and resolved technical issues and misunderstandings both asynchronously and during live sessions, helping students make consistent progress in React.",
         "Earned Mentor of the Month - March 2024",
       ],
     },
@@ -362,9 +367,7 @@ const myData: MyData = {
       company: "Knights of the Tempest",
       year: "2019",
       companyUrl: "",
-      desc: [
-        "Catch me running around in a kilt swinging my seax at Northern Colorado Medieval Festivals.",
-      ],
+      desc: ["Catch me running around in a kilt swinging my seax at Northern Colorado Medieval Festivals."],
     },
     {
       title: "Manager",
@@ -420,14 +423,14 @@ const myData: MyData = {
         destination: "Video Call.",
         href: "https://calendly.com/geo-sauer",
       },
-      { text: "Check out my ", destination: "Resume.", href: "/GeoSauer_Resume.pdf" },
+      { text: "Check out my ", destination: "Resume.", href: "/Geo-Sauer-Resume.pdf" },
       { text: "And my ", destination: "LinkedIn.", href: "https://www.linkedin.com/in/geosauer/" },
       { text: "Maybe even my ", destination: "GitHub.", href: "https://github.com/GeoSauer" },
     ],
   },
 
   socialUrls: {
-    resumeUrl: "/GeoSauer_Resume.pdf",
+    resumeUrl: "/Geo-Sauer-Resume.pdf",
     linkedIn: "https://www.linkedin.com/in/geosauer/",
     github: "https://github.com/GeoSauer",
     portfolio: "https://geosauer.com/",

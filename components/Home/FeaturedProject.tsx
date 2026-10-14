@@ -23,7 +23,7 @@ export default function FeaturedProject() {
             mb={{ md: "-35px" }}
             color="title"
           >
-            Current Project
+            Currently Building
           </Heading>
 
           <ViewMoreLink href="/products" whiteSpace="nowrap" destination="View All &rarr;" />
