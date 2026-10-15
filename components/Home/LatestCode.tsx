@@ -17,7 +17,7 @@ export default function LatestCode({ repositories }: Repositories) {
           mx={{ base: 2, md: 10 }}
         >
           <Heading
-            as={"h1"}
+            as={"h2"}
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={"left"}
             mb={{ md: "-45px" }}

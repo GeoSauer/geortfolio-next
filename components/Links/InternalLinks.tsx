@@ -19,22 +19,22 @@ const dividerStyles = {
 export default function InternalLinks() {
   return (
     <HStack justify={"space-evenly"} fontWeight={"bold"}>
-      <StyledLink href="/about" activeColor={myData.colors[0]}>
+      <StyledLink href="/about" activeColor="accentOrange">
         About
       </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 
-      <StyledLink href="/products" activeColor={myData.colors[1]}>
+      <StyledLink href="/products" activeColor="accentBlue">
         Products
       </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 
-      <StyledLink href="/my-journey" activeColor={myData.colors[2]}>
+      <StyledLink href="/my-journey" activeColor="accentPurple">
         My Journey
       </StyledLink>
       <Divider orientation="vertical" sx={dividerStyles} />
 
-      <StyledLink href="/contact" activeColor={myData.colors[3]}>
+      <StyledLink href="/contact" activeColor="accentGreen">
         Contact
       </StyledLink>
     </HStack>
@@ -43,15 +43,19 @@ export default function InternalLinks() {
 
 const StyledLink = ({ href, activeColor, children }: StyledLinkProps) => {
   const router = useRouter();
+  const isCurrentPage = router.asPath === href;
 
   return (
     <CustomLink
       href={href}
+      aria-current={isCurrentPage ? "page" : undefined}
       css={{
         transform: "translateY(0)",
         transition: "color 0.3s ease, transform 0.3s ease",
-        ...(router.asPath === href && {
+        ...(isCurrentPage && {
           color: activeColor,
+          textDecoration: "underline",
+          textUnderlineOffset: "0.2em",
         }),
       }}
       _hover={{

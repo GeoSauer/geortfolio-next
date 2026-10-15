@@ -26,6 +26,7 @@ export default function ViewMoreLink({
     <CustomLink
       href={href}
       target={target}
+      aria-label={target === "_blank" ? `${destination} (opens in a new tab)` : undefined}
       whiteSpace={whiteSpace}
       px={{ base: 2, md: 6 }}
       py={{ base: 2, md: 4 }}

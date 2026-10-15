@@ -6,7 +6,7 @@ export default function TechStack() {
   return (
     <>
       <Text
-        as="h1"
+        as="h2"
         textAlign={"center"}
         fontSize={"4xl"}
         fontWeight={"bold"}

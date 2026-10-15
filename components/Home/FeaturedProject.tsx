@@ -10,14 +10,15 @@ export default function FeaturedProject() {
       <Container maxWidth={"6xl"} px={0}>
         <Flex
           as={"header"}
-          direction={"row"}
+          direction={{ base: "column", lg: "row" }}
           justify={"space-between"}
-          alignItems={"center"}
+          alignItems={{ base: "flex-start", lg: "center" }}
+          gap={{ base: 2, lg: 0 }}
           paddingTop={60}
           mx={{ base: 2, md: 10 }}
         >
           <Heading
-            as={"h1"}
+            as={"h2"}
             fontSize={{ base: "6xl", md: "9xl" }}
             textAlign={"left"}
             mb={{ md: "-35px" }}
@@ -30,7 +31,11 @@ export default function FeaturedProject() {
         </Flex>
 
         <Container px={0} maxW="5xl">
-          <CustomLink href={myData.featuredProject.link} target="_blank">
+          <CustomLink
+            href={myData.featuredProject.link}
+            target="_blank"
+            aria-label={`${myData.featuredProject.title} (opens in a new tab)`}
+          >
             <AspectRatio ratio={16 / 9}>
               <CustomImage
                 src={myData.featuredProject.imageUrl}

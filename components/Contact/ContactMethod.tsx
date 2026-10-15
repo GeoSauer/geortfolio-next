@@ -13,7 +13,14 @@ export default function ContactMethod({ text, destination, href, color, sx }: Co
   return (
     <Text sx={sx}>
       {text}
-      <CustomLink href={href} color={color} fontWeight={"bold"} target="_blank" rel="noreferrer">
+      <CustomLink
+        href={href}
+        color={color}
+        fontWeight={"bold"}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`${destination} (opens in a new tab)`}
+      >
         {destination}
       </CustomLink>
     </Text>

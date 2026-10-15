@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, usePrefersReducedMotion } from "@chakra-ui/react";
 import { ReactNode, createContext, useContext, useEffect, useState } from "react";
 
 type SuperDarkModeContextValue = {
@@ -15,10 +15,11 @@ const SuperDarkModeContext = createContext<SuperDarkModeContextValue | undefined
 
 export default function SuperDarkModeProvider({ children }: SuperDarkModeProviderProps) {
   const [superDarkMode, setSuperDarkMode] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
   const value = { superDarkMode, setSuperDarkMode };
 
   useEffect(() => {
-    if (superDarkMode) {
+    if (superDarkMode && !prefersReducedMotion) {
       function update(e: MouseEvent) {
         let x, y;
 
@@ -35,7 +36,7 @@ export default function SuperDarkModeProvider({ children }: SuperDarkModeProvide
         document.removeEventListener("mousemove", update);
       };
     }
-  }, [superDarkMode]);
+  }, [superDarkMode, prefersReducedMotion]);
 
   return (
     <SuperDarkModeContext.Provider value={value}>

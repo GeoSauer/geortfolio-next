@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Heading } from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, useColorModeValue } from "@chakra-ui/react";
 import { RoughNotationGroup } from "react-rough-notation";
 import HeroHighlight from "../RoughNotation/HeroHighlight";
 import avatar from "/public/avatar.png";
@@ -10,6 +10,11 @@ import CustomImage from "../Custom/CustomImage";
 export default function Hero() {
   const headingStyles = { fontSize: { base: "4xl", md: "8xl" } };
   const { superDarkMode } = useSuperDarkMode();
+  const headingColor = useColorModeValue("gray.900", "white");
+  const highlightColors = useColorModeValue(
+    ["#FFD1B8", "#B7E7FF", "#CFC7FF", "#B5F3C8"],
+    ["#84300B", "#00486C", "#3F2AA6", "#034A22"],
+  );
 
   return (
     <HStack as={"section"} role="hero" align={"start"} mt={{ base: -100, md: -250 }}>
@@ -22,13 +27,17 @@ export default function Hero() {
         p={{ md: 20 }}
         mx={{ md: 20 }}
       >
-        <RoughNotationGroup show={true}>
-          {myData.descriptors?.map((text, idx) => (
-            <HeroHighlight key={text} color={myData.colors[idx]}>
-              <Heading sx={headingStyles}>{text}</Heading>
-            </HeroHighlight>
-          ))}
-        </RoughNotationGroup>
+        <Heading as="h1" id="hero-title" sx={headingStyles} color={headingColor}>
+          <RoughNotationGroup show={true}>
+            {myData.descriptors?.map((text, idx) => (
+              <HeroHighlight key={text} color={highlightColors[idx]}>
+                <Box as="span" display="block">
+                  {text}
+                </Box>
+              </HeroHighlight>
+            ))}
+          </RoughNotationGroup>
+        </Heading>
       </Flex>
 
       <Box

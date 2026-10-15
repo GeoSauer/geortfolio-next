@@ -12,22 +12,29 @@ type JourneyCardProps = {
 export default function JourneyCard({ title, company, year, companyUrl, desc }: JourneyCardProps) {
   return (
     <Box bg="cardBG" position={"relative"} p={4} rounded={"lg"} shadow={"xl"} mx={4} zIndex={10}>
-      <Text
-        as={"h1"}
-        position={"absolute"}
-        top={-12}
-        left={{ md: -8 }}
-        fontSize={"4xl"}
-        fontWeight={"bold"}
-        color="cardText"
-      >
-        {year}
-      </Text>
+      {year && (
+        <Text
+          as="p"
+          position={"absolute"}
+          top={-12}
+          left={{ md: -8 }}
+          fontSize={"4xl"}
+          fontWeight={"bold"}
+          color="cardText"
+        >
+          {year}
+        </Text>
+      )}
       <Text as={"h2"} fontWeight={"semibold"} fontSize={"xl"}>
         {title}
       </Text>
       {companyUrl ? (
-        <CustomLink href={companyUrl} target="_blank" color="textSecondary">
+        <CustomLink
+          href={companyUrl}
+          target="_blank"
+          color="textSecondary"
+          aria-label={`${company} (opens in a new tab)`}
+        >
           {company}
         </CustomLink>
       ) : (

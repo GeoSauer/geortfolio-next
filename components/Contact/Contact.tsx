@@ -11,12 +11,12 @@ const textStyles = {
   px: { base: 8, md: 0 },
 };
 
-const color = myData.colors[3];
+const color = "accentGreen";
 
 export default function Contact() {
   return (
     <>
-      <ContactTitle color={color} />
+      <ContactTitle color={myData.colors[3]} />
 
       <VStack align={{ base: "center", md: "end" }} py={10}>
         {myData.contact.contactMethods.map((method) => (

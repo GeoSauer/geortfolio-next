@@ -4,7 +4,7 @@ import { Box, Container, SimpleGrid, Text } from "@chakra-ui/react";
 const subheaderStyles = {
   fontSize: "3xl",
   fontWeight: "semibold",
-  color: myData.colors[0],
+  color: "accentOrange",
   mb: -4,
   paddingBottom: 10,
 };

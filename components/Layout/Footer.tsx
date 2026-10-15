@@ -14,7 +14,7 @@ import { FaLinkedin, FaGithubAlt } from "react-icons/fa";
 export default function Footer() {
   return (
     <Box pt={20} bg="bgPrimary">
-      <Divider maxW={"6xl"} mx={"auto"} sx={{ borderWidth: "1px" }} />
+      <Divider maxW={"6xl"} mx={"auto"} sx={{ borderBottomWidth: "1px" }} />
       <Container
         as="footer"
         role="contentinfo"
@@ -38,7 +38,7 @@ export default function Footer() {
               <IconButton
                 as="a"
                 href={myData.socialUrls.linkedIn}
-                aria-label="LinkedIn"
+                aria-label="LinkedIn (opens in a new tab)"
                 target="_blank"
                 icon={<FaLinkedin />}
               />
@@ -48,7 +48,7 @@ export default function Footer() {
               <IconButton
                 as="a"
                 href={myData.socialUrls.github}
-                aria-label="GitHub"
+                aria-label="GitHub (opens in a new tab)"
                 target="_blank"
                 icon={<FaGithubAlt />}
               />

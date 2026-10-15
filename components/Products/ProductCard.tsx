@@ -50,7 +50,11 @@ export default function ProductCard({
   return (
     <Box transition="transform 0.3s ease" sx={{ "&:hover": { transform: "scale(1.05)" } }}>
       {href ? (
-        <CustomLink href={href} target="_blank">
+        <CustomLink
+          href={href}
+          target="_blank"
+          aria-label={`${title} (opens in a new tab)`}
+        >
           {card}
         </CustomLink>
       ) : (

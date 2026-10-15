@@ -23,8 +23,16 @@ export default function MyJourney() {
             />
             {idx === arr.length - 1 ? null : (
               <Flex direction={"column"} alignItems={"center"} my={-2}>
-                <Box w={4} h={4} bg={myData.colors[2]} rounded={"full"} zIndex={10} mt={-2} />
-                <Box w={1} h={24} rounded={"none"} bg={myData.colors[2]} />
+                <Box
+                  w={4}
+                  h={4}
+                  bg="accentPurple"
+                  rounded={"full"}
+                  zIndex={10}
+                  mt={-2}
+                  aria-hidden="true"
+                />
+                <Box w={1} h={24} rounded={"none"} bg="accentPurple" aria-hidden="true" />
               </Flex>
             )}
           </Fragment>

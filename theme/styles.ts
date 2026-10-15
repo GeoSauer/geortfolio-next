@@ -3,6 +3,13 @@ const styles = {
     body: {
       width: "full",
     },
+    "@media (prefers-reduced-motion: reduce)": {
+      "*, *::before, *::after": {
+        animation: "none !important",
+        transition: "none !important",
+        scrollBehavior: "auto !important",
+      },
+    },
   },
 };
 

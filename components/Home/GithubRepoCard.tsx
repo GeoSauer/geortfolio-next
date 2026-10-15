@@ -12,13 +12,14 @@ type LatestRepo = {
 export default function GithubRepoCard({ latestRepo }: LatestRepo) {
   return (
     <Stack>
-      <Heading fontSize={"2xl"}>{latestRepo.name}</Heading>
+      <Heading as="h3" fontSize={"2xl"}>{latestRepo.name}</Heading>
       <Text color="textSecondary" fontWeight={"semibold"}>
         {latestRepo.description}
       </Text>
       <CustomLink
         href={latestRepo.clone_url}
         target="_blank"
+        aria-label="View Repository (opens in a new tab)"
         fontWeight={"bold"}
         transform={"translateX(0)"}
         transition={"transform 0.3s ease"}

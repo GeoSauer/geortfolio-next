@@ -10,7 +10,7 @@ export default function Products() {
           key={project.title}
           href={project?.link}
           src={project.imageUrl}
-          alt={project.title}
+          alt=""
           title={project.title}
           // color={myData.colors[1]}
         />
